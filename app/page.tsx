@@ -12,6 +12,7 @@ import Prizes from "@/components/prizes"
 import Partners from "@/components/partners"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
+import TechnicalSupport from "@/components/technical-support"
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
@@ -51,6 +52,9 @@ export default function Home() {
         </section>
         <section id="partners">
           <Partners />
+        </section>
+        <section id="technical-support">
+          <TechnicalSupport />
         </section>
         <section id="contact">
           <Contact />
