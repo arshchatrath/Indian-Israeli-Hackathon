@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { Video, Trophy, Award, FileText, Users } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const registrationRounds = [
@@ -81,8 +80,7 @@ export default function Registration() {
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-gray-600 mb-4">{round.description}</p>
-                  <p className="font-semibold text-gray-900 mb-4">{round.deadline || round.date}</p>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">{round.action}</Button>
+                  <p className="font-semibold text-gray-900">{round.deadline || round.date}</p>
                 </CardContent>
               </Card>
             </motion.div>

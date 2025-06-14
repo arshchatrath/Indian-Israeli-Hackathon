@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { ExternalLink, Building2, Users, Gamepad2 } from "lucide-react"
+import { ExternalLink, Building2, Users, Gamepad2, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const themes = [
@@ -51,9 +51,15 @@ const themes = [
   },
 ]
 
+const PROBLEM_STATEMENTS_DOC_URL = "https://docs.google.com/document/d/1Y7J2x-8U0FXWcMgQLFgoc6MHTjbRe94AE_M2pq8Onfs/edit?tab=t.0"
+
 export default function Themes() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  const handleViewDetails = () => {
+    window.open(PROBLEM_STATEMENTS_DOC_URL, '_blank', 'noopener,noreferrer')
+  }
 
   return (
     <div className="py-20 bg-gray-50">
@@ -66,7 +72,23 @@ export default function Themes() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Themes & Problem Statements</h2>
-          <p className="text-xl text-gray-600">Choose your challenge and innovate</p>
+          <p className="text-xl text-gray-600 mb-6">Choose your challenge and innovate</p>
+          
+          {/* Central button for detailed descriptions */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Button 
+              onClick={handleViewDetails}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+            >
+              <FileText className="mr-2 h-5 w-5" />
+              View All Detailed Problem Statements
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Button>
+          </motion.div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -86,15 +108,20 @@ export default function Themes() {
               </div>
 
               <div className="p-6">
-                <p className="text-gray-600 mb-4">{theme.description}</p>
-                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
-                  Click Here for Detailed Description
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+                <p className="text-gray-600">{theme.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom reminder */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center mt-12"
+        >
+        </motion.div>
       </div>
     </div>
   )
