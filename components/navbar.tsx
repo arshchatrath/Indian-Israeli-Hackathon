@@ -48,9 +48,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.div className="flex items-center space-x-2" whileHover={{ scale: 1.05 }}>
-            <Flag className="h-8 w-8 text-blue-600" />
+          <img src="https://res.cloudinary.com/dldfnkvlm/image/upload/v1749908509/e26087_56733e5cb94f45fdb388df8d87a82071_mv2_jzbyqr.avif"  // Replace with your image path
+           alt="Hackathon Logo"
+           className="h-10 w-10 object-contain"  // Adjust size as needed
+             />
             <span className="font-bold text-xl text-gray-900">Israeli-Indian Hackathon</span>
-          </motion.div>
+</motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

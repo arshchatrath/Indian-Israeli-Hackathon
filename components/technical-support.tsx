@@ -29,39 +29,39 @@ const technicalSupporters = [
   },
   {
     name: "Microsoft Learn Student Ambassadors",
-    logo: "/placeholder.svg?height=120&width=120",
+    logo: "https://avatars.githubusercontent.com/u/45298983?s=200&v=4?height=120&width=120",
     description: "Student leaders passionate about technology and helping their peers learn new skills.",
     icon: Users,
     color: "bg-purple-500",
   },
   {
-    name: "Coding Club IIT Delhi",
-    logo: "/placeholder.svg?height=120&width=120",
-    description: "Fostering programming culture and competitive coding among students at IIT Delhi.",
+    name: "Creative Computing Society",
+    logo: "https://res.cloudinary.com/dldfnkvlm/image/upload/v1749908612/CCS_twx1np.avif?height=120&width=120",
+    description: "Fostering programming culture and competitive coding among students",
     icon: Code,
     color: "bg-indigo-500",
   },
-  {
-    name: "Technion Innovation Society",
-    logo: "/placeholder.svg?height=120&width=120",
-    description: "Promoting entrepreneurship and innovation in technology among Israeli students.",
-    icon: Lightbulb,
-    color: "bg-orange-500",
-  },
-  {
-    name: "Healthcare Innovation Club",
-    logo: "/placeholder.svg?height=120&width=120",
-    description: "Bridging the gap between technology and healthcare through student-led initiatives.",
-    icon: Rocket,
-    color: "bg-teal-500",
-  },
-  {
-    name: "AI & ML Society",
-    logo: "/placeholder.svg?height=120&width=120",
-    description: "Advancing artificial intelligence and machine learning research among students.",
-    icon: Users,
-    color: "bg-pink-500",
-  },
+  // {
+  //   name: "Technion Innovation Society",
+  //   logo: "/placeholder.svg?height=120&width=120",
+  //   description: "Promoting entrepreneurship and innovation in technology among Israeli students.",
+  //   icon: Lightbulb,
+  //   color: "bg-orange-500",
+  // },
+  // {
+  //   name: "Healthcare Innovation Club",
+  //   logo: "/placeholder.svg?height=120&width=120",
+  //   description: "Bridging the gap between technology and healthcare through student-led initiatives.",
+  //   icon: Rocket,
+  //   color: "bg-teal-500",
+  // },
+  // {
+  //   name: "AI & ML Society",
+  //   logo: "/placeholder.svg?height=120&width=120",
+  //   description: "Advancing artificial intelligence and machine learning research among students.",
+  //   icon: Users,
+  //   color: "bg-pink-500",
+  // },
 ]
 
 export default function TechnicalSupport() {
@@ -192,14 +192,14 @@ export default function TechnicalSupport() {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+          { <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
             <motion.div
               animate={{
                 scale: [1, 1.05, 1],
@@ -226,8 +226,8 @@ export default function TechnicalSupport() {
               <Code className="h-5 w-5 mr-2" />
               Explore Communities
             </motion.div>
-          </div>
-        </motion.div>
+          </div> }
+        </motion.div> */}
       </div>
     </div>
   )
