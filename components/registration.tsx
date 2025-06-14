@@ -15,7 +15,6 @@ const registrationRounds = [
     description: "Submit your innovative presentation showcasing your solution approach",
     icon: FileText,
     color: "bg-blue-500",
-    action: "Submit PPT",
   },
   {
     round: "Round-II",
@@ -24,7 +23,6 @@ const registrationRounds = [
     description: "Present your solution to our expert panel via Zoom",
     icon: Video,
     color: "bg-indigo-500",
-    action: "Join Zoom",
   },
   {
     round: "Round-III",
@@ -33,7 +31,6 @@ const registrationRounds = [
     description: "Demonstrate your working prototype in person",
     icon: Trophy,
     color: "bg-purple-500",
-    action: "View Results",
   },
 ]
 
