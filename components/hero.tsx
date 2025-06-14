@@ -6,11 +6,15 @@ import { Button } from "@/components/ui/button"
 
 export default function Hero() {
   const handleRegistration = () => {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLScn8F1KEg57rFbDvFhCqqyyHD3TkLKKUFqPR-g39aUe69EhYw/viewform', '_blank', 'noopener,noreferrer')
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLScn8F1KEg57rFbDvFhCqqyyHD3TkLKKUFqPR-g39aUe69EhYw/viewform",
+      "_blank",
+      "noopener,noreferrer",
+    )
   }
 
   const handleGuidelines = () => {
-    window.open('https://docs.google.com/document/d/19GKKvMuLMkw967IPeP2W04WT2gSSKP7l5i_nbDuHTKA/edit?tab=t.0', '_blank', 'noopener,noreferrer')
+    window.location.href = "/guidelines"
   }
 
   return (
@@ -48,8 +52,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
               onClick={handleRegistration}
             >
