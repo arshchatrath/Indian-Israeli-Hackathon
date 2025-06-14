@@ -12,6 +12,7 @@ const navItems = [
   { name: "Organizers", href: "#organizers" },
   { name: "Judges", href: "#judges" },
   { name: "Registration", href: "#registration" },
+  { name: "Technical Support", href: "#technical-support" },
   { name: "Contact", href: "#contact" },
 ]
 

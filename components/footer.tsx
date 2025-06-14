@@ -11,6 +11,7 @@ const quickLinks = [
   { name: "Timeline", href: "#timeline" },
   { name: "Themes", href: "#themes" },
   { name: "Registration", href: "#registration" },
+  { name: "Technical Support", href: "#technical-support" },
   { name: "Contact", href: "#contact" },
 ]
 
