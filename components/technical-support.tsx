@@ -7,22 +7,29 @@ import { Users, Code, Lightbulb, Rocket } from "lucide-react"
 
 const technicalSupporters = [
   {
+    name: "Creative Computing Society",
+    logo: "https://res.cloudinary.com/dldfnkvlm/image/upload/v1749908612/CCS_twx1np.avif?height=120&width=120",
+    description: "Fostering programming culture and competitive coding among students",
+    icon: Code,
+    color: "bg-indigo-500",
+  },
+  {
     name: "IEEE Computer Society",
-    logo: "/placeholder.svg?height=120&width=120",
+    logo: "https://res.cloudinary.com/dldfnkvlm/image/upload/v1749965530/ieeethapar_logo_rncpvh.avif?height=120&width=120",
     description: "Leading the advancement of technology for humanity through computing and engineering excellence.",
     icon: Code,
     color: "bg-blue-500",
   },
   {
     name: "ACM Student Chapter",
-    logo: "/placeholder.svg?height=120&width=120",
+    logo: "https://res.cloudinary.com/dldfnkvlm/image/upload/v1749965524/ACM_ajytyh.avif?height=120&width=120",
     description: "Advancing computing as a science and profession through innovation and collaboration.",
     icon: Lightbulb,
     color: "bg-green-500",
   },
   {
     name: "Google Developer Student Clubs",
-    logo: "/placeholder.svg?height=120&width=120",
+    logo: "https://res.cloudinary.com/dldfnkvlm/image/upload/v1749965536/GDSC_vsj29c.avif?height=120&width=120",
     description: "University-based community groups for students interested in Google developer technologies.",
     icon: Rocket,
     color: "bg-red-500",
@@ -34,13 +41,7 @@ const technicalSupporters = [
     icon: Users,
     color: "bg-purple-500",
   },
-  {
-    name: "Creative Computing Society",
-    logo: "https://res.cloudinary.com/dldfnkvlm/image/upload/v1749908612/CCS_twx1np.avif?height=120&width=120",
-    description: "Fostering programming culture and competitive coding among students",
-    icon: Code,
-    color: "bg-indigo-500",
-  },
+  
   // {
   //   name: "Technion Innovation Society",
   //   logo: "/placeholder.svg?height=120&width=120",

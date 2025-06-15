@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Download, Share2, Users, FileText, Clock, Award, CheckCircle, AlertTriangle, ExternalLink, Mail, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Guidelines() {
   const [activeSection, setActiveSection] = useState('general');
@@ -48,6 +49,7 @@ export default function Guidelines() {
     { name: "Hackathon Strategy Podcast", url: "https://open.spotify.com/episode/7fXEfYSnxGDtYlxHoTG6WX?nd=1&dlsi=9a8923fb1a164995" },
     { name: "Winning Pitch Techniques", url: "https://www.youtube.com/watch?v=jqLsD1zT14o" },
     { name: "Common Hackathon Mistakes", url: "https://deecodes.hashnode.dev/how-not-to-win-sih" },
+    { name: "Sample PPTs and Hackathon Template", url: "https://drive.google.com/drive/folders/1VKDmAVa0ALRRx-phpExBh_LDCAUf5X1t?usp=sharing" },
     { name: "Hackathon Success Roadmap", url: "https://www.linkedin.com/posts/vikram-gaur-0252aa185_hackathon-learnbydoing-hackathonroadmap-activity-7307279051885338624-ZFd2/" }
   ];
 
@@ -160,13 +162,24 @@ export default function Guidelines() {
               <span className="text-sm text-gray-600">israeli-indian-hackathon.org</span>
             </div>
             <div className="flex items-center space-x-2">
-              <button
-                onClick={handleDownloadGuidelines}
-                className="flex items-center space-x-2 px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              <motion.a
+                href="https://dsai.thapar.edu/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ scale: 1, opacity: 0.7 }}
+                animate={{ scale: 1.08, opacity: 1 }}
+                whileHover={{ scale: 1.15, rotate: 3, opacity: 1 }}
+                transition={{ type: "spring", stiffness: 200, damping: 12 }}
+                className="flex items-center space-x-2 px-2 py-1 rounded-lg bg-white shadow hover:shadow-lg border border-blue-100"
+                title="Organizing Center"
               >
-                <Download className="h-4 w-4" />
-                <span className="text-sm">Download PDF</span>
-              </button>
+                <img
+                  src="https://res.cloudinary.com/dldfnkvlm/image/upload/v1749965201/coe_xivuna.png"
+                  alt="Organizing Center Logo"
+                  className="h-10 w-30 object-contain"
+                />
+                <span className="text-xs font-semibold text-blue-700 hidden sm:inline"></span>
+              </motion.a>
               <button
                 onClick={handleShare}
                 className="flex items-center space-x-2 px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
