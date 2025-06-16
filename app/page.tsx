@@ -14,13 +14,12 @@ import Partners from "@/components/partners"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import TechnicalSupport from "@/components/technical-support"
-import SPOC from "@/components/spoc" // <-- Add this import
+import SPOC from "@/components/spoc" 
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
   const [isLoaded, setIsLoaded] = useState(false)
 
-  // Smooth spring animations for scroll progress
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -107,6 +106,10 @@ export default function Home() {
         <motion.section id="about" variants={sectionVariants}>
           <About />
         </motion.section>
+        
+        <motion.section id="spoc" variants={sectionVariants}>
+          <SPOC />
+        </motion.section>
 
         <motion.section id="themes" variants={sectionVariants}>
           <Themes />
@@ -136,10 +139,6 @@ export default function Home() {
           <TechnicalSupport />
         </motion.section>
 
-        {/* Insert SPOC section before Contact */}
-        <motion.section id="spoc" variants={sectionVariants}>
-          <SPOC />
-        </motion.section>
 
         <motion.section id="contact" variants={sectionVariants}>
           <Contact />

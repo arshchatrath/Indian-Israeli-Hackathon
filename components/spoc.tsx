@@ -18,10 +18,10 @@ const spocMembers = [
     linkedin: "#",
   },
   {
-    name: "David Drabkin",
+    name: "Ori Kadvil",
     designation: "SPOC - Israel",
-    organization: "CEO, VRSteps",
-    image: "/david_drabkin.avif",
+    organization: "Hackathon Organizer",
+    image: "/Ori kadvil.avif",
     bio: "Healthcare technology pioneer leading immersive VR solutions for medical training.",
     country: "Israel",
     email: "david@example.com",
