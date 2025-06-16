@@ -2,10 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Flag } from "lucide-react"
-import SPOC from "@/components/spoc"
-import Hero from "@/components/Hero"
-import Timeline from "@/components/Timeline"
+import { Menu, X } from "lucide-react"
 
 const navItems = [
   // Removed "Home" and "About", added "Partners"
@@ -64,9 +61,7 @@ export default function Navbar() {
               alt="Hackathon Logo"
               className="h-10 w-10 object-contain"
             />
-            <span className="font-bold text-xl text-gray-900">
-              Israeli-Indian Hackathon
-            </span>
+            <span className="font-bold text-xl text-gray-900">Israeli-Indian Hackathon</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -122,16 +117,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </motion.nav>
-  )
-}
-
-function HomePage() {
-  return (
-    <div>
-      <Hero />
-      <SPOC />
-      <Timeline />
-      {/* Other components like Themes, Organizers, Judges, Registration, Partners, Contact */}
-    </div>
   )
 }
