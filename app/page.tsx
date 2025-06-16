@@ -14,6 +14,7 @@ import Partners from "@/components/partners"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import TechnicalSupport from "@/components/technical-support"
+import SPOC from "@/components/spoc" // <-- Add this import
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
@@ -133,6 +134,11 @@ export default function Home() {
 
         <motion.section id="technical-support" variants={sectionVariants}>
           <TechnicalSupport />
+        </motion.section>
+
+        {/* Insert SPOC section before Contact */}
+        <motion.section id="spoc" variants={sectionVariants}>
+          <SPOC />
         </motion.section>
 
         <motion.section id="contact" variants={sectionVariants}>

@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Flag } from "lucide-react"
+import SPOC from "@/components/spoc"
+import Hero from "@/components/Hero"
+import Timeline from "@/components/Timeline"
 
 const navItems = [
   // Removed "Home" and "About", added "Partners"
@@ -119,5 +122,16 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </motion.nav>
+  )
+}
+
+function HomePage() {
+  return (
+    <div>
+      <Hero />
+      <SPOC />
+      <Timeline />
+      {/* Other components like Themes, Organizers, Judges, Registration, Partners, Contact */}
+    </div>
   )
 }

@@ -1,21 +1,31 @@
 "use client"
 
 import type React from "react"
-
-import { motion, useMotionValue, useTransform } from "framer-motion"
-import { ArrowRight, FileText, Sparkles } from "lucide-react"
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion"
+import { ArrowRight, FileText, Sparkles, Users, Trophy, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovered, setIsHovered] = useState(false)
+  const [scrollY, setScrollY] = useState(0)
 
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
-  const rotateX = useTransform(mouseY, [-300, 300], [10, -10])
-  const rotateY = useTransform(mouseX, [-300, 300], [-10, 10])
+  // Smooth spring animations for mouse tracking
+  const springX = useSpring(mouseX, { stiffness: 200, damping: 30 })
+  const springY = useSpring(mouseY, { stiffness: 200, damping: 30 })
+
+  const rotateX = useTransform(springY, [-300, 300], [8, -8])
+  const rotateY = useTransform(springX, [-300, 300], [-8, 8])
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect()
@@ -48,8 +58,8 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
       },
     },
   }
@@ -57,8 +67,8 @@ export default function Hero() {
   const itemVariants = {
     hidden: {
       opacity: 0,
-      y: 30,
-      scale: 0.9,
+      y: 40,
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
@@ -66,98 +76,163 @@ export default function Hero() {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
       },
     },
   }
 
   const floatingVariants = {
     animate: {
-      y: [0, -20, 0],
-      rotate: [0, 5, -5, 0],
-      scale: [1, 1.05, 1],
+      y: [0, -25, 0],
+      rotate: [0, 8, -8, 0],
+      scale: [1, 1.1, 1],
       transition: {
-        duration: 6,
-        repeat: Number.POSITIVE_INFINITY,
+        duration: 8,
+        repeat: Infinity,
         ease: "easeInOut",
+      },
+    },
+  }
+
+  const logoVariants = {
+    hidden: { 
+      scale: 0, 
+      rotate: -180, 
+      opacity: 0,
+      y: -50 
+    },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 20,
+        duration: 1.2,
       },
     },
   }
 
   return (
     <div
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Enhanced Background with Parallax */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      {/* Enhanced Dynamic Background */}
+      <div className="absolute inset-0">
+        {/* Animated mesh gradient */}
         <motion.div
-          className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1200')] bg-cover bg-center opacity-10"
+          className="absolute inset-0 opacity-30"
           style={{
-            x: useTransform(mouseX, [-300, 300], [-10, 10]),
-            y: useTransform(mouseY, [-300, 300], [-10, 10]),
+            background: `radial-gradient(circle at ${50 + mousePosition.x * 20}% ${50 + mousePosition.y * 20}%, 
+              rgba(59, 130, 246, 0.15) 0%, 
+              rgba(99, 102, 241, 0.1) 35%, 
+              rgba(168, 85, 247, 0.05) 70%, 
+              transparent 100%)`,
+          }}
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
           }}
         />
 
-        {/* Animated gradient overlay */}
+        {/* Parallax geometric shapes */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5"
+          className="absolute top-20 left-16 w-32 h-32 bg-gradient-to-br from-blue-300/20 to-purple-300/20 rounded-3xl blur-sm"
+          style={{
+            x: useTransform(springX, [-300, 300], [-20, 20]),
+            y: useTransform(springY, [-300, 300], [-20, 20]),
+            rotate: useTransform(springX, [-300, 300], [-5, 5]),
+          }}
           animate={{
-            background: [
-              "linear-gradient(45deg, rgba(59, 130, 246, 0.05), transparent, rgba(147, 51, 234, 0.05))",
-              "linear-gradient(135deg, rgba(147, 51, 234, 0.05), transparent, rgba(59, 130, 246, 0.05))",
-              "linear-gradient(45deg, rgba(59, 130, 246, 0.05), transparent, rgba(147, 51, 234, 0.05))",
-            ],
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
           }}
           transition={{
-            duration: 8,
-            repeat: Number.POSITIVE_INFINITY,
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-32 right-20 w-24 h-24 bg-gradient-to-br from-indigo-300/20 to-blue-300/20 rounded-full blur-sm"
+          style={{
+            x: useTransform(springX, [-300, 300], [15, -15]),
+            y: useTransform(springY, [-300, 300], [15, -15]),
+          }}
+          animate={{
+            y: [0, -40, 0],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-br from-purple-300/15 to-pink-300/15 rounded-2xl blur-sm"
+          animate={{
+            y: [0, -35, 0],
+            x: [0, 20, 0],
+            rotate: [0, 180, 360],
+            scale: [1, 1.4, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
             ease: "easeInOut",
           }}
         />
       </div>
 
-      {/* Interactive floating elements */}
-      <motion.div
-        className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20"
-        variants={floatingVariants}
-        animate="animate"
-        style={{
-          x: useTransform(mouseX, [-300, 300], [-15, 15]),
-          y: useTransform(mouseY, [-300, 300], [-15, 15]),
-        }}
-      />
+      {/* LOGOS FIRST */}
+      <motion.div 
+        className="absolute top-8 left-1/2 -translate-x-1/2 z-20 w-full flex flex-col items-center"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <div className="flex justify-center items-center gap-8 sm:gap-12 mb-2">
+          <motion.img
+            src="/coe logo.png"
+            alt="Center of Excellence"
+            className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain"
+            variants={logoVariants}
+            whileHover={{ scale: 1.08, rotate: 2, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          />
+          <motion.img
+            src="/thapar logo.png"
+            alt="Thapar University"
+            className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain"
+            variants={logoVariants}
+            whileHover={{ scale: 1.08, rotate: -2, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          />
+        </div>
+        <motion.p 
+          className="text-sm font-semibold text-gray-600 tracking-wider uppercase"
+          variants={itemVariants}
+        >
+          Presents
+        </motion.p>
+      </motion.div>
 
+      {/* Enhanced Main Content */}
       <motion.div
-        className="absolute bottom-20 right-10 w-16 h-16 bg-indigo-200 rounded-full opacity-20"
-        variants={floatingVariants}
-        animate="animate"
-        style={{
-          x: useTransform(mouseX, [-300, 300], [10, -10]),
-          y: useTransform(mouseY, [-300, 300], [10, -10]),
-        }}
-      />
-
-      <motion.div
-        className="absolute top-1/3 right-1/4 w-12 h-12 bg-purple-200 rounded-full opacity-15"
-        animate={{
-          y: [0, -30, 0],
-          x: [0, 15, 0],
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-      />
-
-      {/* Main Content with 3D Transform */}
-      <motion.div
-        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto perspective-1000"
+        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pt-40 sm:pt-48"
         style={{
           rotateX,
           rotateY,
@@ -168,78 +243,91 @@ export default function Hero() {
         animate="visible"
       >
         <motion.div className="relative">
-          {/* Animated title with stagger effect */}
-          <motion.h1
-            className="text-4xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 relative"
-            variants={itemVariants}
-          >
-            <motion.span
-              className="inline-block"
-              whileHover={{ scale: 1.05, color: "#2563eb" }}
-              transition={{ duration: 0.3 }}
+          {/* Enhanced Main Title */}
+          <motion.div className="relative mb-8">
+            <motion.h1
+              className="text-4xl sm:text-6xl lg:text-8xl font-black mb-2 relative"
+              variants={itemVariants}
             >
-              Israeli-Indian
-            </motion.span>
-            <motion.span className="block text-blue-600 relative" variants={itemVariants}>
-              Hackathon 2025
-              {/* Sparkle effect on hover */}
-              <motion.div
-                className="absolute -top-2 -right-2"
-                animate={
-                  isHovered
-                    ? {
-                        scale: [0, 1, 0],
-                        rotate: [0, 180, 360],
-                      }
-                    : {}
-                }
-                transition={{
-                  duration: 1,
-                  repeat: isHovered ? Number.POSITIVE_INFINITY : 0,
+              <motion.span
+                className="inline-block bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 bg-clip-text text-transparent"
+                whileHover={{ 
+                  scale: 1.02,
+                  transition: { type: "spring", stiffness: 300, damping: 20 }
                 }}
               >
-                <Sparkles className="h-6 w-6 text-yellow-400" />
-              </motion.div>
-            </motion.span>
-          </motion.h1>
+                Israeli-Indian
+              </motion.span>
+            </motion.h1>
+            
+            <motion.h1
+              className="text-4xl sm:text-6xl lg:text-8xl font-black relative"
+              variants={itemVariants}
+            >
+              <motion.span 
+                className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent relative"
+                whileHover={{ 
+                  scale: 1.02,
+                  transition: { type: "spring", stiffness: 300, damping: 20 }
+                }}
+              >
+                Hackathon 2025
+              </motion.span>
+            </motion.h1>
+          </motion.div>
 
-          {/* Subtitle with typewriter effect */}
-          <motion.p className="text-xl sm:text-2xl text-gray-600 mb-8 font-medium" variants={itemVariants}>
-            <motion.span
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 2, delay: 1 }}
-              className="inline-block overflow-hidden whitespace-nowrap"
+          {/* Enhanced Subtitle */}
+          <motion.div 
+            className="relative mb-12"
+            variants={itemVariants}
+          >
+            <motion.p 
+              className="text-xl sm:text-3xl text-gray-700 font-semibold tracking-wide"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.2, duration: 0.8, type: "spring" }}
             >
               Restorative Health Care Hackathon
-            </motion.span>
-          </motion.p>
+            </motion.p>
+            <motion.div
+              className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4 rounded-full"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 1.8, duration: 0.8 }}
+            />
+          </motion.div>
 
-          {/* Enhanced CTA buttons */}
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center items-center" variants={itemVariants}>
+          {/* Enhanced CTA Buttons */}
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16" 
+            variants={itemVariants}
+          >
             <motion.div
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
+                y: -3,
               }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 text-lg shadow-lg relative overflow-hidden group"
+                className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 hover:from-blue-700 hover:via-purple-600 hover:to-blue-800 text-white px-10 py-4 text-lg font-semibold shadow-2xl rounded-2xl overflow-hidden group border-0"
                 onClick={handleRegistration}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-20"
-                  initial={false}
-                  animate={{ x: ["-100%", "100%"] }}
-                  transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
+                  className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.6 }}
                 />
                 <span className="relative z-10 flex items-center">
                   Register Now
-                  <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}>
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                  <motion.div 
+                    animate={{ x: [0, 8, 0] }} 
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight className="ml-3 h-6 w-6" />
                   </motion.div>
                 </span>
               </Button>
@@ -248,47 +336,84 @@ export default function Hero() {
             <motion.div
               whileHover={{
                 scale: 1.05,
-                borderColor: "#3b82f6",
+                y: -3,
               }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg relative overflow-hidden group"
+                className="border-3 border-blue-600 text-blue-700 hover:bg-blue-50 hover:border-purple-600 hover:text-purple-700 px-10 py-4 text-lg font-semibold rounded-2xl transition-all duration-300 backdrop-blur-sm bg-white/80"
                 onClick={handleGuidelines}
               >
-                <motion.div
-                  className="absolute inset-0 bg-blue-50 scale-x-0 group-hover:scale-x-100 origin-left"
-                  transition={{ duration: 0.3 }}
-                />
-                <span className="relative z-10 flex items-center">
+                <span className="flex items-center">
                   View Guidelines
-                  <FileText className="ml-2 h-5 w-5" />
+                  <FileText className="ml-3 h-6 w-6" />
                 </span>
               </Button>
             </motion.div>
           </motion.div>
 
-          {/* Stats or key info with counter animation */}
-          <motion.div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center" variants={itemVariants}>
+          {/* Enhanced Stats Section */}
+          <motion.div 
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-3xl mx-auto" 
+            variants={itemVariants}
+          >
             {[
-              { label: "Prize Pool", value: "₹1,00,000", prefix: "" },
-              { label: "Participants Expected", value: "500", prefix: "+" },
-              { label: "Countries", value: "2", prefix: "" },
+              { 
+                label: "Prize Pool", 
+                value: "₹1,00,000", 
+                icon: Trophy,
+                gradient: "from-yellow-500 to-orange-500" 
+              },
+              { 
+                label: "Participants Expected", 
+                value: "500+", 
+                icon: Users,
+                gradient: "from-blue-500 to-purple-500" 
+              },
+              { 
+                label: "Countries", 
+                value: "2", 
+                icon: Globe,
+                gradient: "from-green-500 to-blue-500" 
+              },
             ].map((stat, index) => (
-              <motion.div key={index} className="relative" whileHover={{ y: -5 }} transition={{ duration: 0.3 }}>
-                <motion.div
-                  className="text-2xl sm:text-3xl font-bold text-blue-600"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 2 + index * 0.2, duration: 0.5, type: "spring" }}
-                >
-                  {stat.value}
-                  {stat.prefix}
-                </motion.div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+              <motion.div 
+                key={index} 
+                className="group relative"
+                whileHover={{ 
+                  y: -6, 
+                  scale: 1.03,
+                  transition: { type: "spring", stiffness: 300, damping: 20 }
+                }}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ 
+                  delay: 2.2 + index * 0.2, 
+                  duration: 0.6, 
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 15
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg group-hover:shadow-xl border border-gray-200/50 group-hover:border-blue-200/50 transition-all duration-500">
+                  <motion.div
+                    className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${stat.gradient} mb-3 shadow-lg`}
+                    whileHover={{ rotate: 5, scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <stat.icon className="h-6 w-6 text-white" />
+                  </motion.div>
+                  <motion.div
+                    className={`text-2xl sm:text-3xl font-black bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-1`}
+                  >
+                    {stat.value}
+                  </motion.div>
+                  <div className="text-gray-700 font-semibold text-base">{stat.label}</div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
