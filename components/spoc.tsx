@@ -21,7 +21,7 @@ const spocMembers = [
     name: "Ori Kadvil",
     designation: "SPOC - Israel",
     organization: "Hackathon Organizer",
-    image: "/Ori kadvil.avif",
+    image: "/Ori Kadvil.avif",
     bio: "Healthcare technology pioneer leading immersive VR solutions for medical training.",
     country: "Israel",
     email: "ori.kadvil@reichman.ac.il", 
