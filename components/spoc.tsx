@@ -13,7 +13,7 @@ const spocMembers = [
     image: "/Dr. Harpreet Singh.avif",
     bio: "Academic leader bridging Indian and Israeli innovation in healthcare technology.",
     country: "India",
-    email: "harpreet@example.com",
+    email: "harpreet@thapar.edu", 
     phone: "+91-XXXX-XXXX",
     linkedin: "#",
   },
@@ -24,7 +24,7 @@ const spocMembers = [
     image: "/Ori kadvil.avif",
     bio: "Healthcare technology pioneer leading immersive VR solutions for medical training.",
     country: "Israel",
-    email: "david@example.com",
+    email: "ori.kadvil@reichman.ac.il", 
     phone: "+972-XX-XXXX",
     linkedin: "#",
   },
@@ -92,38 +92,33 @@ export default function SPOC() {
                   <p className="text-gray-700 leading-relaxed">{member.bio}</p>
                 </div>
 
-                {/* Contact Information */}
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center justify-center space-x-2 text-gray-600">
-                    <Mail className="h-4 w-4" />
-                    <span className="text-sm">{member.email}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2 text-gray-600">
-                    <Phone className="h-4 w-4" />
-                    <span className="text-sm">{member.phone}</span>
-                  </div>
-                </div>
-
                 {/* Action Buttons */}
                 <div className="flex justify-center space-x-4">
-                  <motion.button
+                  {/* Email Button */}
+                  <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    href={`mailto:${member.email}?subject=Regarding%20Israeli-Indian%20Hackathon&body=Hello%20${member.name.split(' ')[0]},`}
                     className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
                   >
                     <Mail className="h-4 w-4" />
                     <span>Contact</span>
-                  </motion.button>
-                  <motion.button
+                  </motion.a>
+
+                  {/* LinkedIn Button */}
+                  <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 bg-blue-100 hover:bg-blue-200 text-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
                   >
                     <Linkedin className="h-4 w-4" />
                     <span>LinkedIn</span>
-                  </motion.button>
+                  </motion.a>
                 </div>
-              </div>
+              </div>  
 
               {/* Decorative Elements */}
               <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">

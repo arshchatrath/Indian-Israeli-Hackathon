@@ -2,9 +2,77 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Linkedin, Mail, MapPin, Users } from "lucide-react";
+import { Linkedin, Mail, MapPin, Users, Award } from "lucide-react";
 
-const organizers = [
+// Board Members - Premium positioning
+const boardMembers = [
+	{
+		name: "Dr. Inderveer Channa",
+		designation: "Board Chair",
+		image: "/inderveer channa.jpg",
+		bio: "Visionary leader driving innovation and strategic partnerships.",
+		location: "India"
+	},
+	{
+		name: "Tim Miller",
+		designation: "Board Member",
+		image: "/tim_miller.avif",
+		bio: "Strategic advisor with extensive international experience.",
+		location: "Queensland"
+	},
+	{
+		name: "Ori Kadvil",
+		designation: "Board Member",
+		image: "/Ori Kadvil.avif",
+		bio: "Experienced organizer of international tech events.",
+		location: "Israel"
+	},
+	{
+		name: "Dr. Harpreet Singh",
+		designation: "Board Member",
+		image: "/Dr. Harpreet Singh.avif",
+		bio: "Academic in emerging tech and AI in healthcare.",
+		location: "India"
+	},
+	{
+		name: "Dr. Varinder Garg",
+		designation: "Board Member",
+		image: "/varinder.png",
+		bio: "Leading expert in medical technology and innovation.",
+		location: "India"
+	},
+	{
+		name: "Prof. Yosi Shacham",
+		designation: "Board Member",
+		image: "/yosi.jpeg",
+		bio: "Distinguished professor and research leader.",
+		location: "Israel"
+	},
+	{
+		name: "Dr. PS Rana",
+		designation: "Board Member",
+		image: "/bkl.avif",
+		bio: "AI researcher and educator in computer science.",
+		location: "India"
+	},
+	{
+		name: "Dr. Anju Bala",
+		designation: "Board Member",
+		image: "/anju bala.jpg",
+		bio: "Renowned researcher and academic leader.",
+		location: "India"
+	},
+	{
+		name: "Rafi Bhonker",
+		designation: "Board Member",
+		image: "/rafi_bhonkar.avif",
+		bio: "Advocate for Indo-Jewish cultural collaboration.",
+		location: "Israel"
+	}
+];
+
+// Core Members - Operational team
+const coreMembers = [
 	{
 		name: "David Drabkin",
 		designation: "CEO, VRSteps",
@@ -31,13 +99,6 @@ const organizers = [
 		designation: "Cancer Research Center, Sheba",
 		image: "/sharon_paz.avif",
 		bio: "Expert in oncology research and translational care.",
-		location: "Israel"
-	},
-	{
-		name: "Rafi Bhonker",
-		designation: "Chairman, Indian Jewish Heritage Center, IJHC",
-		image: "/rafi_bhonkar.avif",
-		bio: "Advocate for Indo-Jewish cultural collaboration.",
 		location: "Israel"
 	},
 	{
@@ -69,13 +130,6 @@ const organizers = [
 		location: "Israel"
 	},
 	{
-		name: "Dr. Harpreet Singh",
-		designation: "Asst. Professor, TIET & Visiting Prof., Reichman Univ.",
-		image: "/Dr. Harpreet Singh.avif",
-		bio: "Academic in emerging tech and AI in healthcare.",
-		location: "India"
-	},
-	{
 		name: "Aniruddha Bera",
 		designation: "PhD Scholar, TAU / Event Co-ordinator, Lowy School",
 		image: "/Aniruddha Bera.avif",
@@ -102,13 +156,6 @@ const organizers = [
 		image: "/Oren Daudi.avif",
 		bio: "Promoting business partnerships between India and Israel.",
 		location: "Israel"
-	},
-	{
-		name: "Dr. Prashant Singh Rana",
-		designation: "Associate Professor, TIET, India",
-		image: "/bkl.avif",
-		bio: "AI researcher and educator in computer science.",
-		location: "India"
 	},
 	{
 		name: "Saar Nehemia",
@@ -160,13 +207,6 @@ const organizers = [
 		location: "Israel"
 	},
 	{
-		name: "Ori Kadvil",
-		designation: "Hackathon Organizer",
-		image: "/Ori Kadvil.avif",
-		bio: "Experienced organizer of international tech events.",
-		location: "Israel"
-	},
-	{
 		name: "Prathor L.",
 		designation: "Operations Anchor, NCR",
 		image: "/Prakhar L..avif",
@@ -184,7 +224,11 @@ const organizers = [
 
 export default function Organizers() {
 	const ref = useRef(null);
+	const boardRef = useRef(null);
+	const coreRef = useRef(null);
 	const isInView = useInView(ref, { once: true, margin: "-100px" });
+	const isBoardInView = useInView(boardRef, { once: true, margin: "-100px" });
+	const isCoreInView = useInView(coreRef, { once: true, margin: "-100px" });
 
 	const containerVariants = {
 		hidden: { opacity: 0 },
@@ -216,34 +260,23 @@ export default function Organizers() {
 		},
 	};
 
-	const getExpertiseColor = (expertise) => {
-		const colors = {
-			"VR/AR": "bg-gradient-to-r from-purple-500 to-pink-500 text-white",
-			"Healthcare Tech": "bg-gradient-to-r from-green-500 to-teal-500 text-white",
-			"Venture Capital": "bg-gradient-to-r from-blue-500 to-indigo-500 text-white",
-			"Medical Research": "bg-gradient-to-r from-red-500 to-pink-500 text-white",
-			"Cultural Affairs": "bg-gradient-to-r from-yellow-500 to-orange-500 text-white",
-			"Heritage Studies": "bg-gradient-to-r from-amber-500 to-yellow-500 text-white",
-			"AgriTech": "bg-gradient-to-r from-emerald-500 to-green-500 text-white",
-			"Software Engineering": "bg-gradient-to-r from-indigo-500 to-purple-500 text-white",
-			"Project Management": "bg-gradient-to-r from-pink-500 to-rose-500 text-white",
-			"AI/Healthcare": "bg-gradient-to-r from-teal-500 to-cyan-500 text-white",
-			"Medical Innovation": "bg-gradient-to-r from-cyan-500 to-blue-500 text-white",
-			"Diplomacy": "bg-gradient-to-r from-rose-500 to-pink-500 text-white",
-			"Talent Acquisition": "bg-gradient-to-r from-violet-500 to-purple-500 text-white",
-			"Business Development": "bg-gradient-to-r from-orange-500 to-red-500 text-white",
-			"AI Research": "bg-gradient-to-r from-slate-600 to-gray-600 text-white",
-			"Physics/AI": "bg-gradient-to-r from-gray-600 to-slate-600 text-white",
-			"Innovation": "bg-gradient-to-r from-lime-500 to-green-500 text-white",
-			"AI/Robotics": "bg-gradient-to-r from-sky-500 to-blue-500 text-white",
-			"Biomedical Engineering": "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white",
-			"Cybersecurity": "bg-gradient-to-r from-red-600 to-rose-600 text-white",
-			"Entrepreneurship": "bg-gradient-to-r from-green-600 to-emerald-600 text-white",
-			"Event Management": "bg-gradient-to-r from-blue-600 to-indigo-600 text-white",
-			"Operations": "bg-gradient-to-r from-purple-600 to-violet-600 text-white",
-			"Medical Devices": "bg-gradient-to-r from-pink-600 to-rose-600 text-white",
-		};
-		return colors[expertise] || "bg-gradient-to-r from-gray-500 to-slate-500 text-white";
+	const premiumCardVariants = {
+		hidden: { 
+			opacity: 0, 
+			y: 60,
+			scale: 0.9,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			scale: 1,
+			transition: {
+				type: "spring",
+				damping: 20,
+				stiffness: 100,
+				duration: 0.8,
+			},
+		},
 	};
 
 	return (
@@ -263,7 +296,7 @@ export default function Organizers() {
 					transition={{ duration: 0.8, ease: "easeOut" }}
 					className="text-center mb-20"
 				>
-					<motion.div
+					{/* <motion.div
 						initial={{ scale: 0.8, opacity: 0 }}
 						animate={isInView ? { scale: 1, opacity: 1 } : {}}
 						transition={{ duration: 0.6, delay: 0.2 }}
@@ -271,7 +304,7 @@ export default function Organizers() {
 					>
 						<Users className="w-4 h-4" />
 						Meet Our Team
-					</motion.div>
+					</motion.div> */}
 					
 					<motion.h2 
 						initial={{ opacity: 0, y: 20 }}
@@ -292,123 +325,301 @@ export default function Organizers() {
 					</motion.p>
 				</motion.div>
 
+				{/* Board Members Section */}
 				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					animate={isInView ? "visible" : "hidden"}
-					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6"
+					ref={boardRef}
+					initial={{ opacity: 0, y: 30 }}
+					animate={isBoardInView ? { opacity: 1, y: 0 } : {}}
+					transition={{ duration: 0.8, ease: "easeOut" }}
+					className="mb-24"
 				>
-					{organizers.map((organizer, index) => (
-						<motion.div
-							key={index}
-							variants={cardVariants}
-							whileHover={{ 
-								y: -12, 
-								scale: 1.03,
-								transition: { 
-									type: "spring", 
-									stiffness: 400, 
-									damping: 25 
-								}
-							}}
-							className="group relative"
+					<motion.div
+						initial={{ scale: 0.9, opacity: 0 }}
+						animate={isBoardInView ? { scale: 1, opacity: 1 } : {}}
+						transition={{ duration: 0.6, delay: 0.2 }}
+						className="text-center mb-16"
+					>
+						<div className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-6 shadow-2xl">
+							Board Members
+						</div>
+						<motion.h3 
+							initial={{ opacity: 0, y: 20 }}
+							animate={isBoardInView ? { opacity: 1, y: 0 } : {}}
+							transition={{ duration: 0.8, delay: 0.4 }}
+							className="text-4xl font-bold bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-600 bg-clip-text text-transparent mb-4"
 						>
-							<div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100/50 h-full backdrop-blur-sm">
-								{/* Image Section */}
-								<div className="relative overflow-hidden h-48">
-									<motion.img
-										src={organizer.image || "/placeholder.svg"}
-										alt={organizer.name}
-										className="w-full h-full object-cover transition-transform duration-700"
-										whileHover={{ scale: 1.1 }}
-									/>
-									
-									{/* Overlay with social icons */}
-									<motion.div 
-										initial={{ opacity: 0 }}
-										whileHover={{ opacity: 1 }}
-										transition={{ duration: 0.3 }}
-										className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end justify-center pb-4"
-									>
-										<div className="flex space-x-3">
-											<motion.button
-												whileHover={{ 
-													scale: 1.15, 
-													rotate: 3,
-													boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
-												}}
-												whileTap={{ scale: 0.95 }}
-												className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
-											>
-												<Linkedin className="h-4 w-4 text-blue-600" />
-											</motion.button>
-											<motion.button
-												whileHover={{ 
-													scale: 1.15, 
-													rotate: -3,
-													boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
-												}}
-												whileTap={{ scale: 0.95 }}
-												className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
-											>
-												<Mail className="h-4 w-4 text-gray-600" />
-											</motion.button>
-										</div>
-									</motion.div>
+							Leadership & Strategic Guidance
+						</motion.h3>
+						<motion.p 
+							initial={{ opacity: 0, y: 20 }}
+							animate={isBoardInView ? { opacity: 1, y: 0 } : {}}
+							transition={{ duration: 0.8, delay: 0.6 }}
+							className="text-lg text-gray-600 max-w-2xl mx-auto"
+						>
+							Distinguished leaders providing strategic direction and executive oversight for our mission.
+						</motion.p>
+					</motion.div>
 
-									{/* Location badge */}
-									<div className="absolute top-3 right-3">
+					<motion.div
+						variants={containerVariants}
+						initial="hidden"
+						animate={isBoardInView ? "visible" : "hidden"}
+						className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8"
+					>
+						{boardMembers.map((member, index) => (
+							<motion.div
+								key={index}
+								variants={premiumCardVariants}
+								whileHover={{ 
+									y: -15, 
+									scale: 1.05,
+									transition: { 
+										type: "spring", 
+										stiffness: 400, 
+										damping: 20 
+									}
+								}}
+								className="group relative"
+							>
+								<div className="bg-gradient-to-br from-white via-amber-50/50 to-yellow-50/30 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-700 border-2 border-amber-200/30 h-full backdrop-blur-sm relative">
+									
+									{/* Image Section */}
+									<div className="relative overflow-hidden h-56">
+										<motion.img
+											src={member.image || "/placeholder.svg"}
+											alt={member.name}
+											className="w-full h-full object-cover transition-transform duration-700"
+											whileHover={{ scale: 1.15 }}
+										/>
+										
+										{/* Premium overlay */}
 										<motion.div 
-											whileHover={{ scale: 1.05 }}
-											className="flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium text-gray-700 shadow-sm"
+											initial={{ opacity: 0 }}
+											whileHover={{ opacity: 1 }}
+											transition={{ duration: 0.3 }}
+											className="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-amber-800/40 to-transparent flex items-end justify-center pb-6"
 										>
-											<MapPin className="w-3 h-3" />
-											{organizer.location}
+											<div className="flex space-x-4">
+												<motion.button
+													whileHover={{ 
+														scale: 1.2, 
+														rotate: 5,
+														boxShadow: "0 12px 30px rgba(245,158,11,0.4)"
+													}}
+													whileTap={{ scale: 0.95 }}
+													className="bg-gradient-to-r from-amber-400 to-yellow-400 backdrop-blur-sm p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+												>
+													<Linkedin className="h-5 w-5 text-white" />
+												</motion.button>
+												<motion.button
+													whileHover={{ 
+														scale: 1.2, 
+														rotate: -5,
+														boxShadow: "0 12px 30px rgba(245,158,11,0.4)"
+													}}
+													whileTap={{ scale: 0.95 }}
+													className="bg-gradient-to-r from-amber-400 to-yellow-400 backdrop-blur-sm p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+												>
+													<Mail className="h-5 w-5 text-white" />
+												</motion.button>
+											</div>
 										</motion.div>
+
+										{/* Location badge - Updated position */}
+										<div className="absolute top-3 right-3"> {/* Changed from top-4 right-4 to top-3 right-3 */}
+											<motion.div 
+												whileHover={{ scale: 1.1 }}
+												className="flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium text-gray-700 shadow-sm" // Updated styling to match core members
+											>
+												<MapPin className="w-3 h-3" />
+												{member.location}
+											</motion.div>
+										</div>
 									</div>
 
-
-								</div>
-
-								{/* Content Section */}
-								<div className="p-4 space-y-3">
-									<div>
-										<h3 className="font-bold text-gray-900 text-sm leading-tight group-hover:text-blue-600 transition-colors duration-300">
-											{organizer.name}
-										</h3>
-										<p className="text-blue-600 font-medium text-xs mt-1 leading-tight">
-											{organizer.designation}
+									{/* Content Section */}
+									<div className="p-6 space-y-4">
+										<div>
+											<h3 className="font-bold text-gray-900 text-lg leading-tight group-hover:text-amber-700 transition-colors duration-300">
+												{member.name}
+											</h3>
+											<p className="text-amber-600 font-semibold text-sm mt-2 leading-tight">
+												{member.designation}
+											</p>
+										</div>
+										
+										<p className="text-gray-700 text-sm leading-relaxed">
+											{member.bio}
 										</p>
 									</div>
-									
-									<p className="text-gray-600 text-xs leading-relaxed">
-										{organizer.bio}
-									</p>
-								</div>
 
-								{/* Enhanced shadow effect on hover */}
-								<motion.div
-									className="absolute inset-0 rounded-2xl pointer-events-none"
-									whileHover={{
-										boxShadow: "0 25px 50px rgba(0,0,0,0.15), 0 0 0 1px rgba(59, 130, 246, 0.1)",
-									}}
-									transition={{ duration: 0.3 }}
-								/>
-							</div>
-						</motion.div>
-					))}
+									{/* Enhanced premium shadow */}
+									<motion.div
+										className="absolute inset-0 rounded-3xl pointer-events-none"
+										whileHover={{
+											boxShadow: "0 30px 60px rgba(245,158,11,0.3), 0 0 0 2px rgba(245,158,11,0.2)",
+										}}
+										transition={{ duration: 0.3 }}
+									/>
+								</div>
+							</motion.div>
+						))}
+					</motion.div>
+				</motion.div>
+
+				{/* Core Members Section */}
+				<motion.div
+					ref={coreRef}
+					initial={{ opacity: 0, y: 30 }}
+					animate={isCoreInView ? { opacity: 1, y: 0 } : {}}
+					transition={{ duration: 0.8, ease: "easeOut" }}
+					className="mb-20"
+				>
+					<motion.div
+						initial={{ scale: 0.9, opacity: 0 }}
+						animate={isCoreInView ? { scale: 1, opacity: 1 } : {}}
+						transition={{ duration: 0.6, delay: 0.2 }}
+						className="text-center mb-16"
+					>
+						<div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-bold mb-6 shadow-xl">
+							<Award className="w-6 h-6" />
+							Core Members
+						</div>
+						<motion.h3 
+							initial={{ opacity: 0, y: 20 }}
+							animate={isCoreInView ? { opacity: 1, y: 0 } : {}}
+							transition={{ duration: 0.8, delay: 0.4 }}
+							className="text-4xl font-bold bg-gradient-to-r from-blue-700 via-purple-700 to-indigo-700 bg-clip-text text-transparent mb-4"
+						>
+							Operational Excellence Team
+						</motion.h3>
+						<motion.p 
+							initial={{ opacity: 0, y: 20 }}
+							animate={isCoreInView ? { opacity: 1, y: 0 } : {}}
+							transition={{ duration: 0.8, delay: 0.6 }}
+							className="text-lg text-gray-600 max-w-2xl mx-auto"
+						>
+							Dedicated professionals executing our vision and ensuring seamless operations across all initiatives.
+						</motion.p>
+					</motion.div>
+
+					<motion.div
+						variants={containerVariants}
+						initial="hidden"
+						animate={isCoreInView ? "visible" : "hidden"}
+						className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6"
+					>
+						{coreMembers.map((member, index) => (
+							<motion.div
+								key={index}
+								variants={cardVariants}
+								whileHover={{ 
+									y: -12, 
+									scale: 1.03,
+									transition: { 
+										type: "spring", 
+										stiffness: 400, 
+										damping: 25 
+									}
+								}}
+								className="group relative"
+							>
+								<div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100/50 h-full backdrop-blur-sm">
+									{/* Image Section */}
+									<div className="relative overflow-hidden h-48">
+										<motion.img
+											src={member.image || "/placeholder.svg"}
+											alt={member.name}
+											className="w-full h-full object-cover transition-transform duration-700"
+											whileHover={{ scale: 1.1 }}
+										/>
+										
+										{/* Overlay with social icons */}
+										<motion.div 
+											initial={{ opacity: 0 }}
+											whileHover={{ opacity: 1 }}
+											transition={{ duration: 0.3 }}
+											className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end justify-center pb-4"
+										>
+											<div className="flex space-x-3">
+												<motion.button
+													whileHover={{ 
+														scale: 1.15, 
+														rotate: 3,
+														boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
+													}}
+													whileTap={{ scale: 0.95 }}
+													className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
+												>
+													<Linkedin className="h-4 w-4 text-blue-600" />
+												</motion.button>
+												<motion.button
+													whileHover={{ 
+														scale: 1.15, 
+														rotate: -3,
+														boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
+													}}
+													whileTap={{ scale: 0.95 }}
+													className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
+												>
+													<Mail className="h-4 w-4 text-gray-600" />
+												</motion.button>
+											</div>
+										</motion.div>
+
+										{/* Location badge */}
+										<div className="absolute top-3 right-3">
+											<motion.div 
+												whileHover={{ scale: 1.05 }}
+												className="flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium text-gray-700 shadow-sm"
+											>
+												<MapPin className="w-3 h-3" />
+												{member.location}
+											</motion.div>
+										</div>
+									</div>
+
+									{/* Content Section */}
+									<div className="p-4 space-y-3">
+										<div>
+											<h3 className="font-bold text-gray-900 text-sm leading-tight group-hover:text-blue-600 transition-colors duration-300">
+												{member.name}
+											</h3>
+											<p className="text-blue-600 font-medium text-xs mt-1 leading-tight">
+												{member.designation}
+											</p>
+										</div>
+										
+										<p className="text-gray-600 text-xs leading-relaxed">
+											{member.bio}
+										</p>
+									</div>
+
+									{/* Enhanced shadow effect on hover */}
+									<motion.div
+										className="absolute inset-0 rounded-2xl pointer-events-none"
+										whileHover={{
+											boxShadow: "0 25px 50px rgba(0,0,0,0.15), 0 0 0 1px rgba(59, 130, 246, 0.1)",
+										}}
+										transition={{ duration: 0.3 }}
+									/>
+								</div>
+							</motion.div>
+						))}
+					</motion.div>
 				</motion.div>
 
 				{/* Statistics Section */}
-				<motion.div
+				{/* <motion.div
 					initial={{ opacity: 0, y: 30 }}
 					animate={isInView ? { opacity: 1, y: 0 } : {}}
 					transition={{ duration: 0.8, delay: 0.8 }}
 					className="mt-20 text-center"
 				>
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+					<div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
 						{[
-							{ number: "25+", label: "Expert Organizers", color: "blue" },
+							{ number: "9", label: "Board Members", color: "amber" },
+							{ number: "21", label: "Core Members", color: "blue" },
 							{ number: "2", label: "Countries United", color: "purple" },
 							{ number: "15+", label: "Diverse Specializations", color: "green" }
 						].map((stat, index) => (
@@ -431,7 +642,7 @@ export default function Organizers() {
 							</motion.div>
 						))}
 					</div>
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</div>
 	);
