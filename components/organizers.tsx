@@ -8,14 +8,14 @@ import { Linkedin, Mail, MapPin, Users, Award } from "lucide-react";
 const boardMembers = [
 	{
 		name: "Dr. Inderveer Channa",
-		designation: "Board Chair",
+		designation: "Center Director, Professor of Computer Science, TIET",
 		image: "/inderveer channa.jpg",
 		bio: "Visionary leader driving innovation and strategic partnerships.",
 		location: "India"
 	},
 	{
 		name: "Tim Miller",
-		designation: "Board Member",
+		designation: "Center Director, Professor of Artificial Intelligence, UQ",
 		image: "/tim miller.png",
 		bio: "Strategic advisor with extensive international experience.",
 		location: "Queensland"
@@ -29,35 +29,35 @@ const boardMembers = [
 	},
 	{
 		name: "Dr. Harpreet Singh",
-		designation: "Board Member",
+		designation: "Assistant Professor, TIET & Visiting Professor, Reichman University, Israel",
 		image: "/Dr. Harpreet Singh.avif",
 		bio: "Academic in emerging tech and AI in healthcare.",
 		location: "India"
 	},
 	{
 		name: "Dr. Varinder Garg",
-		designation: "Board Member",
+		designation: "OSD to Union Health Minister & President PGIMER",
 		image: "/varinder.png",
 		bio: "Leading expert in medical technology and innovation.",
 		location: "India"
 	},
 	{
 		name: "Prof. Yosi Shacham",
-		designation: "Board Member",
+		designation: "Head at Scojen Institute for Synthetic Biology, Reichman University, Israel.",
 		image: "/yosi.jpeg",
-		bio: "Distinguished professor and research leader.",
+		bio: "Professor Emeritus, Faculty of engineering, Tel Aviv University",
 		location: "Israel"
 	},
 	{
 		name: "Dr. PS Rana",
-		designation: "Board Member",
-		image: "/bkl.avif",
+		designation: "Associate Professor, TIET",
+		image: "/rana.avif",
 		bio: "AI researcher and educator in computer science.",
 		location: "India"
 	},
 	{
 		name: "Dr. Anju Bala",
-		designation: "Board Member",
+		designation: "Education and Training Coordinator & Associate Professor, TIET",
 		image: "/anju bala.jpg",
 		bio: "Renowned researcher and academic leader.",
 		location: "India"
@@ -215,7 +215,7 @@ const coreMembers = [
 	},
 	{
 		name: "Dr. Simerjeet Sharma",
-		designation: "Head Of Department, Amar Hospital",
+		designation: "Founder, Procare",
 		image: "/dr simar.avif",
 		bio: "Leading healthcare professional",
 		location: "India"
