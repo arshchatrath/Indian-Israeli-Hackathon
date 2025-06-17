@@ -3,11 +3,11 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Trophy, DollarSign, Briefcase, Camera, Award } from "lucide-react"
+import { Trophy, IndianRupee, Briefcase, Camera, Award } from "lucide-react"
 
 const prizeFeatures = [
   {
-    icon: DollarSign,
+    icon: IndianRupee,
     title: "Total Prize Pool",
     value: "₹1,00,000",
     description: "Distributed among winners",
@@ -80,7 +80,7 @@ export default function Prizes() {
             className="inline-block"
           >
             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-8 rounded-full shadow-2xl">
-              <DollarSign className="h-16 w-16 mx-auto mb-2" />
+              <IndianRupee className="h-16 w-16 mx-auto mb-2" />
               <div className="text-4xl font-bold">₹1,00,000</div>
               <div className="text-lg">Total Prize Pool</div>
             </div>

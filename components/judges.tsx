@@ -190,7 +190,7 @@ export default function Judges() {
 						<Button
 							onClick={() => setShowEligibility((v) => !v)}
 							variant="outline"
-							className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105"
+							className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center" // Added inline-flex and items-center
 						>
 							Eligibility Criteria
 							<ChevronDown
@@ -202,7 +202,7 @@ export default function Judges() {
 						<Button
 							onClick={() => setShowCriteria((v) => !v)}
 							variant="outline"
-							className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105"
+							className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center" // Added inline-flex and items-center
 						>
 							Selection Criteria
 							<ChevronDown
@@ -214,7 +214,7 @@ export default function Judges() {
 						<Button
 							onClick={() => setShowProcess((v) => !v)}
 							variant="outline"
-							className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105"
+							className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center" // Added inline-flex and items-center
 						>
 							Selection Process
 							<ChevronDown

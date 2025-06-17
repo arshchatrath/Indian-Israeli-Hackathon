@@ -16,7 +16,7 @@ const boardMembers = [
 	{
 		name: "Tim Miller",
 		designation: "Board Member",
-		image: "/tim_miller.avif",
+		image: "/tim miller.png",
 		bio: "Strategic advisor with extensive international experience.",
 		location: "Queensland"
 	},
@@ -100,6 +100,13 @@ const coreMembers = [
 		image: "/sharon_paz.avif",
 		bio: "Expert in oncology research and translational care.",
 		location: "Israel"
+	},
+	{
+		name: "Dr. Saif Nailband",
+		designation: "Assisstant Professor, Thapar University",
+		image: "/saif.jpg",
+		bio: "Expert in cross-border project execution.",
+		location: "India"
 	},
 	{
 		name: "Dr. Nehemya Shachaf",
@@ -205,6 +212,13 @@ const coreMembers = [
 		image: "/Chen Kamin.avif",
 		bio: "Advocate for emerging entrepreneurs in tech.",
 		location: "Israel"
+	},
+	{
+		name: "Dr. Simerjeet Sharma",
+		designation: "Head Of Department, Amar Hospital",
+		image: "/dr simar.avif",
+		bio: "Leading healthcare professional",
+		location: "India"
 	},
 	{
 		name: "Prathor L.",
