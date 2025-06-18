@@ -140,7 +140,7 @@ export default function Footer() {
               >
                 <User size={14} className="text-blue-400" />
                 <span className="font-medium bg-gradient-to-r from-gray-100 to-blue-100 bg-clip-text text-transparent">
-                  Developed by Arsh Chatrath
+                  Developed by Team CCS
                 </span>
               </motion.div>
               
@@ -148,17 +148,17 @@ export default function Footer() {
 
               <div className="flex items-center space-x-3">
                 <motion.a 
-                  href="mailto:achatrath_be23@thapar.edu" 
+                  href="mailto:ccs@thapar.edu" 
                   className="flex items-center space-x-2 hover:text-blue-300 transition-all duration-300"
                   whileHover={{ 
                     scale: 1.05,
                     color: "#93C5FD",
                   }}
                 >
-                  <Mail size={14} />
-                  <span className="font-medium">achatrath_be23@thapar.edu</span>
+                <Mail size={14} />
+                 <span className="font-medium">ccs@thapar.edu</span>
                 </motion.a>
-
+{/* 
                 <motion.a 
                   href="https://linkedin.com/in/arshchatrath" 
                   target="_blank" 
@@ -171,7 +171,7 @@ export default function Footer() {
                   transition={{ duration: 0.3 }}
                 >
                   <Linkedin size={16} className="hover:filter hover:brightness-125" />
-                </motion.a>
+                </motion.a> */}
               </div>
             </motion.div>
           </div>
