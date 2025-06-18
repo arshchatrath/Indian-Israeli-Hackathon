@@ -13,9 +13,8 @@ import {
   Activity,
   BarChart3,
   Lightbulb,
-  Users,
   Target,
-  Zap,
+  Sparkles,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -29,9 +28,7 @@ const problemStatements = [
     icon: BrainCircuit,
     color: "from-blue-500 to-indigo-600",
     bgColor: "from-blue-50 to-indigo-50",
-    difficulty: "Advanced",
     tags: ["AI/ML", "Medical Imaging", "Diagnostics"],
-    impact: "High",
   },
   {
     id: "PS002",
@@ -42,9 +39,7 @@ const problemStatements = [
     icon: Video,
     color: "from-emerald-500 to-teal-600",
     bgColor: "from-emerald-50 to-teal-50",
-    difficulty: "Intermediate",
     tags: ["Telemedicine", "Remote Care", "Digital Health"],
-    impact: "High",
   },
   {
     id: "PS003",
@@ -55,9 +50,7 @@ const problemStatements = [
     icon: Activity,
     color: "from-purple-500 to-pink-600",
     bgColor: "from-purple-50 to-pink-50",
-    difficulty: "Advanced",
     tags: ["IoT", "Wearables", "Real-time Monitoring"],
-    impact: "Medium",
   },
   {
     id: "PS004",
@@ -67,9 +60,7 @@ const problemStatements = [
     icon: Eye,
     color: "from-orange-500 to-red-600",
     bgColor: "from-orange-50 to-red-50",
-    difficulty: "Advanced",
     tags: ["AR/VR", "Medical Training", "Simulation"],
-    impact: "Medium",
   },
   {
     id: "PS005",
@@ -80,9 +71,7 @@ const problemStatements = [
     icon: BarChart3,
     color: "from-cyan-500 to-blue-600",
     bgColor: "from-cyan-50 to-blue-50",
-    difficulty: "Intermediate",
     tags: ["Data Analytics", "Healthcare", "Business Intelligence"],
-    impact: "High",
   },
   {
     id: "PS006",
@@ -93,9 +82,7 @@ const problemStatements = [
     icon: Stethoscope,
     color: "from-indigo-500 to-purple-600",
     bgColor: "from-indigo-50 to-purple-50",
-    difficulty: "Advanced",
     tags: ["Digital Therapeutics", "Chronic Care", "Mental Health"],
-    impact: "High",
   },
 ]
 
@@ -109,9 +96,7 @@ const openInnovationChallenge = {
   icon: Lightbulb,
   color: "from-yellow-500 to-orange-600",
   bgColor: "from-yellow-50 to-orange-50",
-  difficulty: "Variable",
   tags: ["Innovation", "Open Challenge", "Healthcare"],
-  impact: "Variable",
 }
 
 const PROBLEM_STATEMENTS_DOC_URL =
@@ -125,32 +110,6 @@ export default function Themes() {
     window.open(PROBLEM_STATEMENTS_DOC_URL, "_blank", "noopener,noreferrer")
   }
 
-  const getDifficultyColor = (difficulty) => {
-    switch (difficulty) {
-      case "Advanced":
-        return "bg-red-100 text-red-700 border-red-200"
-      case "Intermediate":
-        return "bg-yellow-100 text-yellow-700 border-yellow-200"
-      case "Variable":
-        return "bg-gray-100 text-gray-700 border-gray-200"
-      default:
-        return "bg-blue-100 text-blue-700 border-blue-200"
-    }
-  }
-
-  const getImpactColor = (impact) => {
-    switch (impact) {
-      case "High":
-        return "bg-green-100 text-green-700 border-green-200"
-      case "Medium":
-        return "bg-blue-100 text-blue-700 border-blue-200"
-      case "Variable":
-        return "bg-gray-100 text-gray-700 border-gray-200"
-      default:
-        return "bg-gray-100 text-gray-700 border-gray-200"
-    }
-  }
-
   const renderProblemCard = (problem, index, isSpecial = false) => (
     <motion.div
       key={problem.id}
@@ -162,40 +121,54 @@ export default function Themes() {
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
       whileHover={{
-        y: -8,
-        scale: 1.02,
+        y: -12,
+        scale: 1.03,
         transition: { duration: 0.3, ease: "easeOut" },
       }}
       className={`group relative ${isSpecial ? "lg:col-span-2 xl:col-span-1" : ""}`}
     >
-      {/* Card Background with Gradient */}
+      {/* Card Background with Enhanced Gradient */}
       <div
         className={`
-          relative bg-gradient-to-br ${problem.bgColor} rounded-2xl overflow-hidden 
-          shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/60
-          backdrop-blur-sm h-full ${isSpecial ? "ring-2 ring-yellow-300/50" : ""}
+          relative bg-gradient-to-br ${problem.bgColor} rounded-3xl overflow-hidden 
+          shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/70
+          backdrop-blur-sm h-full ${isSpecial ? "ring-2 ring-yellow-400/60 shadow-yellow-200/50" : ""}
         `}
       >
-        {/* Subtle Pattern Overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[length:20px_20px]" />
+        {/* Enhanced Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,0,0,0.15)_1px,transparent_1px)] bg-[length:24px_24px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:32px_32px]" />
         </div>
 
         {/* Special Badge for Open Innovation */}
         {isSpecial && (
-          <div className="absolute top-4 right-4 z-20">
-            <span className="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
-              FEATURED
-            </span>
-          </div>
+          <motion.div
+            className="absolute top-4 right-4 z-20"
+            animate={{
+              scale: [1, 1.05, 1],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "easeInOut",
+            }}
+          >
+            {/* <div className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+              <Sparkles className="w-3 h-3" />
+              <span>FEATURED</span>
+            </div> */}
+          </motion.div>
         )}
 
-        {/* Header Section */}
-        <div className={`bg-gradient-to-r ${problem.color} p-6 relative overflow-hidden`}>
+        {/* Enhanced Header Section */}
+        <div className={`bg-gradient-to-r ${problem.color} p-8 relative overflow-hidden`}>
+          {/* Animated Background Elements */}
           <motion.div
-            className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"
+            className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"
             animate={{
               rotate: [0, 360],
+              scale: [1, 1.1, 1],
             }}
             transition={{
               duration: 20,
@@ -203,143 +176,219 @@ export default function Themes() {
               ease: "linear",
             }}
           />
+          <motion.div
+            className="absolute bottom-0 left-0 w-16 h-16 bg-white/5 rounded-full -ml-8 -mb-8"
+            animate={{
+              rotate: [360, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "linear",
+            }}
+          />
 
-          <div className="relative z-10 flex items-start justify-between">
-            <div className="flex-1">
-              <div className="flex items-center space-x-2 mb-3">
-                <problem.icon className="h-7 w-7 text-white" />
-                <span className="text-white/90 text-sm font-medium">{problem.id}</span>
-              </div>
-              <h3 className="text-xl font-bold text-white leading-tight mb-2">{problem.title}</h3>
-              <p className="text-white/90 text-sm font-medium">Partner: {problem.partner}</p>
+          <div className="relative z-10">
+            <div className="flex items-center space-x-3 mb-4">
+              <motion.div
+                className="p-2 bg-white/20 rounded-xl backdrop-blur-sm"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <problem.icon className="h-8 w-8 text-white" />
+              </motion.div>
+              <span className="text-white/90 text-sm font-semibold tracking-wide">{problem.id}</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white leading-tight mb-3">{problem.title}</h3>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-white/60 rounded-full"></div>
+              <p className="text-white/90 text-sm font-medium">{problem.partner}</p>
             </div>
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className="p-6 space-y-4">
-          <p className="text-slate-700 leading-relaxed text-sm">{problem.description}</p>
+        {/* Enhanced Content Section */}
+        <div className="p-8 space-y-6">
+          <p className="text-slate-700 leading-relaxed text-base font-medium">{problem.description}</p>
 
-          {/* Tags */}
+          {/* Enhanced Tags */}
           <div className="flex flex-wrap gap-2">
             {problem.tags.map((tag, tagIndex) => (
-              <span
+              <motion.span
                 key={tagIndex}
-                className="px-3 py-1 bg-white/80 text-slate-600 text-xs font-medium rounded-full border border-slate-200/50"
+                className="px-4 py-2 bg-white/90 text-slate-700 text-sm font-semibold rounded-full border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-200"
+                whileHover={{ scale: 1.05, y: -2 }}
+                transition={{ duration: 0.2 }}
               >
                 {tag}
-              </span>
+              </motion.span>
             ))}
-          </div>
-
-          {/* Metadata */}
-          <div className="flex items-center justify-between pt-4 border-t border-white/50">
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-1">
-                <Zap className="h-3 w-3 text-slate-500" />
-                <span
-                  className={`px-2 py-1 text-xs font-medium rounded-full border ${getDifficultyColor(problem.difficulty)}`}
-                >
-                  {problem.difficulty}
-                </span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Users className="h-3 w-3 text-slate-500" />
-              <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getImpactColor(problem.impact)}`}>
-                {problem.impact} Impact
-              </span>
-            </div>
           </div>
         </div>
 
-        {/* Hover Effect Overlay */}
-        <motion.div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        {/* Enhanced Hover Effect Overlay */}
+        <motion.div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" />
+
+        {/* Subtle Border Glow on Hover */}
+        <motion.div
+          className="absolute inset-0 rounded-3xl pointer-events-none"
+          whileHover={{
+            boxShadow: isSpecial
+              ? "0 0 40px rgba(251, 191, 36, 0.3), 0 0 80px rgba(251, 191, 36, 0.1)"
+              : "0 0 30px rgba(59, 130, 246, 0.2), 0 0 60px rgba(59, 130, 246, 0.1)",
+          }}
+          transition={{ duration: 0.3 }}
+        />
       </div>
     </motion.div>
   )
 
   return (
-    <div className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-emerald-400/10 to-cyan-400/10 rounded-full blur-3xl"
+          animate={{
+            scale: [1.1, 1, 1.1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+            delay: 5,
+          }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-200/50 shadow-lg mb-6"
-            whileHover={{ scale: 1.02 }}
+            className="inline-flex items-center space-x-3 bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full border border-blue-200/60 shadow-xl mb-8"
+            whileHover={{ scale: 1.02, y: -2 }}
             transition={{ duration: 0.2 }}
           >
-            <Target className="w-5 h-5 text-blue-600" />
-            <span className="text-blue-700 font-semibold">Problem Statements</span>
+            <Target className="w-6 h-6 text-blue-600" />
+            <span className="text-blue-700 font-bold text-lg">Problem Statements</span>
           </motion.div>
 
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-900 bg-clip-text text-transparent mb-6">
-            Healthcare Innovation Challenges
+          <h2 className="text-6xl font-black bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-900 bg-clip-text text-transparent mb-8 leading-tight">
+            Healthcare Innovation
+            <br />
+            <span className="text-5xl">Challenges</span>
           </h2>
-          <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 mb-10 max-w-4xl mx-auto leading-relaxed">
             Choose your challenge and develop solutions that will transform healthcare delivery and patient outcomes
+            across Israel and India
           </p>
 
-          {/* Central CTA Button */}
+          {/* Enhanced Central CTA Button */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            whileHover={{ scale: 1.02, y: -2 }}
+            whileHover={{ scale: 1.02, y: -3 }}
             whileTap={{ scale: 0.98 }}
           >
             <Button
               onClick={handleViewDetails}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 rounded-xl"
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-10 py-5 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl border-0 relative overflow-hidden group"
             >
-              <FileText className="mr-2 h-5 w-5" />
-              View Detailed Problem Statements
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "100%" }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+              />
+              <span className="relative z-10 flex items-center">
+                <FileText className="mr-3 h-6 w-6" />
+                View Detailed Problem Statements
+                <ExternalLink className="ml-3 h-5 w-5" />
+              </span>
             </Button>
           </motion.div>
         </motion.div>
 
         {/* Problem Statements Grid - First 6 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
           {problemStatements.map((problem, index) => renderProblemCard(problem, index))}
         </div>
 
-        {/* Open Innovation Challenge - Centered */}
-        <div className="flex justify-center mb-16">
-          <div className="w-full max-w-md">{renderProblemCard(openInnovationChallenge, 6, true)}</div>
+        {/* Open Innovation Challenge - Centered and Enhanced */}
+        <div className="flex justify-center mb-20">
+          <div className="w-full max-w-lg">{renderProblemCard(openInnovationChallenge, 6, true)}</div>
         </div>
 
-        {/* Bottom Statistics */}
+        {/* Enhanced Bottom Statistics */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
         >
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/60 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">Challenge Overview</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">7</div>
-                <div className="text-slate-600 font-medium">Problem Statements</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">6</div>
-                <div className="text-slate-600 font-medium">Industry Partners</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-2">Multiple</div>
-                <div className="text-slate-600 font-medium">Technology Domains</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">Open</div>
-                <div className="text-slate-600 font-medium">Innovation Track</div>
-              </div>
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-white/80 max-w-5xl mx-auto">
+            <h3 className="text-3xl font-bold text-slate-900 mb-8">Challenge Overview</h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+              <motion.div
+                className="text-center group"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-4xl font-black text-blue-600 mb-3 group-hover:text-blue-700 transition-colors">
+                  7
+                </div>
+                <div className="text-slate-600 font-semibold text-lg">Problem Statements</div>
+              </motion.div>
+              <motion.div
+                className="text-center group"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-4xl font-black text-purple-600 mb-3 group-hover:text-purple-700 transition-colors">
+                  6
+                </div>
+                <div className="text-slate-600 font-semibold text-lg">Industry Partners</div>
+              </motion.div>
+              <motion.div
+                className="text-center group"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-4xl font-black text-emerald-600 mb-3 group-hover:text-emerald-700 transition-colors">
+                  Multiple
+                </div>
+                <div className="text-slate-600 font-semibold text-lg">Technology Domains</div>
+              </motion.div>
+              <motion.div
+                className="text-center group"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-4xl font-black text-orange-600 mb-3 group-hover:text-orange-700 transition-colors">
+                  Open
+                </div>
+                <div className="text-slate-600 font-semibold text-lg">Innovation Track</div>
+              </motion.div>
             </div>
           </div>
         </motion.div>
