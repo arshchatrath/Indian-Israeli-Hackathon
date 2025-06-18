@@ -39,6 +39,13 @@ const boardMembers = [
 		location: "India"
 	},
 	{
+		name: "Dr. Sachin Kansal",
+		designation: "Assistant Professor -II, TIET",
+		image: "/sachin kansal.jpg",
+		bio: "Academic in Robotics, Computer Vision, Mechatronics.",
+		location: "India"
+	},
+	{
 		name: "Dr. Varinder Garg",
 		designation: "OSD to Union Health Minister & President PGIMER",
 		image: "/varinder.png",
@@ -119,6 +126,13 @@ const coreMembers = [
 		designation: "Chairman, Cochin Jewish Heritage Center",
 		image: "/Dr. Nehemya Shachaf.avif",
 		bio: "Preserving and promoting Jewish heritage in India.",
+		location: "India"
+	},
+	{
+		name: "Dr. Gaganpreet Kaur",
+		designation: "Assisstant Professor, Thapar University",
+		image: "/Dr. Gaganpreet Kaur.jpg",
+		bio: "Expert in Optical Communication.",
 		location: "India"
 	},
 	{
@@ -632,41 +646,6 @@ export default function Organizers() {
 						))}
 					</motion.div>
 				</motion.div>
-
-				{/* Statistics Section */}
-				{/* <motion.div
-					initial={{ opacity: 0, y: 30 }}
-					animate={isInView ? { opacity: 1, y: 0 } : {}}
-					transition={{ duration: 0.8, delay: 0.8 }}
-					className="mt-20 text-center"
-				>
-					<div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-						{[
-							{ number: "9", label: "Board Members", color: "amber" },
-							{ number: "21", label: "Core Members", color: "blue" },
-							{ number: "2", label: "Countries United", color: "purple" },
-							{ number: "15+", label: "Diverse Specializations", color: "green" }
-						].map((stat, index) => (
-							<motion.div
-								key={index}
-								whileHover={{ 
-									y: -5, 
-									scale: 1.05,
-									boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
-								}}
-								transition={{ type: "spring", stiffness: 300, damping: 20 }}
-								className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-lg hover:shadow-xl transition-all duration-300"
-							>
-								<div className={`text-3xl font-bold text-${stat.color}-600 mb-2`}>
-									{stat.number}
-								</div>
-								<div className="text-gray-600 font-medium">
-									{stat.label}
-								</div>
-							</motion.div>
-						))}
-					</div>
-				</motion.div> */}
 			</div>
 		</div>
 	);
