@@ -3,7 +3,17 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { ExternalLink, Building2, Users, Gamepad2, FileText } from "lucide-react"
+import { 
+  ExternalLink, 
+  FileText, 
+  BrainCircuit, // For AI theme
+  StethoscopeIcon, // For Digital Health
+  Glasses, // For VR/AR
+  Video, // For Telemedicine
+  WatchIcon, // For Wearables
+  BarChart3, // For Data Analytics
+  Lightbulb // For Open Innovation
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const themes = [
@@ -11,43 +21,50 @@ const themes = [
     title: "AI-Powered Diagnostic Solutions",
     partner: "Reut",
     description: "Develop innovative AI solutions for early disease detection and diagnosis",
-    icon: Building2,
+    icon: BrainCircuit,
     color: "bg-blue-500",
   },
   {
     title: "Digital Health Platforms",
     partner: "Silvergenie",
     description: "Create comprehensive digital health management systems",
-    icon: Users,
+    icon: StethoscopeIcon,
     color: "bg-green-500",
   },
   {
     title: "VR/AR Healthcare Training",
     partner: "VRSteps",
     description: "Revolutionary virtual reality solutions for medical training",
-    icon: Gamepad2,
+    icon: Glasses,
     color: "bg-purple-500",
   },
   {
     title: "Telemedicine Innovation",
     partner: "HealthTech Partners",
     description: "Next-generation telemedicine and remote care solutions",
-    icon: Building2,
+    icon: Video,
     color: "bg-indigo-500",
   },
   {
     title: "Wearable Health Monitoring",
     partner: "MedDevice Corp",
     description: "Smart wearable devices for continuous health monitoring",
-    icon: Users,
+    icon: WatchIcon,
     color: "bg-red-500",
   },
   {
     title: "Healthcare Data Analytics",
     partner: "DataHealth Solutions",
     description: "Advanced analytics for healthcare data insights",
-    icon: Gamepad2,
+    icon: BarChart3,
     color: "bg-yellow-500",
+  },
+  {
+    title: "Open Innovation Track",
+    partner: "Open Category",
+    description: "Propose your own innovative healthcare solution addressing unmet medical needs",
+    icon: Lightbulb,
+    color: "bg-teal-500",
   },
 ]
 
@@ -85,7 +102,7 @@ export default function Themes() {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
             >
               <FileText className="mr-2 h-5 w-5" />
-              View All Detailed Problem Statements
+              View all problem statements in detail
               <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, Flag } from "lucide-react"
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, Flag, User } from "lucide-react"
 
 const quickLinks = [
   { name: "Home", href: "#home" },
@@ -118,11 +118,63 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="border-t border-gray-700 mt-12 pt-8 text-center"
+          className="border-t border-gray-700 mt-12 pt-8"
         >
-          <p className="text-gray-400 text-sm">
-            © 2025 Israeli-Indian Hackathon. All rights reserved. | Restorative Health Care Innovation Challenge
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400 text-sm">
+              © 2025 Israeli-Indian Hackathon. All rights reserved. | Restorative Health Care Innovation Challenge
+            </p>
+            
+            {/* Enhanced Personal Credit Section */}
+            <motion.div 
+              className="flex items-center space-x-6 text-sm bg-gradient-to-r from-gray-800 to-gray-700 px-6 py-3 rounded-full shadow-lg"
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div 
+                className="flex items-center space-x-2"
+                whileHover={{ color: "#60A5FA" }}
+              >
+                <User size={14} className="text-blue-400" />
+                <span className="font-medium bg-gradient-to-r from-gray-100 to-blue-100 bg-clip-text text-transparent">
+                  Developed by Arsh Chatrath
+                </span>
+              </motion.div>
+              
+              <div className="h-4 w-px bg-gray-600" /> {/* Vertical Divider */}
+
+              <div className="flex items-center space-x-3">
+                <motion.a 
+                  href="mailto:achatrath_be23@thapar.edu" 
+                  className="flex items-center space-x-2 hover:text-blue-300 transition-all duration-300"
+                  whileHover={{ 
+                    scale: 1.05,
+                    color: "#93C5FD",
+                  }}
+                >
+                  <Mail size={14} />
+                  <span className="font-medium">achatrath_be23@thapar.edu</span>
+                </motion.a>
+
+                <motion.a 
+                  href="https://linkedin.com/in/arshchatrath" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-all duration-300"
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: [0, -10, 10, 0],
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Linkedin size={16} className="hover:filter hover:brightness-125" />
+                </motion.a>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </footer>

@@ -82,28 +82,28 @@ export default function Guidelines() {
       round: "Round-I",
       title: "PPT/Idea Submission",
       description: "Submit your 13-slide presentation with your innovative healthcare solution",
-      details: "Exactly 13 slides required. Focus on problem, solution, and implementation plan.",
+      details: "Due by: 24 July 2025. Exactly 13 slides required. Focus on problem, solution, and implementation plan.",
       color: "blue",
     },
     {
       round: "Round-II",
       title: "Online Presentation",
       description: "Present your idea to judges via online platform",
-      details: "15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
+      details: "31 July 2025. 15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
       color: "purple",
     },
     {
       round: "Round-III",
       title: "Offline Evaluation",
       description: "Final round with in-person presentation and demo",
-      details: "15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
+      details: "2nd week of August 2025. 15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
       color: "green",
     },
     {
       round: "Certificates",
       title: "Participation Recognition",
       description: "All participants receive certificates of participation",
-      details: "Digital certificates will be provided to all registered participants",
+      details: "Digital certificates will be provided to all registered participants after the final round",
       color: "orange",
     }
   ];

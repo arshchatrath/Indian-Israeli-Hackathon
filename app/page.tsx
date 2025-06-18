@@ -99,40 +99,40 @@ export default function Home() {
           <Hero />
         </motion.section>
 
-        <motion.section id="timeline" variants={sectionVariants}>
-          <Timeline />
-        </motion.section>
-
         <motion.section id="about" variants={sectionVariants}>
           <About />
-        </motion.section>
-        
-        <motion.section id="spoc" variants={sectionVariants}>
-          <SPOC />
-        </motion.section>
-
-        <motion.section id="themes" variants={sectionVariants}>
-          <Themes />
         </motion.section>
 
         <motion.section id="organizers" variants={sectionVariants}>
           <Organizers />
         </motion.section>
 
-        <motion.section id="judges" variants={sectionVariants}>
-          <Judges />
+        <motion.section id="themes" variants={sectionVariants}>
+          <Themes />
         </motion.section>
 
+        <motion.section id="timeline" variants={sectionVariants}>
+          <Timeline />
+        </motion.section>
+        
         <motion.section id="registration" variants={sectionVariants}>
           <Registration />
         </motion.section>
 
-        <motion.section id="prizes" variants={sectionVariants}>
-          <Prizes />
+        <motion.section id="spoc" variants={sectionVariants}>
+          <SPOC />
         </motion.section>
 
         <motion.section id="partners" variants={sectionVariants}>
           <Partners />
+        </motion.section>
+
+        <motion.section id="judges" variants={sectionVariants}>
+          <Judges />
+        </motion.section>
+
+        <motion.section id="prizes" variants={sectionVariants}>
+          <Prizes />
         </motion.section>
 
         <motion.section id="technical-support" variants={sectionVariants}>

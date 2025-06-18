@@ -1,97 +1,105 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Calendar, Presentation, Trophy } from "lucide-react"
 
 const timelineData = [
-  {
-    round: "Round-I",
-    title: "PPT Submission",
-    date: "28 June 2025",
-    description: "Submit your innovative presentation showcasing your solution",
-    icon: Calendar,
-    color: "bg-blue-500",
-  },
-  {
-    round: "Round-II",
-    title: "Online Presentation",
-    date: "19 July 2025",
-    description: "Present your solution to our panel of expert judges",
-    icon: Presentation,
-    color: "bg-indigo-500",
-  },
-  {
-    round: "Round-III",
-    title: "Offline Demo",
-    date: "1st week of August 2025",
-    description: "Demonstrate your working prototype and compete for the grand prize",
-    icon: Trophy,
-    color: "bg-purple-500",
-  },
+	{
+		round: "Round-I",
+		title: "PPT Submission",
+		date: "24 July 2025",
+		description:
+			"Submit your innovative presentation showcasing your solution",
+		icon: Calendar,
+		color: "bg-blue-500",
+	},
+	{
+		round: "Round-II",
+		title: "Online Presentation",
+		date: "31 July 2025",
+		description: "Present your solution to our panel of expert judges",
+		icon: Presentation,
+		color: "bg-indigo-500",
+	},
+	{
+		round: "Round-III",
+		title: "Offline Demo",
+		date: "2nd week of August 2025",
+		description:
+			"Demonstrate your working prototype and compete for the grand prize",
+		icon: Trophy,
+		color: "bg-purple-500",
+	},
 ]
 
 export default function Timeline() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+	const ref = useRef(null)
+	const isInView = useInView(ref, { once: true })
 
-  return (
-    <div className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Timeline</h2>
-          <p className="text-xl text-gray-600">Your journey to innovation</p>
-        </motion.div>
+	return (
+		<div
+			id="timeline"
+			className="py-12 bg-white scroll-mt-16" /* Added id and scroll-mt-16 */
+		>
+			<div className="max-w-6xl mx-auto px-4">
+				<motion.h2
+					className="text-3xl font-bold text-center mb-8"
+					ref={ref}
+					initial={{ opacity: 0 }}
+					animate={isInView ? { opacity: 1 } : {}}
+				>
+					Timeline
+				</motion.h2>
 
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-300 hidden md:block"></div>
+				<div className="relative flex items-center justify-between px-4">
+					{/* Connecting Line */}
+					<div className="absolute left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
 
-          <div className="space-y-12">
-            {timelineData.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`flex items-center ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } flex-col md:flex-row`}
-              >
-                <div className={`flex-1 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
-                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <div className="flex items-center mb-4">
-                      <div className={`${item.color} p-3 rounded-full text-white mr-4`}>
-                        <item.icon size={24} />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">{item.round}</h3>
-                        <p className="text-blue-600 font-semibold">{item.title}</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 mb-2">{item.description}</p>
-                    <p className="text-sm font-semibold text-gray-800">{item.date}</p>
-                  </div>
-                </div>
+					{timelineData.map((item, index) => (
+						<motion.div
+							key={index}
+							initial={{ opacity: 0, y: 20 }}
+							animate={isInView ? { opacity: 1, y: 0 } : {}}
+							transition={{ duration: 0.5, delay: index * 0.2 }}
+							className="relative z-10 w-1/3 px-2"
+						>
+							<div className={`${index % 2 === 0 ? "-mt-32" : "mt-8"}`}>
+								<motion.div
+									className="bg-white rounded-lg p-4 shadow-md border border-gray-100 hover:shadow-lg transition-all"
+									whileHover={{ y: -5 }}
+								>
+									<div className="flex items-center gap-3 mb-2">
+										<div className={`${item.color} p-2 rounded-lg`}>
+											<item.icon className="h-4 w-4 text-white" />
+										</div>
+										<div>
+											<h3 className="font-bold text-gray-900">
+												{item.round}
+											</h3>
+											<p className="text-sm text-blue-600">
+												{item.title}
+											</p>
+										</div>
+									</div>
+									<div className="text-sm font-medium text-gray-900 bg-gray-50 px-3 py-1 rounded-md inline-block">
+										{item.date}
+									</div>
+								</motion.div>
+							</div>
 
-                {/* Timeline dot */}
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 bg-white border-4 border-blue-500 rounded-full my-4 md:my-0">
-                  <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-                </div>
-
-                <div className="flex-1"></div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+							{/* Timeline Node */}
+							<div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y 1/2">
+								<div
+									className={`w-4 h-4 ${item.color} rounded-full ring-4 ring-white`}
+								>
+									<div className="absolute inset-0 animate-ping rounded-full bg-white opacity-75" />
+								</div>
+							</div>
+						</motion.div>
+					))}
+				</div>
+			</div>
+		</div>
+	)
 }

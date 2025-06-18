@@ -5,14 +5,12 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
-  // Removed "Home" and "About", added "Partners"
-  { name: "Timeline", href: "#timeline" },
-  { name: "Problem Statements", href: "#themes" },
   { name: "Organizers", href: "#organizers" },
-  { name: "Judges", href: "#judges" },
+  { name: "Problem Statements", href: "#themes" },
+  { name: "Timeline", href: "#timeline" },
   { name: "Registration", href: "#registration" },
-  { name: "Partners", href: "#partners" }, // Added
-  // { name: "Technical Support", href: "#technical-support" },
+  { name: "Partners", href: "#partners" },
+  { name: "Judges", href: "#judges" },
   { name: "Contact", href: "#contact" },
 ]
 

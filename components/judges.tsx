@@ -51,6 +51,12 @@ const judges = [
 		image: "/Mr. Chetan Sharma.avif",
 	},
 	{
+		name: "Mr Sai Raghu Ram Gummadidala",
+		title: "Independent Researcher",
+		company: "Tractor Supply Company, Brentwood, Tennessee",
+		image: "/Sai raghu.jpg",
+	},
+	{
 		name: "Ms. Sangeeta Singh",
 		title: "Firmware Engineer III",
 		company: "Variosystems Inc",

@@ -11,14 +11,18 @@ const boardMembers = [
 		designation: "Center Director, Professor of Computer Science, TIET",
 		image: "/inderveer channa.jpg",
 		bio: "Visionary leader driving innovation and strategic partnerships.",
-		location: "India"
+		location: "India",
+		email: "inderveer@thapar.edu",
+		linkedin: "https://www.linkedin.com/in/inderveer-channa/"
 	},
 	{
 		name: "Tim Miller",
 		designation: "Center Director, Professor of Artificial Intelligence, UQ",
 		image: "/tim miller.png",
 		bio: "Strategic advisor with extensive international experience.",
-		location: "Queensland"
+		location: "Queensland",
+		email: "tim.miller@uq.edu.au",
+		linkedin: "https://www.linkedin.com/in/tim-miller/"
 	},
 	{
 		name: "Ori Kadvil",
@@ -78,7 +82,9 @@ const coreMembers = [
 		designation: "CEO, VRSteps",
 		image: "/david_drabkin.avif",
 		bio: "Leader in immersive VR healthcare solutions.",
-		location: "Israel"
+		location: "Israel",
+		email: "david.drabkin@vrsteps.com",
+		linkedin: "https://www.linkedin.com/in/david-drabkin/"
 	},
 	{
 		name: "Poulomi",
@@ -421,6 +427,7 @@ export default function Organizers() {
 														boxShadow: "0 12px 30px rgba(245,158,11,0.4)"
 													}}
 													whileTap={{ scale: 0.95 }}
+													onClick={() => window.open(member.linkedin, '_blank')}
 													className="bg-gradient-to-r from-amber-400 to-yellow-400 backdrop-blur-sm p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
 												>
 													<Linkedin className="h-5 w-5 text-white" />
@@ -432,6 +439,7 @@ export default function Organizers() {
 														boxShadow: "0 12px 30px rgba(245,158,11,0.4)"
 													}}
 													whileTap={{ scale: 0.95 }}
+													onClick={() => window.location.href = `mailto:${member.email}`}
 													className="bg-gradient-to-r from-amber-400 to-yellow-400 backdrop-blur-sm p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
 												>
 													<Mail className="h-5 w-5 text-white" />
@@ -563,6 +571,7 @@ export default function Organizers() {
 														boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
 													}}
 													whileTap={{ scale: 0.95 }}
+													onClick={() => window.open(member.linkedin, '_blank')}
 													className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
 												>
 													<Linkedin className="h-4 w-4 text-blue-600" />
@@ -574,6 +583,7 @@ export default function Organizers() {
 														boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
 													}}
 													whileTap={{ scale: 0.95 }}
+													onClick={() => window.location.href = `mailto:${member.email}`}
 													className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
 												>
 													<Mail className="h-4 w-4 text-gray-600" />
