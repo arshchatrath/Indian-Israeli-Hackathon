@@ -39,13 +39,6 @@ const boardMembers = [
 		location: "India"
 	},
 	{
-		name: "Dr. Sachin Kansal",
-		designation: "Assistant Professor -II, TIET",
-		image: "/sachin kansal.jpg",
-		bio: "Academic in Robotics, Computer Vision, Mechatronics.",
-		location: "India"
-	},
-	{
 		name: "Dr. Varinder Garg",
 		designation: "OSD to Union Health Minister & President PGIMER",
 		image: "/varinder.png",
@@ -79,6 +72,13 @@ const boardMembers = [
 		image: "/rafi_bhonkar.avif",
 		bio: "Advocate for Indo-Jewish cultural collaboration.",
 		location: "Israel"
+	},
+	{
+		name: "Dr. Sachin Kansal",
+		designation: "Assistant Professor -II, TIET",
+		image: "/sachin kansal.jpg",
+		bio: "Academic in Robotics, Computer Vision, Mechatronics.",
+		location: "India"
 	}
 ];
 
