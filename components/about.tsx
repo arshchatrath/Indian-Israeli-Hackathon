@@ -3,20 +3,24 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { 
-  BrainCircuit, // More AI-specific than Brain
-  Shield, // More security-focused than Shield
-  Stethoscope, // More medical than Heart
-  Wallet, // More fintech-specific than Smartphone
-  HeartPulse // More healthcare-specific than DollarSign
+import {
+  BrainCircuit,
+  Stethoscope,
+  Glasses,
+  Video,
+  Watch,
+  BarChart3,
+  Lightbulb
 } from "lucide-react"
 
 const keyPoints = [
-  { icon: BrainCircuit, label: "AI", color: "text-blue-500" },
-  { icon: Shield, label: "Cybersecurity", color: "text-green-500" },
+  { icon: BrainCircuit, label: "AI Diagnostics", color: "text-blue-500" },
   { icon: Stethoscope, label: "Medtech", color: "text-red-500" },
-  { icon: Wallet, label: "Fintech", color: "text-purple-500" },
-  { icon: HeartPulse, label: "Healthcare", color: "text-indigo-500" },
+  { icon: Glasses, label: "VR/AR Training", color: "text-purple-500" },
+  { icon: Video, label: "Telemedicine", color: "text-indigo-500" },
+  // { icon: Watch, label: "Wearables", color: "text-green-500" },
+  { icon: BarChart3, label: "Data Analytics", color: "text-yellow-500" },
+  { icon: Lightbulb, label: "Open Innovation", color: "text-teal-500" },
 ]
 
 export default function About() {

@@ -129,13 +129,6 @@ const coreMembers = [
 		location: "India"
 	},
 	{
-		name: "Dr. Gaganpreet Kaur",
-		designation: "Assisstant Professor, Thapar University",
-		image: "/Dr. Gaganpreet Kaur.jpg",
-		bio: "Expert in Optical Communication.",
-		location: "India"
-	},
-	{
 		name: "Tsafrir Tsadok",
 		designation: "CEO, Tsora",
 		image: "/Tsafrir Tsadok.avif",
