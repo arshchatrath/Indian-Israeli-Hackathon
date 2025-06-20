@@ -13,7 +13,7 @@ const boardMembers = [
 		bio: "Visionary leader driving innovation and strategic partnerships.",
 		location: "India",
 		email: "inderveer@thapar.edu",
-		linkedin: "https://www.linkedin.com/in/inderveer-channa/"
+		linkedin: "https://www.linkedin.com/in/dr-inderveer-chana-b0102023/"
 	},
 	{
 		name: "Tim Miller",
@@ -22,21 +22,25 @@ const boardMembers = [
 		bio: "Strategic advisor with extensive international experience.",
 		location: "Queensland",
 		email: "tim.miller@uq.edu.au",
-		linkedin: "https://www.linkedin.com/in/tim-miller/"
+		linkedin: "https://www.linkedin.com/in/tim-miller-6a9271/"
 	},
 	{
 		name: "Ori Kadvil",
 		designation: "Board Member",
 		image: "/Ori Kadvil.avif",
 		bio: "Experienced organizer of international tech events.",
-		location: "Israel"
+		email: "orikadvil@israelindiahub.com",
+		location: "Israel",
+		linkedin: "https://www.linkedin.com/in/ori-kadvil-66222351/"
 	},
 	{
 		name: "Dr. Harpreet Singh",
 		designation: "Assistant Professor, TIET & Visiting Professor, Reichman University, Israel",
 		image: "/Dr. Harpreet Singh.avif",
 		bio: "Academic in emerging tech and AI in healthcare.",
-		location: "India"
+		email: "harpreet.s@thapar.edu",
+		location: "India",
+		linkedin: "https://www.linkedin.com/in/harpreet-singh-bb3aa89b/"
 	},
 	{
 		name: "Dr. Varinder Garg",
@@ -98,7 +102,8 @@ const coreMembers = [
 		designation: "CEO, Silvergenie",
 		image: "/poulomi.avif",
 		bio: "Driving innovation for eldercare with technology.",
-		location: "India"
+		location: "India",
+		linkedin: "https://www.linkedin.com/in/poulomi-bhattacharya-072883/"
 	},
 	{
 		name: "Noa Muzaffi",
@@ -448,30 +453,34 @@ export default function Organizers() {
 											className="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-amber-800/40 to-transparent flex items-end justify-center pb-6"
 										>
 											<div className="flex space-x-4">
-												<motion.button
-													whileHover={{ 
-														scale: 1.2, 
-														rotate: 5,
-														boxShadow: "0 12px 30px rgba(245,158,11,0.4)"
-													}}
-													whileTap={{ scale: 0.95 }}
-													onClick={() => window.open(member.linkedin, '_blank')}
-													className="bg-gradient-to-r from-amber-400 to-yellow-400 backdrop-blur-sm p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
-												>
-													<Linkedin className="h-5 w-5 text-white" />
-												</motion.button>
-												<motion.button
-													whileHover={{ 
-														scale: 1.2, 
-														rotate: -5,
-														boxShadow: "0 12px 30px rgba(245,158,11,0.4)"
-													}}
-													whileTap={{ scale: 0.95 }}
-													onClick={() => window.location.href = `mailto:${member.email}`}
-													className="bg-gradient-to-r from-amber-400 to-yellow-400 backdrop-blur-sm p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
-												>
-													<Mail className="h-5 w-5 text-white" />
-												</motion.button>
+												{member.linkedin && (
+													<motion.button
+														whileHover={{ 
+															scale: 1.2, 
+															rotate: 5,
+															boxShadow: "0 12px 30px rgba(245,158,11,0.4)"
+														}}
+														whileTap={{ scale: 0.95 }}
+														onClick={() => window.open(member.linkedin, '_blank')}
+														className="bg-gradient-to-r from-amber-400 to-yellow-400 backdrop-blur-sm p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+													>
+														<Linkedin className="h-5 w-5 text-white" />
+													</motion.button>
+												)}
+												{member.email && (
+													<motion.button
+														whileHover={{ 
+															scale: 1.2, 
+															rotate: -5,
+															boxShadow: "0 12px 30px rgba(245,158,11,0.4)"
+														}}
+														whileTap={{ scale: 0.95 }}
+														onClick={() => window.location.href = `mailto:${member.email}`}
+														className="bg-gradient-to-r from-amber-400 to-yellow-400 backdrop-blur-sm p-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+													>
+														<Mail className="h-5 w-5 text-white" />
+													</motion.button>
+												)}
 											</div>
 										</motion.div>
 
@@ -592,30 +601,34 @@ export default function Organizers() {
 											className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end justify-center pb-4"
 										>
 											<div className="flex space-x-3">
-												<motion.button
-													whileHover={{ 
-														scale: 1.15, 
-														rotate: 3,
-														boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
-													}}
-													whileTap={{ scale: 0.95 }}
-													onClick={() => window.open(member.linkedin, '_blank')}
-													className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
-												>
-													<Linkedin className="h-4 w-4 text-blue-600" />
-												</motion.button>
-												<motion.button
-													whileHover={{ 
-														scale: 1.15, 
-														rotate: -3,
-														boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
-													}}
-													whileTap={{ scale: 0.95 }}
-													onClick={() => window.location.href = `mailto:${member.email}`}
-													className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
-												>
-													<Mail className="h-4 w-4 text-gray-600" />
-												</motion.button>
+												{member.linkedin && (
+													<motion.button
+														whileHover={{ 
+															scale: 1.15, 
+															rotate: 3,
+															boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
+														}}
+														whileTap={{ scale: 0.95 }}
+														onClick={() => window.open(member.linkedin, '_blank')}
+														className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
+													>
+														<Linkedin className="h-4 w-4 text-blue-600" />
+													</motion.button>
+												)}
+												{member.email && (
+													<motion.button
+														whileHover={{ 
+															scale: 1.15, 
+															rotate: -3,
+															boxShadow: "0 8px 25px rgba(0,0,0,0.2)"
+														}}
+														whileTap={{ scale: 0.95 }}
+														onClick={() => window.location.href = `mailto:${member.email}`}
+														className="bg-white/95 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-all duration-200"
+													>
+														<Mail className="h-4 w-4 text-gray-600" />
+													</motion.button>
+												)}
 											</div>
 										</motion.div>
 

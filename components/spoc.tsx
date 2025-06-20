@@ -13,9 +13,8 @@ const spocMembers = [
     image: "/Dr. Harpreet Singh.avif",
     bio: "Academic leader bridging Indian and Israeli innovation in healthcare technology.",
     country: "India",
-    email: "harpreet@thapar.edu", 
-    phone: "+91-XXXX-XXXX",
-    linkedin: "#",
+    email: "harpreet.s@thapar.edu",
+    linkedin: "https://www.linkedin.com/in/harpreet-singh-bb3aa89b/",
   },
   {
     name: "Ori Kadvil",
@@ -24,9 +23,8 @@ const spocMembers = [
     image: "/Ori Kadvil.avif",
     bio: "Healthcare technology pioneer leading immersive VR solutions for medical training.",
     country: "Israel",
-    email: "ori.kadvil@reichman.ac.il", 
-    phone: "+972-XX-XXXX",
-    linkedin: "#",
+    email: "orikadvil@israelindiahub.com", 
+    linkedin: "https://www.linkedin.com/in/ori-kadvil-66222351/",
   },
 ]
 
