@@ -16,7 +16,7 @@ const Prizes = dynamic(() => import("@/components/prizes"), { suspense: true })
 const Partners = dynamic(() => import("@/components/partners"), { suspense: true })
 const Contact = dynamic(() => import("@/components/contact"), { suspense: true })
 const Footer = dynamic(() => import("@/components/footer"), { suspense: true })
-const TechnicalSupport = dynamic(() => import("@/components/technical-support"), { suspense: true })
+// const TechnicalSupport = dynamic(() => import("@/components/technical-support"), { suspense: true })
 const SPOC = dynamic(() => import("@/components/spoc"), { suspense: true })
 
 // Optionally, wrap stateless components with React.memo in their own files
@@ -138,9 +138,9 @@ export default function Home() {
           <motion.section id="prizes" variants={sectionVariants}>
             <Prizes />
           </motion.section>
-          <motion.section id="technical-support" variants={sectionVariants}>
+          {/* <motion.section id="technical-support" variants={sectionVariants}>
             <TechnicalSupport />
-          </motion.section>
+          </motion.section> */}
           <motion.section id="contact" variants={sectionVariants}>
             <Contact />
           </motion.section>

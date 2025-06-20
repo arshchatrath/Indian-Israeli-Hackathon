@@ -247,6 +247,27 @@ const coreMembers = [
 		bio: "Developer of innovative medical devices and systems.",
 		location: "India"
 	},
+	{
+		name:"Karman Singh Talwar",
+		designation:"Student Volunteer, Thapar University",
+		image:"/Karman Singh Talwar.avif",
+		bio:"Passionate advocate for student innovation and impact.",
+		location:"India"
+	},
+	{
+		name:"Sarthak Tyagi",
+		designation:"General Secretary,Creative Computing Society,Thapar University",
+		image:"/Sarthak Tyagi.avif",
+		bio:"Shaping the future of tech through student leadership",
+		location:"India"
+	},
+	{
+		name:"Bhavninder Singh",
+		designation:"Student Volunteer, Thapar University",
+		image:"/Bhavninder Singh.avif",
+		bio:"Passionate about collaborative problem-solving and impactful technology",
+		location:"India"
+	}
 ];
 
 export default function Organizers() {

@@ -128,9 +128,9 @@ export default function Prizes() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-20"
+          className="text-center mb-8"
         >
-          <div className="relative inline-block">
+          <div className="relative block w-full">
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-3xl blur-2xl"
               animate={{
@@ -143,7 +143,9 @@ export default function Prizes() {
                 ease: "easeInOut",
               }}
             />
-            <div className="relative bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-12 rounded-3xl shadow-2xl border border-yellow-300">
+            <div className="relative bg-gradient-to-r from-yellow-400 to-orange-500 text-white 
+  p-6 sm:p-8 md:p-12 rounded-3xl shadow-2xl border border-yellow-300 
+  w-full h-full min-h-64 sm:min-h-72 md:min-h-80">
               <motion.div
                 animate={{
                   rotate: [0, 5, -5, 0],
@@ -155,11 +157,11 @@ export default function Prizes() {
                   ease: "easeInOut",
                 }}
               >
-                <IndianRupee className="h-20 w-20 mx-auto mb-4" />
+                <IndianRupee className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 mx-auto mb-4" />
               </motion.div>
-              <div className="text-6xl font-black mb-2">₹1,00,000</div>
-              <div className="text-2xl font-bold opacity-90">Total Prize Pool</div>
-              <div className="text-lg opacity-75 mt-2">+ Exclusive Benefits & Opportunities</div>
+              <div className="text-3xl sm:text-4xl md:text-6xl font-black mb-2">₹1,00,000</div>
+              <div className="text-lg sm:text-xl md:text-2xl font-bold opacity-90">Total Prize Pool</div>
+              <div className="text-sm sm:text-base md:text-lg opacity-75 mt-2">+ Exclusive Benefits & Opportunities</div>
             </div>
           </div>
         </motion.div>
