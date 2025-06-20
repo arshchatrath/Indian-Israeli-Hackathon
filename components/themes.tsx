@@ -312,7 +312,7 @@ export default function Themes() {
           >
             <Button
               onClick={handleViewDetails}
-              className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white px-10 py-5 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl border-0 relative overflow-hidden group"
+              className="w-full sm:w-auto px-4 sm:px-8 py-4 sm:py-5 text-base sm:text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-2xl border-0 relative overflow-hidden group whitespace-normal"
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
