@@ -129,13 +129,6 @@ const coreMembers = [
 		location: "India"
 	},
 	{
-		name: "Dr. Gaganpreet Kaur",
-		designation: "Assisstant Professor, Thapar University",
-		image: "/Dr. Gaganpreet Kaur.jpg",
-		bio: "Expert in Optical Communication.",
-		location: "India"
-	},
-	{
 		name: "Tsafrir Tsadok",
 		designation: "CEO, Tsora",
 		image: "/Tsafrir Tsadok.avif",
@@ -200,7 +193,7 @@ const coreMembers = [
 	},
 	{
 		name: "Bhavvishya Singla",
-		designation: "Institutions Innovation Council, Student Volunteer",
+		designation: "Student Volunteer, Thapar University",
 		image: "/Bhavishya Singla.avif",
 		bio: "Innovative thinker driving student-led change.",
 		location: "India"
