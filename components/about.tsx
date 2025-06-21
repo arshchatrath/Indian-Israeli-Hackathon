@@ -39,7 +39,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">About Hackathon</h2>
-            <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+            <div className="space-y-4 text-gray-600 text-lg leading-relaxed text-justify">
               <p>
                 The Israeli-Indian Hackathon 2025 is a groundbreaking collaboration that brings together the brightest
                 minds from both nations to tackle the most pressing challenges in restorative healthcare.
