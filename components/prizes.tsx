@@ -145,7 +145,7 @@ export default function Prizes() {
             />
             <div className="relative bg-gradient-to-r from-yellow-400 to-orange-500 text-white 
   p-6 sm:p-8 md:p-12 rounded-3xl shadow-2xl border border-yellow-300 
-  w-full h-full min-h-64 sm:min-h-72 md:min-h-80">
+  w-full max-w-xl mx-auto min-h-64 sm:min-h-72 md:min-h-80">
               <motion.div
                 animate={{
                   rotate: [0, 5, -5, 0],
