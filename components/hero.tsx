@@ -1,9 +1,9 @@
 "use client"
 
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
-import { ArrowRight, FileText, Trophy, Users, Globe, Calendar, MapPin, Sparkles } from "lucide-react"
+import { ArrowRight, FileText, Trophy, Users, Globe, Calendar, MapPin, Sparkles, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
 
 // Update the stats array with more impactful visuals
 const stats = [
@@ -12,39 +12,64 @@ const stats = [
 		value: "₹1,00,000",
 		icon: Trophy,
 		gradient: "from-yellow-400 via-amber-500 to-orange-600",
-		glow: "from-yellow-400/30 to-orange-600/30", // Increased glow intensity
-		animation: "pulse",
 	},
 	{
 		label: "Expected Participants",
 		value: "500+",
 		icon: Users,
 		gradient: "from-blue-400 via-indigo-500 to-purple-600",
-		glow: "from-blue-400/20 to-purple-600/20",
 	},
 	{
 		label: "Participating Nations",
 		value: "2",
 		icon: Globe,
 		gradient: "from-emerald-400 via-teal-500 to-cyan-600",
-		glow: "from-emerald-400/20 to-cyan-600/20",
+	},
+	{
+		label: "Event Duration",
+		value: "48 Hours",
+		icon: Calendar,
+		gradient: "from-blue-400 via-blue-500 to-blue-600",
+	},
+	{
+		label: "Format",
+		value: "Hybrid Event",
+		icon: MapPin,
+		gradient: "from-purple-400 via-purple-500 to-indigo-600",
 	},
 ]
 
-const eventDetails = [
-	{
-		icon: Calendar,
-		label: "Event Duration",
-		value: "48 Hours",
-		color: "text-blue-600",
-	},
-	{
-		icon: MapPin,
-		label: "Format",
-		value: "Hybrid Event",
-		color: "text-purple-600",
-	},
-]
+// Countdown Timer Component
+function Countdown({ deadline }: { deadline: string }) {
+  const [timeLeft, setTimeLeft] = useState<{days: number, hours: number, minutes: number, seconds: number}>({
+    days: 0, hours: 0, minutes: 0, seconds: 0
+  })
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date()
+      const end = new Date(deadline)
+      const diff = end.getTime() - now.getTime()
+      if (diff > 0) {
+        setTimeLeft({
+          days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((diff / (1000 * 60)) % 60),
+          seconds: Math.floor((diff / 1000) % 60),
+        })
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+      }
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [deadline])
+
+  return (
+    <span className="font-mono text-blue-900 text-base">
+      {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
+    </span>
+  )
+}
 
 export default function Hero() {
 	const containerRef = useRef(null)
@@ -59,7 +84,6 @@ export default function Hero() {
 	const heroY = useTransform(scrollYProgress, [0, 1], [0, -150])
 	const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
 	const backgroundY = useTransform(scrollYProgress, [0, 1], [0, -50])
-	const y = useTransform(scrollYProgress, [0, 1], [0, 300])
 
 	return (
 		<motion.div
@@ -120,11 +144,11 @@ export default function Hero() {
 				>
 					<div className="w-full max-w-7xl mx-auto px-8 py-8">
 						<div
-							className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center"
+							className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-center"
 							style={{ minHeight: "calc(100vh - 4rem)" }}
 						>
 							{/* Left Column - Content */}
-							<div className="space-y-6">
+							<div className="space-y-4 xl:pr-8">
 								{/* Enhanced Logo Section */}
 								<motion.div
 									initial={{ opacity: 0, y: 30 }}
@@ -244,60 +268,10 @@ export default function Hero() {
 											Build groundbreaking solutions that will transform patient care and medical innovation across both nations.
 										</p>
 									</motion.div>
-
-									{/* Event Details Cards */}
-									<motion.div
-										className="grid grid-cols-2 gap-3 max-w-md"
-										initial={{ opacity: 0, y: 20 }}
-										animate={{ opacity: 1, y: 0 }}
-										transition={{ duration: 0.8, delay: 1.8 }}
-									>
-										{eventDetails.map((detail, idx) => (
-											<motion.div
-												key={detail.label}
-												className="bg-white/80 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-white/60 group cursor-pointer"
-												initial={{ opacity: 0, x: -20 }}
-												animate={{ opacity: 1, x: 0 }}
-												transition={{ duration: 0.6, delay: 1.9 + idx * 0.1 }}
-												whileHover={{
-													scale: 1.05,
-													y: -3,
-													boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-													transition: { duration: 0.3 },
-												}}
-											>
-												<motion.div
-													className="flex items-center space-x-3"
-													whileHover={{ x: 2 }}
-													transition={{ duration: 0.2 }}
-												>
-													<motion.div
-														animate={{
-															rotate: [0, 360],
-															scale: [1, 1.1, 1],
-														}}
-														transition={{
-															duration: 8,
-															repeat: Infinity,
-															ease: "linear",
-															delay: idx * 2,
-														}}
-													>
-														<detail.icon className={`h-5 w-5 ${detail.color}`} />
-													</motion.div>
-													<div>
-														<p className="text-sm text-slate-600 font-medium">
-															{detail.label}
-														</p>
-														<p className="text-base font-bold text-slate-800">
-															{detail.value}
-														</p>
-													</div>
-												</motion.div>
-											</motion.div>
-										))}
-									</motion.div>
 								</div>
+
+								{/* Countdown Timer */}
+              {/* <Countdown deadline="2025-07-24T23:59:59" /> */}
 
 								{/* Premium CTA Buttons */}
 								<motion.div
@@ -384,175 +358,81 @@ export default function Hero() {
 							</div>
 
 							{/* Right Column - Enhanced Stats Dashboard */}
-							<div className="xl:pl-8">
-								<motion.div
-									ref={statsRef}
-									className="relative"
-									initial={{ opacity: 0, x: 60 }}
-									animate={isStatsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 }}
-									transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-								>
-									{/* Background Glow Effect */}
-									<motion.div
-										className="absolute -inset-8 bg-gradient-to-r from-blue-400/10 via-purple-400/10 to-indigo-400/10 rounded-[3rem] blur-3xl"
-										animate={{
-											scale: [1, 1.05, 1],
-											opacity: [0.3, 0.5, 0.3],
-										}}
-										transition={{
-											duration: 8,
-											repeat: Infinity,
-											ease: "easeInOut",
-										}}
-									/>
+							<div className="xl:pl-8 xl:ml-12">
+  <motion.div
+    ref={statsRef}
+    className="relative"
+    initial={{ opacity: 0, x: 60 }}
+    animate={isStatsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 }}
+    transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+  >
+    {/* Background Glow Effect */}
+    <motion.div
+      className="absolute -inset-6 bg-gradient-to-r from-blue-400/10 via-purple-400/10 to-indigo-400/10 rounded-2xl blur-2xl"
+      animate={{
+        scale: [1, 1.05, 1],
+        opacity: [0.3, 0.5, 0.3],
+      }}
+      transition={{
+        duration: 8,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    />
 
-									{/* Main Stats Container */}
-									<div className="relative bg-white/90 backdrop-blur-2xl rounded-2xl p-6 shadow-2xl border border-white/50"> {/* Reduced padding and border radius */}
-										{/* Header */}
-										<motion.div
-											className="text-center mb-6" // Reduced margin
-											initial={{ opacity: 0, y: 20 }}
-											animate={isStatsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-											transition={{ duration: 0.8, delay: 0.8 }}
-										>
-											<h3 className="text-2xl font-bold text-slate-900 mb-2"> {/* Reduced text size and margin */}
-												Event Highlights
-											</h3>
-											<motion.div
-												className="w-20 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 rounded-full mx-auto" // Reduced width and height
-												initial={{ width: 0 }}
-												animate={isStatsInView ? { width: "5rem" } : { width: 0 }}
-												transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
-											/>
-										</motion.div>
+    {/* Main Stats Container */}
+    <div className="relative bg-white/95 backdrop-blur-xl rounded-2xl p-7 shadow-xl border border-white/40 max-w-lg mx-auto"> {/* Increased p-5 -> p-7 and max-w-sm -> max-w-lg */}
+      {/* Countdown Timer at the top of the box */}
+      <div className="flex flex-nowrap items-center gap-3 bg-blue-50 border border-blue-200 rounded-xl px-6 py-3 mb-3 w-fit shadow-sm animate-pulse"> {/* Increased px-4 -> px-6, py-2 -> py-3, gap-2 -> gap-3, mb-2 -> mb-3 */}
+        <Clock className="h-5 w-5 text-blue-500" />
+        <span className="font-semibold text-blue-700 text-sm">
+          Registration closes in:
+        </span>
+        <Countdown deadline="2025-07-24T23:59:59" />
+      </div>
 
-										{/* Stats Grid */}
-										<div className="space-y-4"> {/* Reduced spacing */}
-											{stats.map((stat, idx) => (
-												<motion.div
-													key={stat.label}
-													className="group relative"
-													initial={{ opacity: 0, y: 20, scale: 0.9 }}
-													animate={isStatsInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 20, scale: 0.9 }}
-													transition={{ duration: 0.8, delay: 1 + idx * 0.2 }}
-												>
-													<div className="relative flex items-center space-x-4 p-4 rounded-xl bg-gradient-to-r from-white/50 to-white/30"> {/* Reduced padding and spacing */}
-														{/* Icon Container */}
-														<motion.div
-															className={`flex-shrink-0 w-12 h-12 bg-gradient-to-r ${stat.gradient} rounded-lg flex items-center justify-center shadow-lg`} // Reduced size
-														>
-															<stat.icon className="h-6 w-6 text-white" /> {/* Reduced icon size */}
-														</motion.div>
+      {/* Header */}
+      <motion.div
+        className="text-center mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isStatsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+      >
+        <div className="flex items-center justify-center gap-2 mb-1">
+          <Sparkles className="h-5 w-5 text-blue-500" />
+          <h3 className="text-xl font-bold text-slate-900 tracking-wide">
+            Event Highlights
+          </h3>
+        </div>
+        <div className="w-16 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 rounded-full mx-auto" />
+      </motion.div>
 
-														{/* Content */}
-														<div className="flex-1">
-															<motion.div
-																className="text-2xl font-bold text-slate-900 mb-0.5" // Reduced text size
-																initial={{ opacity: 0 }}
-																animate={isStatsInView ? { opacity: 1 } : { opacity: 0 }}
-																transition={{ duration: 0.6, delay: 1.2 + idx * 0.2 }}
-															>
-																{stat.value}
-															</motion.div>
-															<motion.div
-																className="text-xs font-medium text-slate-600" // Reduced text size
-																initial={{ opacity: 0 }}
-																animate={isStatsInView ? { opacity: 1 } : { opacity: 0 }}
-																transition={{ duration: 0.6, delay: 1.3 + idx * 0.2 }}
-															>
-																{stat.label}
-															</motion.div>
-														</div>
-													</div>
-												</motion.div>
-											))}
-										</div>
-
-										{/* Nations Bridge Section */}
-										<motion.div
-											className="mt-10 pt-8 border-t border-slate-200/60"
-											initial={{ opacity: 0, y: 20 }}
-											animate={isStatsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-											transition={{ duration: 0.8, delay: 2.5 }}
-										>
-											<div className="text-center space-y-4">
-												<p className="text-sm text-slate-600 font-bold tracking-wide uppercase">
-													Bridging Innovation Across Nations
-												</p>
-												<div className="flex items-center justify-center space-x-4">
-													<motion.div
-														className="w-10 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-md flex items-center justify-center shadow-lg"
-														whileHover={{ scale: 1.1 }}
-														transition={{ duration: 0.2 }}
-													>
-														<span className="text-white text-xs font-black">🇮🇱</span>
-													</motion.div>
-
-													<motion.div
-														className="flex space-x-1"
-														animate={{ opacity: [0.4, 1, 0.4] }}
-														transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-													>
-														{[...Array(3)].map((_, i) => (
-															<motion.div
-																key={i}
-																className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
-																animate={{ scale: [0.8, 1.2, 0.8] }}
-																transition={{
-																	duration: 1.5,
-																	repeat: Infinity,
-																	delay: i * 0.2,
-																	ease: "easeInOut",
-																}}
-															/>
-														))}
-													</motion.div>
-
-													<motion.div
-														className="w-10 h-6 bg-gradient-to-r from-orange-500 via-white to-green-500 rounded-md flex items-center justify-center shadow-lg"
-														whileHover={{ scale: 1.1 }}
-														transition={{ duration: 0.2 }}
-													>
-														<span className="text-xs font-black">🇮🇳</span>
-													</motion.div>
-												</div>
-											</div>
-										</motion.div>
-									</div>
-								</motion.div>
-							</div>
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 gap-4"> {/* Increased gap-3 -> gap-4 */}
+        {stats.map((stat, idx) => (
+          <motion.div
+            key={stat.label}
+            className="flex items-center gap-4 p-3 rounded-lg bg-gradient-to-r from-white/60 to-white/30 hover:shadow-md transition-all" // Increased gap-3 -> gap-4, p-2 -> p-3
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={isStatsInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 20, scale: 0.95 }}
+            transition={{ duration: 0.7, delay: 1 + idx * 0.12 }}
+            whileHover={{ scale: 1.03, y: -2 }}
+          >
+            <div className={`flex-shrink-0 w-11 h-11 bg-gradient-to-r ${stat.gradient} rounded-lg flex items-center justify-center shadow`}> {/* Increased w-9 h-9 -> w-11 h-11 */}
+              <stat.icon className="h-6 w-6 text-white" /> {/* Increased h-5 w-5 -> h-6 w-6 */}
+            </div>
+            <div>
+              <div className="text-lg font-semibold text-slate-900 leading-tight">{stat.value}</div> {/* Increased text-base -> text-lg */}
+              <div className="text-sm text-slate-600">{stat.label}</div> {/* Increased text-xs -> text-sm */}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </motion.div>
+</div>
 						</div>
 					</div>
-
-					{/* Enhanced Scroll Indicator */}
-					<motion.div
-						className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ delay: 3, duration: 1 }}
-					>
-						<motion.div
-							className="relative cursor-pointer group"
-							onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
-							whileHover={{ scale: 1.1 }}
-							transition={{ duration: 0.3 }}
-						>
-							<motion.div
-								className="w-8 h-12 border-2 border-slate-400 rounded-full flex justify-center group-hover:border-blue-500 transition-colors duration-300"
-								animate={{ opacity: [0.5, 1, 0.5] }}
-								transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-							>
-								<motion.div
-									className="w-1.5 h-3 bg-slate-500 rounded-full mt-2 group-hover:bg-blue-500 transition-colors duration-300"
-									animate={{ y: [0, 12, 0] }}
-									transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-								/>
-							</motion.div>
-							<p className="text-xs text-slate-500 text-center mt-2 font-medium">
-								Scroll to explore
-							</p>
-						</motion.div>
-					</motion.div>
 				</motion.div>
 
 				{/* Add animated background patterns */}
@@ -565,6 +445,12 @@ export default function Hero() {
 						}}
 					/>
 				</motion.div>
+
+				{/* Decorative Globe Illustration - New Addition */}
+				<Globe
+					className="absolute right-10 top-1/2 -translate-y-1/2 text-blue-100/30 w-64 h-64 z-0 pointer-events-none hidden xl:block"
+					style={{ filter: "blur(2px)" }}
+				/>
 			</section>
 		</motion.div>
 	)
