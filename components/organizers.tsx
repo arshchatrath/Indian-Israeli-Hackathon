@@ -253,17 +253,32 @@ const coreMembers = [
 		location: "India"
 	},
 	{
+		name:"Arsh Chatrath",
+		designation:"General Secretary, Creative Computing Society, Tiet",
+		image:"/Arsh Chatrath.avif",
+		bio:"Leading with vision, empowering through creativity.",
+		location:"India"
+
+	},
+	{
+		name:"Sarthak Tyagi",
+		designation:"General Secretary, Creative Computing Society, Tiet",
+		image:"/Sarthak Tyagi.avif",
+		bio:"Shaping the future of tech through student leadership",
+		location:"India"
+	},
+	{
+		name:"Ritesh Kapoor",
+		designation:"General Secretary, Creative Computing Society, Tiet",
+		image:"/Ritesh Kapoor.avif",
+		bio:"Championing student-led change at the intersection of creativity and computing.",
+		location:"India"
+	},
+	{
 		name:"Karman Singh Talwar",
 		designation:"Student Volunteer, Thapar University",
 		image:"/Karman Singh Talwar.avif",
 		bio:"Passionate advocate for student innovation and impact.",
-		location:"India"
-	},
-	{
-		name:"Sarthak Tyagi",
-		designation:"General Secretary,Creative Computing Society,Thapar University",
-		image:"/Sarthak Tyagi.avif",
-		bio:"Shaping the future of tech through student leadership",
 		location:"India"
 	},
 	{
