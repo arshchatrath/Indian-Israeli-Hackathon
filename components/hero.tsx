@@ -171,7 +171,7 @@ export default function Hero() {
 
 									{/* COE Logo - Optimized for Horizontal Layout */}
 									<motion.div
-										className="flex items-center space-x-6"
+										className="flex flex-col sm:flex-row items-center sm:items-stretch w-full"
 										initial={{ opacity: 0, scale: 0.9 }}
 										animate={{ opacity: 1, scale: 1 }}
 										transition={{
@@ -181,7 +181,7 @@ export default function Hero() {
 										}}
 									>
 										<motion.div
-											className="relative group cursor-pointer"
+											className="relative group cursor-pointer w-full sm:w-2/3 flex items-center justify-center sm:pr-6"
 											whileHover={{ scale: 1.02 }}
 											transition={{ duration: 0.3, ease: "easeOut" }}
 										>
@@ -196,23 +196,25 @@ export default function Hero() {
 													ease: "easeInOut",
 												}}
 											/>
-											<div className="relative bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-2xl border border-white/80">
-												<img
-													src="/coe logo.png"
-													alt="Center of Excellence"
-													className="h-16 w-auto object-contain"
-												/>
-											</div>
+											<a href="https://dsai.thapar.edu" target="_blank" rel="noopener noreferrer" title="Visit dsai.thapar.edu" className="block w-full group">
+												<div className="relative bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-2xl border border-white/80 w-full flex items-center justify-center transition-all duration-300 group-hover:ring-4 group-hover:ring-blue-400/40 group-hover:ring-offset-2 group-hover:ring-offset-white group-hover:shadow-blue-400/30 group-hover:shadow-2xl">
+													<img
+														src="/coe logo.png"
+														alt="Center of Excellence"
+														className="h-20 w-4/5 object-contain mx-auto"
+													/>
+													<span className="pointer-events-none absolute inset-0 rounded-xl group-hover:bg-blue-400/10 group-hover:blur-sm transition-all duration-300"></span>
+												</div>
+											</a>
 										</motion.div>
-
 										<motion.div
 											initial={{ opacity: 0, x: -10 }}
 											animate={{ opacity: 1, x: 0 }}
 											transition={{ duration: 0.8, delay: 0.6 }}
-											className="space-y-1"
+											className="flex flex-col justify-center text-center sm:text-left w-full sm:w-1/3"
 										>
 											<p className="text-lg font-bold text-slate-800">
-												Center of Excellence
+												Center of Excellence in Data Science & AI, TIET, Patiala
 											</p>
 											<p className="text-sm text-blue-600 font-semibold tracking-wide uppercase">
 												Proudly Presents
