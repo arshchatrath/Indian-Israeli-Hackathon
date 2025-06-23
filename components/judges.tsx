@@ -146,7 +146,7 @@ const Button = ({ onClick, variant, className, children }) => (
     onClick={onClick}
     className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
       variant === "outline"
-        ? "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 hover:border-blue-700"
+        ? "text-blue-600 hover:bg-blue-50 hover:border-blue-700"
         : "bg-blue-600 text-white hover:bg-blue-700"
     } ${className}`}
   >
@@ -187,7 +187,7 @@ export default function Judges() {
             <Button
               onClick={() => handleSection("eligibility")}
               variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center"
+              className={`${openSection === "eligibility" ? "border-2 border-blue-700" : "border border-blue-600"} text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center`}
             >
               Eligibility Criteria
               <ChevronDown
@@ -197,7 +197,7 @@ export default function Judges() {
             <Button
               onClick={() => handleSection("criteria")}
               variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center"
+              className={`${openSection === "criteria" ? "border-2 border-blue-700" : "border border-blue-600"} text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center`}
             >
               Selection Criteria
               <ChevronDown
@@ -207,7 +207,7 @@ export default function Judges() {
             <Button
               onClick={() => handleSection("process")}
               variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center"
+              className={`${openSection === "process" ? "border-2 border-blue-700" : "border border-blue-600"} text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center`}
             >
               Selection Process
               <ChevronDown
