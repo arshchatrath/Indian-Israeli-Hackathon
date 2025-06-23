@@ -224,10 +224,13 @@ export default function Hero() {
 							initial={{ letterSpacing: "0.1em", opacity: 0.8 }}
 							animate={{ letterSpacing: "0.05em", opacity: 1 }}
 							transition={{ duration: 1.2, delay: 0.4 }}
-							className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-red-700 via-rose-700 to-pink-700 bg-clip-text text-transparent"
+							className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-teal-500"
 						>
-							Center of Excellence in Data Science & AI, TIET, Patiala
+							Center of Excellence in Data Science & AI
 						</motion.h2>
+                        <div className="text-xl sm:text-2xl md:text-3xl font-bold text-teal-500 mb-2">
+                            Thapar Institute of Engineering and Technology, Patiala
+                        </div>
                         <motion.h3 
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -252,7 +255,7 @@ export default function Hero() {
                                 initial={{ scale: 0.95, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-700 bg-clip-text text-transparent leading-tight mt-[-2rem]"
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent leading-tight mt-[-2.5rem]"
                                 style={{
                                     textShadow: "0 0 30px rgba(139, 69, 19, 0.1)"
                                 }}
