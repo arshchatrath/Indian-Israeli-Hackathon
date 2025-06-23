@@ -157,9 +157,11 @@ const Button = ({ onClick, variant, className, children }) => (
 export default function Judges() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [showCriteria, setShowCriteria] = useState(false)
-  const [showEligibility, setShowEligibility] = useState(false)
-  const [showProcess, setShowProcess] = useState(false)
+  const [openSection, setOpenSection] = useState(null)
+
+  const handleSection = (section) => {
+    setOpenSection((prev) => (prev === section ? null : section))
+  }
 
   return (
     <div className="py-20 bg-white min-h-screen">
@@ -169,7 +171,7 @@ export default function Judges() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-4"
         >
           <div className="inline-block p-2 bg-blue-100 rounded-full mb-4">
             <Users className="h-8 w-8 text-blue-600" />
@@ -183,33 +185,33 @@ export default function Judges() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button
-              onClick={() => setShowEligibility((v) => !v)}
+              onClick={() => handleSection("eligibility")}
               variant="outline"
               className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center"
             >
               Eligibility Criteria
               <ChevronDown
-                className={`ml-2 h-4 w-4 transition-transform duration-200 ${showEligibility ? "rotate-180" : ""}`}
+                className={`ml-2 h-4 w-4 transition-transform duration-200 ${openSection === "eligibility" ? "rotate-180" : ""}`}
               />
             </Button>
             <Button
-              onClick={() => setShowCriteria((v) => !v)}
+              onClick={() => handleSection("criteria")}
               variant="outline"
               className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center"
             >
               Selection Criteria
               <ChevronDown
-                className={`ml-2 h-4 w-4 transition-transform duration-200 ${showCriteria ? "rotate-180" : ""}`}
+                className={`ml-2 h-4 w-4 transition-transform duration-200 ${openSection === "criteria" ? "rotate-180" : ""}`}
               />
             </Button>
             <Button
-              onClick={() => setShowProcess((v) => !v)}
+              onClick={() => handleSection("process")}
               variant="outline"
               className="border-blue-600 text-blue-600 hover:bg-blue-50 hover:shadow-lg transform hover:scale-105 inline-flex items-center"
             >
               Selection Process
               <ChevronDown
-                className={`ml-2 h-4 w-4 transition-transform duration-200 ${showProcess ? "rotate-180" : ""}`}
+                className={`ml-2 h-4 w-4 transition-transform duration-200 ${openSection === "process" ? "rotate-180" : ""}`}
               />
             </Button>
           </div>
@@ -219,8 +221,8 @@ export default function Judges() {
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{
-            opacity: showEligibility ? 1 : 0,
-            height: showEligibility ? "auto" : 0,
+            opacity: openSection === "eligibility" ? 1 : 0,
+            height: openSection === "eligibility" ? "auto" : 0,
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="overflow-hidden mb-8"
@@ -247,14 +249,14 @@ export default function Judges() {
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{
-            opacity: showCriteria ? 1 : 0,
-            height: showCriteria ? "auto" : 0,
+            opacity: openSection === "criteria" ? 1 : 0,
+            height: openSection === "criteria" ? "auto" : 0,
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="overflow-hidden mb-8"
         >
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-blue-100">
-            <div className="flex items-center justify-center mb-8">
+            <div className="flex items-center justify-center mb-6">
               <div className="p-2 bg-blue-100 rounded-full mr-3">
                 <Star className="h-6 w-6 text-blue-600" />
               </div>
@@ -265,7 +267,7 @@ export default function Judges() {
                 <motion.div
                   key={`criteria-${criteria.title}`}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={showCriteria ? { opacity: 1, y: 0 } : {}}
+                  animate={openSection === "criteria" ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl hover:shadow-lg transition-all duration-300 border border-blue-100"
                 >
@@ -284,11 +286,11 @@ export default function Judges() {
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{
-            opacity: showProcess ? 1 : 0,
-            height: showProcess ? "auto" : 0,
+            opacity: openSection === "process" ? 1 : 0,
+            height: openSection === "process" ? "auto" : 0,
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="overflow-hidden mb-4"
+          className="overflow-hidden mb-8"
         >
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-blue-100 max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
