@@ -254,7 +254,7 @@ const coreMembers = [
 	},
 	{
 		name:"Arsh Chatrath",
-		designation:"General Secretary, Creative Computing Society, Tiet",
+		designation:"Joint Secretary, Creative Computing Society, Tiet",
 		image:"/Arsh Chatrath.avif",
 		bio:"Leading with vision, empowering through creativity.",
 		linkedin:"https://www.linkedin.com/in/arshchatrath/",
