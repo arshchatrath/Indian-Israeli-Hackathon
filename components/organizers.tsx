@@ -382,7 +382,7 @@ export default function Organizers() {
 					>
 						Organizing Committee
 					</motion.h2>
-					<div className="max-w-3xl mx-auto mb-8">
+					<div className="max-w-4xl mx-auto mb-8">
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -406,7 +406,7 @@ export default function Organizers() {
 										<svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4 text-[#4F46E5] group-hover:text-[#9333EA] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
 											<path strokeLinecap="round" strokeLinejoin="round" d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6m5-3h3m0 0v3m0-3L10 14" />
 										</svg>
-									</a> is a cross-disciplinary research centre advancing foundational and applied research in data science and AI, jointly located at Thapar Institute of Engineering & Technology (TIET), Patiala, India, and The University of Queensland, Australia. It works to bridge national and disciplinary boundaries—spanning computer science, engineering, health, agriculture, and more—to develop innovative solutions for global challenges and foster knowledge exchange between two leading institutions.<br /><br />
+									</a>, the organizing committee of Israeli-Indian Hackathon, is a cross-disciplinary research centre advancing foundational and applied research in data science and AI, jointly located at Thapar Institute of Engineering & Technology (TIET), Patiala, India, and The University of Queensland, Australia. It works to bridge national and disciplinary boundaries—spanning computer science, engineering, health, agriculture, and more—to develop innovative solutions for global challenges and foster knowledge exchange between two leading institutions.<br /><br />
 									<span className="font-bold">Thapar Institute of Engineering & Technology (TIET)</span> is one of India's premier engineering institutions, renowned for its excellence in technical education, research, and innovation. With a legacy since 1956, TIET is consistently ranked among the top 20 engineering institutions in India, pioneering initiatives in Data Science, Artificial Intelligence, and Machine Learning.
 								</p>
 							</div>
