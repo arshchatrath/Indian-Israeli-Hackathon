@@ -258,7 +258,7 @@ export default function Hero() {
                                 }}
                             >
                                 <span className="inline-block">
-                                    Indian Israel
+                                    Israeli-Indian
                                 </span>
                                 <br />
                                 <motion.span 

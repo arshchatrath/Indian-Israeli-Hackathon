@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Video, Trophy, Award, FileText, Users, ArrowRight } from "lucide-react" // Added ArrowRight
+import { Video, Trophy, Award, FileText, Users, ArrowRight, Scale } from "lucide-react" // Added ArrowRight
 import { Button } from "@/components/ui/button" // Added Button import
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -72,33 +72,7 @@ export default function Registration() {
           <p className="text-xl text-gray-600 mb-8">Your path to innovation starts here</p>
         </motion.div>
 
-        {/* Registration Rounds */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {registrationRounds.map((round, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <Card className="h-full hover:shadow-lg transition-shadow">
-                <CardHeader className="text-center">
-                  <div className={`${round.color} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <round.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">{round.round}</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-blue-600">{round.title}</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-600 mb-4">{round.description}</p>
-                  <p className="font-semibold text-gray-900">{round.deadline || round.date}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div> */}
-
-        {/* CTA Buttons After Rounds */}
+        {/* CTA Buttons */}
         <motion.div
           className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -158,70 +132,118 @@ export default function Registration() {
           </motion.div>
         </motion.div>
 
-        {/* Additional Information */}
+        {/* Rules & Eligibility */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Eligibility & Rules */}
+          {/* Left: Eligibility & Rules */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full"
           >
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Users className="h-6 w-6 text-blue-600 mr-2" />
+                <CardTitle className="flex items-center gap-2">
+                  <span role="img" aria-label="shield">🛡️</span>
                   Eligibility & Rules
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
-                  {eligibilityPoints.map((point, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700">{point}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-2 font-semibold text-blue-700 text-lg">
+                    <Users className="h-5 w-5 text-blue-600" />
+                    Eligibility
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-gray-700 text-base pl-2">
+                    <li>Open to undergraduate/graduate students (any discipline) and working professionals currently residing in <b>India</b> or <b>Israel</b>.</li>
+                    <li><b>Thapar students</b> must participate offline; others will join online.</li>
+                    <li>Teams of <b>2-5 members</b>.</li>
+                    <li>Must have basic technical knowledge in chosen domain.</li>
+                    <li className="text-green-700 font-semibold">No registration fee.</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-2 font-semibold text-purple-700 text-lg">
+                    <span role="img" aria-label="scroll">📜</span>
+                    Rules
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-gray-700 text-base pl-2">
+                    <li>All ideas must be original and built during the hackathon.</li>
+                    <li>Teams must take part in all 3 rounds to stay eligible.</li>
+                    <li>Offline teams present at the venue; online teams submit projects digitally.</li>
+                    <li>Each participant can join only one team.</li>
+                    <li>Maintain a respectful and ethical code of conduct.</li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
 
-          {/* Results & Certificates */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Award className="h-6 w-6 text-blue-600 mr-2" />
-                  Results & Certificates
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Result Announcement</h4>
-                  <p className="text-gray-600">
-                    Final results will be announced within 48 hours of Round-III completion
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Certificates</h4>
-                  <p className="text-gray-600">
-                    All participants will receive participation certificates. Winners get special recognition
-                    certificates.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Additional Benefits</h4>
-                  <p className="text-gray-600">
-                    Networking opportunities, mentorship, and potential internship offers for outstanding participants.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+          {/* Right: Evaluation Criteria and Results/Certificates (stacked) */}
+          <div className="flex flex-col gap-8 w-full">
+            {/* Evaluation Criteria Box */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Scale className="h-6 w-6 text-purple-600" />
+                    Evaluation Criteria
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="font-semibold text-blue-700 mb-1">Judges will evaluate on:</div>
+                  <ul className="list-disc list-inside space-y-1 text-gray-700 text-base pl-2">
+                    <li>Innovation</li>
+                    <li>Technical execution</li>
+                    <li>Impact</li>
+                    <li>UX/UI</li>
+                    <li>Pitch</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Results & Certificates Box */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <Award className="h-6 w-6 text-blue-600 mr-2" />
+                    Results & Certificates
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Result Announcement</h4>
+                    <p className="text-gray-600">
+                      Final results will be announced within 48 hours of Round-III completion
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Certificates</h4>
+                    <p className="text-gray-600">
+                      All participants will receive participation certificates. Winners get special recognition
+                      certificates.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Additional Benefits</h4>
+                    <p className="text-gray-600">
+                      Networking opportunities, mentorship, and potential internship offers for outstanding participants.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </div>
     </div>
