@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 const navItems = [
   { name: "Organizers", href: "#organizers" },
@@ -23,14 +24,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-    setIsOpen(false)
-  }
 
   // Scroll to top when clicking the heading
   const scrollToTop = () => {
@@ -62,7 +55,8 @@ export default function Navbar() {
             <span className="font-bold text-xl text-gray-900">Israeli-Indian Hackathon</span>
           </motion.div>
 
-          {/* Desktop Navigation */}
+          {/* Old desktop nav (button-based, commented out) */}
+          {/**
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <motion.button
@@ -74,6 +68,17 @@ export default function Navbar() {
               >
                 {item.name}
               </motion.button>
+            ))}
+          </div>
+          */}
+          {/* New desktop nav (Link-based) */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link key={item.name} href={item.href} scroll={true} legacyBehavior>
+                <a className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                  {item.name}
+                </a>
+              </Link>
             ))}
           </div>
 
@@ -100,6 +105,8 @@ export default function Navbar() {
             className="md:hidden bg-white/95 backdrop-blur-md border-t"
           >
             <div className="px-4 py-2 space-y-1">
+              {/* Old mobile nav (button-based, commented out) */}
+              {/**
               {navItems.map((item) => (
                 <motion.button
                   key={item.name}
@@ -109,6 +116,18 @@ export default function Navbar() {
                 >
                   {item.name}
                 </motion.button>
+              ))}
+              */}
+              {/* New mobile nav (Link-based) */}
+              {navItems.map((item) => (
+                <Link key={item.name} href={item.href} scroll={true} legacyBehavior>
+                  <a
+                    className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                </Link>
               ))}
             </div>
           </motion.div>
