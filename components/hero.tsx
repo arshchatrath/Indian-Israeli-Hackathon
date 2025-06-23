@@ -226,7 +226,7 @@ export default function Hero() {
 							transition={{ duration: 1.2, delay: 0.4 }}
 							className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 bg-gradient-to-r from-red-700 via-rose-700 to-pink-700 bg-clip-text text-transparent"
 						>
-							Center of excellence in data science & AI, TIET, Patiala
+							Center of Excellence in Data Science & AI, TIET, Patiala
 						</motion.h2>
                         <motion.h3 
                             initial={{ opacity: 0 }}
