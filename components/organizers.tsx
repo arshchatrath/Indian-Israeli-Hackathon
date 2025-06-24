@@ -197,7 +197,7 @@ const coreMembers = [
 		location: "Israel"
 	},
 	{
-		name: "Bhavvishya Singla",
+		name: "Bhavishya Singla",
 		designation: "Student Volunteer, Thapar University",
 		image: "/Bhavishya Singla.avif",
 		bio: "Innovative thinker driving student-led change.",
