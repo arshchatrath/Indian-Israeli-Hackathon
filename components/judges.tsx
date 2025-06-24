@@ -30,6 +30,13 @@ const judges = [
     image: "/Anil Vijarnia.avif",
   },
   {
+    name: "Mr Sai Kiran Nandipati",
+    title: "Senior Application System Engineer",
+    company: " Ernst & Young, USA.",
+    image: "/sai kiran.jpg",
+    linkedIn: "https://www.linkedin.com/in/sai-kiran-nandipati-92a302133 ",
+  },
+  {
     name: "Mr. Abhishek Vyas",
     title: "Product Leader",
     company: "Meta",
