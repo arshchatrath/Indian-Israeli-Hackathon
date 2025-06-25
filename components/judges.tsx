@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
-import { ChevronDown, Users, Lightbulb, Globe2, BookOpen, Star, Scale, Building2 } from "lucide-react"
+import { ChevronDown, Users, Lightbulb, Globe2, BookOpen, Star, Scale, Building2, Linkedin } from "lucide-react"
 
 const judges = [
   {
@@ -10,18 +10,21 @@ const judges = [
     title: "Lead SAP",
     company: "Tractor Supply Company",
     image: "/Ravi Patneedi.avif",
+    linkedIn: "https://www.linkedin.com/in/ravi-patneedi-169233a/"
   },
   {
     name: "Mr. Satish Bhambri",
     title: "Sr Machine Learning Engineer",
     company: "Walmart Labs",
     image: "/Satish Bhambri.avif",
+    linkedIn: "https://www.linkedin.com/in/satish-bhambri-9164b997/"
   },
   {
     name: "Mr. Sunil Netra",
     title: "Principal Developer",
     company: "",
     image: "/Sunil Netra.avif",
+    linkedIn: "https://www.linkedin.com/in/snetra/"
   },
   {
     name: "Mr. Anil Vijarnia",
@@ -41,12 +44,14 @@ const judges = [
     title: "Product Leader",
     company: "Meta",
     image: "/Abhishek Vyas.avif",
+    linkedIn: "https://www.linkedin.com/in/abvyas/"
   },
   {
     name: "Mr. Chetan Sharma",
     title: "SAP Architect",
     company: "Tractor Supply Company, Brentwood, Tennessee",
     image: "/Mr. Chetan Sharma.avif",
+    linkedIn: "https://www.linkedin.com/in/chetansharma4u/"
   },
   {
     name: "Mr Sai Raghu Ram Gummadidala",
@@ -59,12 +64,14 @@ const judges = [
     title: "Firmware Engineer III",
     company: "Variosystems Inc",
     image: "/Sangeeta Singh.avif",
+    linkedIn: "https://www.linkedin.com/in/sangeetasinghembeddedsystems/"
   },
   {
     name: "Mr. Naga Bharadwaj Bhavikatta",
     title: "Sr Tech Manager",
     company: "Oracle, USA",
     image: "/Naga Bharadwaj Bhavikatta.avif",
+    linkedIn: "https://www.linkedin.com/in/naga-bharadwaj-bhavikatta-101347203/"
   },
   {
     name: "Mr. Navdeep Singh",
@@ -77,6 +84,7 @@ const judges = [
     title: "Sr. Software Engineer",
     company: "Prosper Marketplace INC",
     image: "/Mr. Jaya Krishna Modadugu.avif",
+    linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
   },
 ]
 
@@ -330,16 +338,37 @@ export default function Judges() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group"
+              whileHover={{ y: -12, scale: 1.04 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-400"
             >
-              <div className="relative overflow-hidden">
+              {/* Image Section with group for hover */}
+              <div className="relative overflow-hidden h-48 group">
                 <img
                   src={judge.image || "/placeholder.svg"}
                   alt={judge.name}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {judge.linkedIn && (
+                  <div className="absolute inset-0 flex items-end justify-center pointer-events-none">
+                    <motion.button
+                      whileHover={{
+                        scale: 1.18,
+                        rotate: 6,
+                        boxShadow: "0 0 0 6px rgba(37,99,235,0.15), 0 8px 32px 0 rgba(37,99,235,0.25)",
+                        filter: "brightness(1.15)",
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => window.open(judge.linkedIn.trim(), "_blank")}
+                      className="pointer-events-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-blue-600 to-blue-400 p-3 rounded-full shadow-2xl ring-2 ring-white/70 hover:ring-blue-400 focus:ring-4 focus:ring-blue-500"
+                      tabIndex={0}
+                      aria-label={`Open LinkedIn profile of ${judge.name}`}
+                      type="button"
+                      style={{ marginBottom: "1.5rem" }}
+                    >
+                      <Linkedin className="h-7 w-7 text-white transition-colors duration-200 drop-shadow-lg" />
+                    </motion.button>
+                  </div>
+                )}
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">{judge.name}</h3>
