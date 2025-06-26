@@ -226,7 +226,7 @@ const coreMembers = [
 	},
 	{
 		name: "Chen Kamin",
-		designation: "CEO, B1 Association",
+		designation: "CEO, 81 Alumni Association",
 		image: "/Chen Kamin.avif",
 		bio: "Advocate for emerging entrepreneurs in tech.",
 		location: "Israel"
