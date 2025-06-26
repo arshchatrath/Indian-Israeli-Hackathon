@@ -288,6 +288,13 @@ const coreMembers = [
 		image:"/Bhavninder Singh.avif",
 		bio:"Passionate about collaborative problem-solving and impactful technology",
 		location:"India"
+	},
+	{
+		name:"Prarabdh Sharma",
+		designation:"Student Volunteer, Thapar University",
+		image:"/Prarabdh Sharma.avif",
+		bio:"Turning ideas into impact through technology and teamwork.",
+		location:"India"
 	}
 ];
 

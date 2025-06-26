@@ -31,6 +31,7 @@ const judges = [
     title: "Senior Principal Engineer",
     company: "Wasabi Technologies",
     image: "/Anil Vijarnia.avif",
+    linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
   },
   {
     name: "Mr Sai Kiran Nandipati",
@@ -58,6 +59,7 @@ const judges = [
     title: "Independent Researcher",
     company: "Tractor Supply Company, Brentwood, Tennessee",
     image: "/Sai raghu.jpg",
+    linkedIn:"https://www.linkedin.com/in/raghu-ram-gummadidala-b2a171128/"
   },
   {
     name: "Ms. Sangeeta Singh",
@@ -78,6 +80,7 @@ const judges = [
     title: "Principal Product Manager",
     company: "Walmart",
     image: "/Navdeep Singh.avif",
+    linkedIn:"https://www.linkedin.com/in/inavdeepsingh/"
   },
   {
     name: "Mr. Jaya Krishna Modadugu",
