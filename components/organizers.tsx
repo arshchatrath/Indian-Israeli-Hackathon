@@ -226,7 +226,7 @@ const coreMembers = [
 	},
 	{
 		name: "Chen Kamin",
-		designation: "CEO, B1 Association",
+		designation: "CEO, 81 Alumni Association",
 		image: "/Chen Kamin.avif",
 		bio: "Advocate for emerging entrepreneurs in tech.",
 		location: "Israel"
@@ -287,6 +287,13 @@ const coreMembers = [
 		designation:"Student Volunteer, Thapar University",
 		image:"/Bhavninder Singh.avif",
 		bio:"Passionate about collaborative problem-solving and impactful technology",
+		location:"India"
+	},
+	{
+		name:"Prarabdh Sharma",
+		designation:"Student Volunteer, Thapar University",
+		image:"/Prarabdh Sharma.avif",
+		bio:"Turning ideas into impact through technology and teamwork.",
 		location:"India"
 	}
 ];
