@@ -40,13 +40,6 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/sai-kiran-nandipati-92a302133 ",
   },
   {
-    name: "Mr. Abhishek Vyas",
-    title: "Product Leader",
-    company: "Meta",
-    image: "/Abhishek Vyas.avif",
-    linkedIn: "https://www.linkedin.com/in/abvyas/"
-  },
-  {
     name: "Mr. Chetan Sharma",
     title: "SAP Architect",
     company: "Tractor Supply Company, Brentwood, Tennessee",
