@@ -68,8 +68,8 @@ export default function Registration() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Registration & Rules</h2>
-          <p className="text-xl text-gray-600 mb-8">Your path to innovation starts here</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Registration, Rules and Guidelines</h2>
+          {/* <p className="text-xl text-gray-600 mb-8">Your path to innovation starts here</p> */}
         </motion.div>
 
         {/* CTA Buttons */}

@@ -221,28 +221,28 @@ export default function Hero() {
                         className="w-full max-w-4xl mx-auto mb-8 text-center px-4"
                     >
                         <motion.h2 
-							initial={{ letterSpacing: "0.1em", opacity: 0.8 }}
-							animate={{ letterSpacing: "0.05em", opacity: 1 }}
-							transition={{ duration: 1.2, delay: 0.4 }}
-							className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-teal-500"
-						>
-							Center of Excellence in Data Science & AI
-						</motion.h2>
-                        <div className="text-xl sm:text-2xl md:text-3xl font-bold text-teal-500 mb-2">
-                            Thapar Institute of Engineering and Technology, Patiala
-                        </div>
-                        <motion.h3 
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.8, delay: 0.6 }}
-                            className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-700"
+                            initial={{ letterSpacing: "0.1em", opacity: 0.8 }}
+                            animate={{ letterSpacing: "0.05em", opacity: 1 }}
+                            transition={{ duration: 1.2, delay: 0.4 }}
+                            className="text-2xl sm:text-2xl md:text-2.5xl font-extrabold mb-2 text-teal-500"
+                            style={{ fontFamily: "inherit" }}
                         >
-                            Proudly presents
-                        </motion.h3>
+                            Center of Excellence in Data Science & AI<br />
+                            Thapar Institute of Engineering and Technology, Patiala
+                        </motion.h2>
+                        <div className="mt-2 mb-1 text-lg font-bold text-black">
+                            in association with
+                        </div>
+                        <div className="text-lg sm:text-xl font-extrabold text-teal-500 mb-2">
+                            Tel Aviv University, Israel and University of Haifa, Israel.
+                        </div>
+                        <div className="text-base font-semibold text-black mt-6">
+                            Presents
+                        </div>
                     </motion.div>
 
                     {/* Main Content Grid */}
-                    <div className="w-full max-w-7xl mx-auto px-4 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-8 xl:gap-12">
+                    <div className="w-full max-w-7xl mx-auto px-4 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-8 xl:gap-6">
                         {/* Left: Main Content (left-aligned, timer below CTAs) */}
                         <motion.div 
                             initial={{ y: 40, opacity: 0 }}
@@ -342,7 +342,7 @@ export default function Hero() {
                                 </Button>
                             </motion.div>
 
-                            {/* Enhanced Timer */}
+                            {/* Timer */}
                             <motion.div 
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
@@ -380,12 +380,12 @@ export default function Hero() {
                             </motion.div>
                         </motion.div>
 
-                        {/* Enhanced Right: Event Highlights */}
+                        {/* Enhanced Right:Event Highlights */}
                         <motion.div 
                             initial={{ x: 60, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
                             transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-                            className="flex flex-col items-center w-full max-w-xs xl:ml-8 order-3" // max-w-md -> max-w-xs
+                            className="flex flex-col items-center w-full max-w-xs xl:ml-8 order-3 -mt-10"
                         >
                             <div className="w-full">
                                 <motion.div 

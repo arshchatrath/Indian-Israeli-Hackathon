@@ -126,14 +126,14 @@ export default function Home() {
           <motion.section id="registration" variants={sectionVariants}>
             <Registration />
           </motion.section>
-          <motion.section id="spoc" variants={sectionVariants}>
-            <SPOC />
-          </motion.section>
           <motion.section id="partners" variants={sectionVariants}>
             <Partners />
           </motion.section>
           <motion.section id="judges" variants={sectionVariants}>
             <Judges />
+          </motion.section>
+          <motion.section id="spoc" variants={sectionVariants}>
+            <SPOC />
           </motion.section>
           <motion.section id="prizes" variants={sectionVariants}>
             <Prizes />

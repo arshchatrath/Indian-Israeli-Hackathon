@@ -25,6 +25,7 @@ const partnerCategories = [
 	{
 		title: "Industry Partners",
 		partners: [
+			{ logo: "/codingn.jpg?height=100&width=200" },
 			{ logo: "/ip1.avif?height=100&width=200" },
 			{ logo: "/ip2.avif?height=100&width=200" },
 			{ logo: "/ip3.avif?height=100&width=200" },

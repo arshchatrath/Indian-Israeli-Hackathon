@@ -1,183 +1,88 @@
 "use client"
 
-import type React from "react"
-
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
-import { useRef, useState } from "react"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useRef } from "react"
+import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function Contact() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    setIsSubmitted(true)
-    setTimeout(() => setIsSubmitted(false), 3000)
-    setFormData({ name: "", email: "", message: "" })
-  }
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
 
   return (
-    <div className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-20 bg-gradient-to-br from-blue-50 via-white to-emerald-50 relative overflow-hidden">
+      {/* Decorative blobs */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-40 pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-40 pointer-events-none" />
+
+      <div className="w-full max-w-6xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-          <p className="text-xl text-gray-600">Get in touch with our team</p>
+          <span className="inline-block bg-blue-100 text-blue-700 font-semibold px-4 py-1 rounded-full mb-4 shadow-sm tracking-wide text-base">
+            We're here to help!
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 bg-gradient-to-r from-blue-700 via-emerald-600 to-blue-400 bg-clip-text text-transparent">
+            Contact Us
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Have questions about the hackathon? Reach out and we'll get back to you soon.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="bg-white/95 rounded-3xl shadow-2xl px-8 py-10 flex flex-col items-center gap-8 w-full border border-blue-100"
+        >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 w-full">
+            <motion.div
+              whileHover={{ scale: 1.08, y: -4, boxShadow: "0 8px 32px 0 rgba(37,99,235,0.10)" }}
+              className="flex items-center gap-3 bg-blue-50/60 rounded-xl px-5 py-3 shadow group transition"
+            >
+              <span className="bg-blue-100 p-3 rounded-full shadow group-hover:scale-110 transition">
+                <Mail className="h-6 w-6 text-blue-600" />
+              </span>
+              <a
+                href="mailto:contact@israeli-indian-hackathon.org"
+                className="text-blue-700 font-semibold hover:underline text-base"
+              >
+                contact@israeli-indian-hackathon.org
+              </a>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.08, y: -4, boxShadow: "0 8px 32px 0 rgba(16,185,129,0.10)" }}
+              className="flex items-center gap-3 bg-green-50/60 rounded-xl px-5 py-3 shadow group transition"
+            >
+              <span className="bg-green-100 p-3 rounded-full shadow group-hover:scale-110 transition">
+                <Phone className="h-6 w-6 text-green-600" />
+              </span>
+              <span className="text-gray-700 font-medium text-base">+91-93138 89932</span>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.08, y: -4, boxShadow: "0 8px 32px 0 rgba(168,85,247,0.10)" }}
+              className="flex items-center gap-3 bg-purple-50/60 rounded-xl px-5 py-3 shadow group transition"
+            >
+              <span className="bg-purple-100 p-3 rounded-full shadow group-hover:scale-110 transition">
+                <MapPin className="h-6 w-6 text-purple-600" />
+              </span>
+              <span className="text-gray-700 font-medium text-base">Virtual & Physical</span>
+            </motion.div>
+          </div>
+          {/* <motion.a
+            href="mailto:contact@israeli-indian-hackathon.org"
+            whileHover={{ scale: 1.07, boxShadow: "0 8px 32px 0 rgba(37,99,235,0.18)" }}
+            className="mt-2 inline-flex items-center px-9 py-4 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-xl font-bold rounded-full shadow-xl hover:from-blue-700 hover:to-emerald-600 transition-all duration-200"
           >
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
-              <p className="text-gray-600 mb-8">
-                Have questions about the hackathon? We're here to help! Reach out to us through any of the following
-                channels.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <motion.div className="flex items-center space-x-4" whileHover={{ x: 10 }}>
-                <div className="bg-blue-100 p-3 rounded-full">
-                  <Mail className="h-6 w-6 text-blue-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">contact@israeli-indian-hackathon.org</p>
-                </div>
-              </motion.div>
-
-              <motion.div className="flex items-center space-x-4" whileHover={{ x: 10 }}>
-                <div className="bg-green-100 p-3 rounded-full">
-                  <Phone className="h-6 w-6 text-green-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Phone</h4>
-                  <p className="text-gray-600">+91-93138 89932</p>
-                </div>
-              </motion.div>
-
-              <motion.div className="flex items-center space-x-4" whileHover={{ x: 10 }}>
-                <div className="bg-purple-100 p-3 rounded-full">
-                  <MapPin className="h-6 w-6 text-purple-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Location</h4>
-                  <p className="text-gray-600">Virtual & Physical Events</p>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
-                <CardDescription>Fill out the form below and we'll get back to you soon</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <motion.div whileFocus={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
-                    <Input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full"
-                    />
-                  </motion.div>
-
-                  <motion.div whileFocus={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full"
-                    />
-                  </motion.div>
-
-                  <motion.div whileFocus={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full"
-                    />
-                  </motion.div>
-
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitted}>
-                    {isSubmitted ? (
-                      <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center">
-                        Message Sent! ✓
-                      </motion.span>
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="ml-2 h-4 w-4" />
-                      </>
-                    )}
-                  </Button>
-                </form>
-
-                {/* Success Message */}
-                {isSubmitted && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg"
-                  >
-                    <p className="text-green-800 text-center">
-                      Thank you for your message! We'll get back to you soon.
-                    </p>
-                  </motion.div>
-                )}
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
+            <Mail className="h-7 w-7 mr-3" />
+            Send Email
+          </motion.a> */}
+        </motion.div>
       </div>
     </div>
   )

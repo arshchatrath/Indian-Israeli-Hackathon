@@ -182,18 +182,20 @@ export default function Judges() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-4"
+          className="text-center mb-0"
         >
-          <div className="inline-block p-2 bg-blue-100 rounded-full mb-4">
-            <Users className="h-8 w-8 text-blue-600" />
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="inline-block p-2 bg-blue-100 rounded-full">
+              <Users className="h-8 w-8 text-blue-600" />
+            </div>
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent m-0">
+              Expert Judges
+            </h2>
           </div>
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
-            Expert Judges
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          {/* <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Meet our distinguished panel of industry leaders and technical experts who will evaluate your innovations
             with their wealth of experience
-          </p>
+          </p> */}
           <div className="flex flex-wrap justify-center gap-4">
             <Button
               onClick={() => handleSection("eligibility")}
@@ -380,7 +382,7 @@ export default function Judges() {
           ))}
         </div>
 
-        {/* Stats Section */}
+        {/* Stats Section
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -404,7 +406,7 @@ export default function Judges() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   )

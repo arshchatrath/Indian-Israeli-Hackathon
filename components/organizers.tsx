@@ -388,7 +388,7 @@ export default function Organizers() {
 						transition={{ duration: 0.8, delay: 0.4 }}
 						className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6"
 					>
-						Organizing Committee
+						Organizers
 					</motion.h2>
 					<div className="max-w-4xl mx-auto mb-8">
 						<motion.div
@@ -453,7 +453,7 @@ export default function Organizers() {
 							transition={{ duration: 0.8, delay: 0.6 }}
 							className="text-lg text-gray-600 max-w-2xl mx-auto"
 						>
-							Distinguished leaders providing strategic direction and executive oversight for our mission.
+							{/* Distinguished leaders providing strategic direction and executive oversight for our mission. */}
 						</motion.p>
 					</motion.div>
 
@@ -602,7 +602,7 @@ export default function Organizers() {
 							transition={{ duration: 0.8, delay: 0.6 }}
 							className="text-lg text-gray-600 max-w-2xl mx-auto"
 						>
-							Dedicated professionals executing our vision and ensuring seamless operations across all initiatives.
+							{/* Dedicated professionals executing our vision and ensuring seamless operations across all initiatives. */}
 						</motion.p>
 					</motion.div>
 
