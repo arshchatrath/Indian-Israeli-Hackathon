@@ -392,33 +392,36 @@ export default function Organizers() {
 					</motion.h2>
 					<div className="max-w-4xl mx-auto mb-8">
 						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={isInView ? { opacity: 1, y: 0 } : {}}
-							transition={{ duration: 0.8, delay: 0.5 }}
-							className="rounded-2xl border-2 border-transparent bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 p-1 shadow-xl"
-							style={{ backgroundClip: 'padding-box' }}
-						>
-							<div className="rounded-2xl bg-white/90 p-6 sm:p-8">
-								<span className="block text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-purple-700 to-indigo-700 bg-clip-text text-transparent">
-									United by Innovation & Excellence
-								</span>
-								<p className="text-base sm:text-lg text-gray-700 leading-relaxed text-justify">
-									The <a
-										href="https://dsai.thapar.edu"
-										target="_blank"
-										rel="noopener noreferrer"
-										title="Visit dsai.thapar.edu"
-										className="inline-flex items-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#9333EA] hover:underline hover:decoration-2 hover:decoration-[#4F46E5] transition-all group"
-									>
-										Centre of Excellence in Data Science & AI,TIET
-										<svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4 text-[#4F46E5] group-hover:text-[#9333EA] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-											<path strokeLinecap="round" strokeLinejoin="round" d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6m5-3h3m0 0v3m0-3L10 14" />
-										</svg>
-									</a>, the organiser of Israeli-Indian Hackathon, is a cross-disciplinary research centre advancing foundational and applied research in data science and AI, jointly located at Thapar Institute, Patiala, India, and The University of Queensland, Australia. It works to bridge national and disciplinary boundaries—spanning computer science, engineering, health, agriculture, and more—to develop innovative solutions for global challenges and foster knowledge exchange between two leading institutions.<br /><br />
-									<span className="font-bold">Thapar Institute of Engineering & Technology (TIET)</span> is one of India's premier engineering institutions, renowned for its excellence in technical education, research, and innovation. With a legacy since 1956, TIET is consistently ranked among the top 20 engineering institutions in India, pioneering initiatives in Data Science, Artificial Intelligence, and Machine Learning.
-								</p>
-							</div>
-						</motion.div>
+						initial={{ opacity: 0, y: 20 }}
+						animate={isInView ? { opacity: 1, y: 0 } : {}}
+						transition={{ duration: 0.8, delay: 0.5 }}
+						className="rounded-2xl border-2 border-transparent bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 p-1 shadow-xl"
+						style={{ backgroundClip: 'padding-box' }}
+					>
+						<div className="rounded-2xl bg-white/90 p-6 sm:p-8">
+							<span className="block text-xl sm:text-2xl font-bold mb-2 bg-gradient-to-r from-blue-700 via-purple-700 to-indigo-700 bg-clip-text text-transparent">
+								United by Innovation & Excellence
+							</span>
+							<p className="text-base sm:text-lg text-gray-700 leading-relaxed text-justify">
+								The <a
+									href="https://dsai.thapar.edu"
+									target="_blank"
+									rel="noopener noreferrer"
+									title="Visit dsai.thapar.edu"
+									className="inline-flex items-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#9333EA] hover:underline hover:decoration-2 hover:decoration-[#4F46E5] transition-all group"
+								>
+									Centre of Excellence in Data Science & AI, TIET
+									<svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4 text-[#4F46E5] group-hover:text-[#9333EA] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M18 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2h6m5-3h3m0 0v3m0-3L10 14" />
+									</svg>
+								</a>, the organiser of Israeli-Indian Hackathon, is a cross-disciplinary research centre advancing foundational and applied research in data science and AI, jointly located at Thapar Institute, Patiala, India, and The University of Queensland, Australia. It works to bridge national and disciplinary boundaries—spanning computer science, engineering, health, agriculture, and more—to develop innovative solutions for global challenges and foster knowledge exchange between two leading institutions.<br /><br />
+								<span className="font-bold">Thapar Institute of Engineering & Technology (TIET)</span> is one of India's premier engineering institutions, renowned for its excellence in technical education, research, and innovation. With a legacy since 1956, TIET is consistently ranked among the top 20 engineering institutions in India, pioneering initiatives in Data Science, Artificial Intelligence, and Machine Learning.<br /><br />
+								<span className="font-bold">Tel Aviv University</span>, Israel’s largest and most comprehensive institution of higher learning, is known globally for its cutting-edge research and academic excellence across diverse fields. With a strong emphasis on innovation, entrepreneurship, and global partnerships, TAU fosters interdisciplinary collaborations that address real-world challenges.<br /><br />
+								<span className="font-bold">University of Haifa</span> is a major research university in Israel recognized for its unique interdisciplinary approach and focus on social responsibility. The university is a hub for advanced research in data science, cybersecurity, sustainability, and health, and is deeply engaged in fostering international academic collaboration and cultural diversity.
+							</p>
+						</div>
+					</motion.div>
+
 					</div>
 				</motion.div>
 
