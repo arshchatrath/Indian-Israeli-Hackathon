@@ -44,6 +44,14 @@ const partnerCategories = [
 		],
 	},
 	{
+		title: "Sponsors",
+		partners: [
+			{ logo: "/devfolio.jpg?height=100&width=200" },
+			{ logo: "/ETHIndia.png?height=100&width=200" },
+			{ logo: "/polygon.png?height=100&width=200" },
+		],
+	},
+	{
 		title: "Healthcare Partners",
 		partners: [
 			{
