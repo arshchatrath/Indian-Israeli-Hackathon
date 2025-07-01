@@ -43,7 +43,16 @@ function Countdown({ deadline }: { deadline: string }) {
   const [timeLeft, setTimeLeft] = useState<{days: number, hours: number, minutes: number, seconds: number}>({
     days: 0, hours: 0, minutes: 0, seconds: 0
   })
-
+useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+}, []);
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date()
@@ -323,15 +332,20 @@ export default function Hero() {
                                     whileTap={{ y: 0, scale: 0.98 }}
                                     className="relative overflow-hidden rounded-2xl flex items-center"
                                 >
-                                    <div
+                                    <div 
+                                        className="apply-button h-[44px] w-[312px]" 
+                                        data-hackathon-slug="israeliindian-hackathon" 
+                                        data-button-theme="light"
+                                        // style="height: 44px; width: 312px"
+                                    ></div>
+                                    {/* <div
                                         className="apply-button"
                                         data-hackathon-slug="israeliindian-hackathon"
                                         data-button-theme="dark"
                                         style={{ height: 44, width: 312, display: "flex", alignItems: "center", justifyContent: "center" }}
                                     >
-                                        {/* Fallback for when Devfolio SDK is not loaded */}
                                         <span className="text-blue-700 font-bold text-base">Apply with Devfolio</span>
-                                    </div>
+                                    </div> */}
                                 </motion.div>
                                 
                                 <Button
