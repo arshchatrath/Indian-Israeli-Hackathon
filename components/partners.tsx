@@ -46,8 +46,8 @@ const partnerCategories = [
 	{
 		title: "Sponsors",
 		partners: [
-			{ logo: "/devfolio.jpg", alt: "DEVFOLIO LOGO", website: "https://devfolio.co/" },
-			{ logo: "/ETHIndia.png", alt: "ETHINDIA LOGO", website: "https://ethindia.co" },
+			{ logo: "/devfolio.jpg", alt: "\"DEVFOLIO LOGO\"", website: "https://devfolio.co/" },
+			{ logo: "/ETHIndia.png", alt: "\"ETHINDIA LOGO\"", website: "https://ethindia.co" },
 			{ logo: "/polygon.png" , alt: "POLYGON LOGO", website: "https://polygon.technology/" },
 		],
 	},
