@@ -228,7 +228,13 @@ export default function Partners() {
 													<a href={partner.website} target="_blank" rel="noopener noreferrer">
 														<motion.img
 															src={partner.logo || "/placeholder.svg"}
-															alt={partner.name || "Partner logo"}
+															alt={
+																partner.name === "DEVFOLIO LOGO"
+																	? "DEVFOLIO LOGO"
+																	: partner.name === "ETHINDIA LOGO"
+																	? "ETHINDIA LOGO"
+																	: partner.name || "Partner logo"
+															}
 															className={`${
 																category.title === "Healthcare Partners"
 																	? "w-32 h-32 object-contain"
@@ -241,7 +247,13 @@ export default function Partners() {
 												) : (
 													<motion.img
 														src={partner.logo || "/placeholder.svg"}
-														alt={partner.name || "Partner logo"}
+														alt={
+															partner.name === "DEVFOLIO LOGO"
+																? "DEVFOLIO LOGO"
+																: partner.name === "ETHINDIA LOGO"
+																? "ETHINDIA LOGO"
+																: partner.name || "Partner logo"
+														}
 														className={`${
 															category.title === "Healthcare Partners"
 																? "w-32 h-32 object-contain"
