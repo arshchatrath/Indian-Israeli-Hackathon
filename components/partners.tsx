@@ -46,9 +46,9 @@ const partnerCategories = [
 	{
 		title: "Sponsors",
 		partners: [
-			{ logo: "/devfolio.jpg?height=100&width=200", alt: "DEVFOLIO LOGO", website: "https://devfolio.co/" },
-			{ logo: "/ETHIndia.png?height=100&width=200", alt: "ETHINDIA LOGO", website: "https://ethindia.co" },
-			{ logo: "/polygon.png?height=100&width=200" , alt: "POLYGON LOGO", website: "https://polygon.technology/" },
+			{ logo: "/devfolio.jpg", alt: "DEVFOLIO LOGO", website: "https://devfolio.co/" },
+			{ logo: "/ETHIndia.png", alt: "ETHINDIA LOGO", website: "https://ethindia.co" },
+			{ logo: "/polygon.png" , alt: "POLYGON LOGO", website: "https://polygon.technology/" },
 		],
 	},
 	{
@@ -225,7 +225,7 @@ export default function Partners() {
 											
 											<div className="relative z-10 w-full flex justify-center items-center">
 												{partner.website ? (
-													<a href={partner.website} target="_blank" rel="noopener noreferrer">
+													<motion.a href={partner.website} target="_blank" rel="noopener noreferrer">
 														<motion.img
 															src={partner.logo || "/placeholder.svg"}
 															alt={partner.alt}
@@ -244,7 +244,7 @@ export default function Partners() {
 															whileHover={{ scale: 1.05 }}
 															transition={{ type: "spring", stiffness: 300, damping: 20 }}
 														/>
-													</a>
+													</motion.a>
 												) : (
 													<motion.img
 														src={partner.logo || "/placeholder.svg"}
