@@ -46,8 +46,8 @@ const partnerCategories = [
 	{
 		title: "Sponsors",
 		partners: [
-			{ logo: "/devfolio.jpg?height=100&width=200" },
-			{ logo: "/ETHIndia.png?height=100&width=200" },
+			{ logo: "/devfolio.jpg?height=100&width=200", name: "DEVFOLIO LOGO", website: "https://devfolio.co/" },
+			{ logo: "/ETHIndia.png?height=100&width=200", name: "ETHINDIA LOGO", website: "https://ethindia.co" },
 			{ logo: "/polygon.png?height=100&width=200" },
 		],
 	},
@@ -224,17 +224,33 @@ export default function Partners() {
 											/>
 											
 											<div className="relative z-10 w-full flex justify-center items-center">
-												<motion.img
-													src={partner.logo || "/placeholder.svg"}
-													alt={partner.name || "Partner logo"}
-													className={`${
-														category.title === "Healthcare Partners"
-															? "w-32 h-32 object-contain"
-															: "w-full max-w-40 h-16 object-contain"
-													} filter group-hover:brightness-110 transition-all duration-300`}
-													whileHover={{ scale: 1.05 }}
-													transition={{ type: "spring", stiffness: 300, damping: 20 }}
-												/>
+												{partner.website ? (
+													<a href={partner.website} target="_blank" rel="noopener noreferrer">
+														<motion.img
+															src={partner.logo || "/placeholder.svg"}
+															alt={partner.name || "Partner logo"}
+															className={`${
+																category.title === "Healthcare Partners"
+																	? "w-32 h-32 object-contain"
+																	: "w-full max-w-40 h-16 object-contain"
+															} filter group-hover:brightness-110 transition-all duration-300`}
+															whileHover={{ scale: 1.05 }}
+															transition={{ type: "spring", stiffness: 300, damping: 20 }}
+														/>
+													</a>
+												) : (
+													<motion.img
+														src={partner.logo || "/placeholder.svg"}
+														alt={partner.name || "Partner logo"}
+														className={`${
+															category.title === "Healthcare Partners"
+																? "w-32 h-32 object-contain"
+																: "w-full max-w-40 h-16 object-contain"
+														} filter group-hover:brightness-110 transition-all duration-300`}
+														whileHover={{ scale: 1.05 }}
+														transition={{ type: "spring", stiffness: 300, damping: 20 }}
+													/>
+												)}
 											</div>
 											
 											{partner.name && (
