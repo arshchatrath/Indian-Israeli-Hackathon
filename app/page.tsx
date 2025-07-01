@@ -105,8 +105,11 @@ export default function Home() {
       </motion.div>
 
       <Navbar />
-
+    <motion.section id="partners" variants={sectionVariants}>
+            <Partners />
+          </motion.section>
       <motion.main variants={containerVariants}>
+          
         <motion.section id="home" variants={sectionVariants}>
           <Hero />
         </motion.section>
@@ -125,9 +128,6 @@ export default function Home() {
           </motion.section>
           <motion.section id="registration" variants={sectionVariants}>
             <Registration />
-          </motion.section>
-          <motion.section id="partners" variants={sectionVariants}>
-            <Partners />
           </motion.section>
           <motion.section id="judges" variants={sectionVariants}>
             <Judges />
