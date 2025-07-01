@@ -33,6 +33,20 @@ const judges = [
     image: "/Anil Vijarnia.avif",
     linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
   },
+    {
+    name: "Mr Arun Kumar",
+    title: "Sr. Sofware Solution Architect",
+    company: "BiziByte, USA.",
+    image: "/Arun.jpg", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/arunqumar"
+  },
+  {
+    name: "Mr Praveen Kumar Thota",
+    title: "Sr. Technical Operations Manager",
+    company: "USA.",
+    image: "/Praveen.jpg", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/praveen-t-2b0a23222/"
+  },
   {
     name: "Mr Sai Kiran Nandipati",
     title: "Senior Application System Engineer",

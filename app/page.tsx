@@ -5,6 +5,7 @@ import dynamic from "next/dynamic"
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 
+
 // Lazy load non-critical sections
 const Timeline = dynamic(() => import("@/components/timeline"), { suspense: true })
 const About = dynamic(() => import("@/components/about"), { suspense: true })

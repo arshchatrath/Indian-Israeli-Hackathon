@@ -65,7 +65,7 @@ function Countdown({ deadline }: { deadline: string }) {
 
   return (
     <span className="font-mono text-blue-900 text-base font-semibold">
-      {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
+    {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
     </span>
   )
 }
@@ -98,7 +98,7 @@ function Button({
         boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
       }}
       whileTap={{ y: 0, scale: 0.98 }}
-      className={`${baseClasses} ${sizeClasses} ${variantClasses} ${className}`}
+      className={`${baseClasses} ${sizeClasses} ${variantClasses} ${className}`} // fixed template string
       onClick={onClick}
       {...props}
     >
@@ -126,6 +126,21 @@ export default function Hero() {
     const heroY = useTransform(scrollYProgress, [0, 1], [0, -150])
     const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
     const backgroundY = useTransform(scrollYProgress, [0, 1], [0, -50])
+
+    // Load Devfolio SDK
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://apply.devfolio.co/v2/sdk.js';
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+        return () => {
+            // Check if script still exists before removing
+            if (document.body.contains(script)) {
+                document.body.removeChild(script);
+            }
+        }
+    }, []);
 
     return (
         <motion.div
@@ -292,38 +307,33 @@ export default function Hero() {
                                 Build groundbreaking solutions that will transform patient care and medical innovation across both nations.
                             </motion.p>
 
-                            {/* Enhanced CTA Buttons */}
+                            {/* Enhanced CTA Buttons - Now with Devfolio */}
                             <motion.div 
                                 initial={{ y: 30, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
                                 className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full justify-start"
                             >
-                                <Button
-                                    size="lg"
-                                    className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold rounded-2xl shadow-2xl border-0 relative overflow-hidden group"
-                                    onClick={() =>
-                                        window.open(
-                                            "https://docs.google.com/forms/d/e/1FAIpQLScn8F1KEg57rFbDvFhCqqyyHD3TkLKKUFqPR-g39aUe69EhYw/viewform",
-                                            "_blank",
-                                            "noopener,noreferrer"
-                                        )
-                                    }
+                                {/* Devfolio Apply Button */}
+                                <motion.div
+                                    whileHover={{ 
+                                        y: -3,
+                                        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                                    }}
+                                    whileTap={{ y: 0, scale: 0.98 }}
+                                    className="relative overflow-hidden rounded-2xl flex items-center"
                                 >
-                                    <span className="relative z-10 flex items-center gap-2">
-                                        Register Now
-                                        <motion.span
-                                            whileHover={{ x: 3 }}
-                                            transition={{ duration: 0.2 }}
-                                        >
-                                            <ArrowRight className="h-5 w-5" />
-                                        </motion.span>
-                                    </span>
-                                    <motion.div
-                                        className="absolute inset-0 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                        whileHover={{ scale: 1.05 }}
-                                    />
-                                </Button>
+                                    <div
+                                        className="apply-button"
+                                        data-hackathon-slug="israeliindian-hackathon"
+                                        data-button-theme="dark"
+                                        style={{ height: 44, width: 312, display: "flex", alignItems: "center", justifyContent: "center" }}
+                                    >
+                                        {/* Fallback for when Devfolio SDK is not loaded */}
+                                        <span className="text-blue-700 font-bold text-base">Apply with Devfolio</span>
+                                    </div>
+                                </motion.div>
+                                
                                 <Button
                                     variant="outline"
                                     size="lg"
