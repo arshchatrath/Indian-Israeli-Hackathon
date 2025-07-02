@@ -5,6 +5,14 @@ import { useRef, useState } from "react"
 import { ChevronDown, Users, Lightbulb, Globe2, BookOpen, Star, Scale, Building2, Linkedin } from "lucide-react"
 
 const judges = [
+   {
+    name: "Ms Sonali Suri",
+    title: "Software Development Engineer",
+    company: "Amazon, USA",
+    image: "/sonali.jpg",
+    linkedIn: "https://www.linkedin.com/in/sonali-suri-3bb440b6/"
+  },
+
   {
     name: "Mr. Ravi Patneedi",
     title: "Lead SAP",
