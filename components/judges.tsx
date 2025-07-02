@@ -13,7 +13,7 @@ const judges = [
     linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
   },
   {
-    name: "Mr Arun Kumar",
+    name: "Mr. Arun Kumar",
     title: "Sr. Sofware Solution Architect",
     company: "BiziByte, USA.",
     image: "/Arun.jpg", // Add the correct image path if available
@@ -48,7 +48,7 @@ const judges = [
     linkedIn:"https://www.linkedin.com/in/inavdeepsingh/"
   },
   {
-    name: "Mr Praveen Kumar Thota",
+    name: "Mr. Praveen Kumar Thota",
     title: "Sr. Technical Operations Manager",
     company: "USA.",
     image: "/Praveen.jpg", // Add the correct image path if available
@@ -62,14 +62,14 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/ravi-patneedi-169233a/"
   },
   {
-    name: "Mr Sai Kiran Nandipati",
+    name: "Mr. Sai Kiran Nandipati",
     title: "Senior Application System Engineer",
     company: " Ernst & Young, USA.",
     image: "/sai kiran.jpg",
     linkedIn: "https://www.linkedin.com/in/sai-kiran-nandipati-92a302133 ",
   },
   {
-    name: "Mr Sai Raghu Ram Gummadidala",
+    name: "Mr. Sai Raghu Ram Gummadidala",
     title: "Independent Researcher",
     company: "Tractor Supply Company, Brentwood, Tennessee",
     image: "/Sai raghu.jpg",
@@ -90,7 +90,7 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/satish-bhambri-9164b997/"
   },
   {
-    name: "Ms Sonali Suri",
+    name: "Ms. Sonali Suri",
     title: "Software Development Engineer",
     company: "Amazon, USA",
     image: "/sonali.jpg",
