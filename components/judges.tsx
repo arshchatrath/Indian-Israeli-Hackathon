@@ -20,6 +20,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/ravi-patneedi-169233a/"
   },
   {
+    name: "Ms Sonali Suri-2",
+    title: "Software Development Engineer",
+    company: "Amazon, USA",
+    image: "/sonali.jpg",
+    linkedIn: "https://www.linkedin.com/in/sonali-suri-3bb440b6/"
+  },
+  {
     name: "Mr. Satish Bhambri",
     title: "Sr Machine Learning Engineer",
     company: "Walmart Labs",
