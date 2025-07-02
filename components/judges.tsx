@@ -12,7 +12,6 @@ const judges = [
     image: "/sonali.jpg",
     linkedIn: "https://www.linkedin.com/in/sonali-suri-3bb440b6/"
   },
-
   {
     name: "Mr. Ravi Patneedi",
     title: "Lead SAP",

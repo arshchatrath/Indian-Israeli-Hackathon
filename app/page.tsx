@@ -4,7 +4,6 @@ import { useEffect, useState, useMemo, Suspense } from "react"
 import dynamic from "next/dynamic"
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
-import Partners from "@/components/partners"
 
 // Lazy load non-critical sections
 const Timeline = dynamic(() => import("@/components/timeline"), { suspense: true })
@@ -16,6 +15,8 @@ const Registration = dynamic(() => import("@/components/registration"), { suspen
 const Prizes = dynamic(() => import("@/components/prizes"), { suspense: true })
 const Contact = dynamic(() => import("@/components/contact"), { suspense: true })
 const Footer = dynamic(() => import("@/components/footer"), { suspense: true })
+const Partners = dynamic(() => import("@/components/partners"), { suspense: true })
+
 // const TechnicalSupport = dynamic(() => import("@/components/technical-support"), { suspense: true })
 const SPOC = dynamic(() => import("@/components/spoc"), { suspense: true })
 
