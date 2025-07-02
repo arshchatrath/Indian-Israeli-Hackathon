@@ -103,6 +103,13 @@ const judges = [
     image: "/Mr. Jaya Krishna Modadugu.avif",
     linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
   },
+  {
+    name: "Mr. Sreekar Theja Jami",
+    title: "Sr. SysDev Engineer",
+    company: "USA",
+    image: "/Sreekar Theja Jami.png",
+    linkedIn: "http://www.linkedin.com/in/sreekar-jami-554583173/"
+  },
 ]
 
 const selectionCriteria = [
