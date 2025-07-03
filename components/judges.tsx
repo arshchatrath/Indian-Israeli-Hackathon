@@ -29,7 +29,7 @@ const judges = [
   {
     name: "Mr. Jaya Krishna Modadugu",
     title: "Sr. Software Engineer",
-    company: "Prosper Marketplace INC",
+    company: "Prosper Marketplace INC, USA.",
     image: "/Mr. Jaya Krishna Modadugu.avif",
     linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
   },
