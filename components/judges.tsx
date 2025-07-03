@@ -48,7 +48,7 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
   },
   {
-    name: "Mr. Justin Rajakumar Maria Thason",
+    name: "Mr. Justin Rajakumar Thason",
     title: "Director of DevOps Information Technology",
     company: "Virginia, USA.",
     image: "/Justin Rajakumar.png",
