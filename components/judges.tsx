@@ -76,6 +76,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/praveen-t-2b0a23222/"
   },
   {
+    name: "Mr. Raghava Chellu",
+    title: "Support Engineer - Specialist",
+    company: "Equifax Inc. USA.",
+    image: "/Raghava Chellu.jpeg",
+    linkedIn: "https://www.linkedin.com/in/raghava-chellu-342746157/"
+  },
+  {
     name: "Mr. Ravi Patneedi",
     title: "Lead SAP",
     company: "Tractor Supply Company",
