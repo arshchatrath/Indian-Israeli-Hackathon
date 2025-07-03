@@ -34,6 +34,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/chetansharma4u/"
   },
   {
+    name: "Mr. Dharmateja Priyadarshi Uddandarao",
+    title: "Sr. Data Scientist",
+    company: "Amazon, USA.",
+    image: "/Dharmateja Priyadarshi Uddandarao.jpg",
+    linkedIn: "https://www.linkedin.com/in/dtp-uddandarao/"
+  },
+  {
     name: "Mr. Jaya Krishna Modadugu",
     title: "Sr. Software Engineer",
     company: "Prosper Marketplace INC, USA.",
