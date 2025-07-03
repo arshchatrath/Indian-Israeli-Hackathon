@@ -17,7 +17,14 @@ const judges = [
     title: "Sr. Sofware Solution Architect",
     company: "BiziByte, USA.",
     image: "/Arun.jpg", // Add the correct image path if available
-    linkedIn: "https://www.linkedin.com/in/arunqumar"
+    linkedIn: "https://www.linkedin.com/in/arunqumar/"
+  },
+  {
+    name: "Mr. Bhanu Prakash Reddy Rella",
+    title: "Sr. Software Engineer",
+    company: "Walmart, USA.",
+    image: "/Bhanu Prakash Reddy Rella.png", // Add the correct image path if available
+    linkedIn: "http://linkedin.com/in/rbhanur/"
   },
   {
     name: "Mr. Chetan Sharma",
