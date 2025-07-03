@@ -8,7 +8,7 @@ const judges = [
   {
     name: "Mr. Anil Vijarnia",
     title: "Senior Principal Engineer",
-    company: "Wasabi Technologies",
+    company: "Wasabi Technologies, USA.",
     image: "/Anil Vijarnia.avif",
     linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
   },
@@ -22,7 +22,7 @@ const judges = [
   {
     name: "Mr. Chetan Sharma",
     title: "SAP Architect",
-    company: "Tractor Supply Company, Brentwood, Tennessee",
+    company: "Tractor Supply Company, Brentwood, Tennessee, USA.",
     image: "/Mr. Chetan Sharma.avif",
     linkedIn: "https://www.linkedin.com/in/chetansharma4u/"
   },
@@ -43,7 +43,7 @@ const judges = [
   {
     name: "Mr. Navdeep Singh",
     title: "Principal Product Manager",
-    company: "Walmart",
+    company: "Walmart, USA.",
     image: "/Navdeep Singh.avif",
     linkedIn:"https://www.linkedin.com/in/inavdeepsingh/"
   },
@@ -71,35 +71,35 @@ const judges = [
   {
     name: "Mr. Sai Raghu Ram Gummadidala",
     title: "Independent Researcher",
-    company: "Tractor Supply Company, Brentwood, Tennessee",
+    company: "Tractor Supply Company, Brentwood, Tennessee, USA.",
     image: "/Sai raghu.jpg",
     linkedIn:"https://www.linkedin.com/in/raghu-ram-gummadidala-b2a171128/"
   },
   {
     name: "Ms. Sangeeta Singh",
     title: "Firmware Engineer III",
-    company: "Variosystems Inc",
+    company: "Variosystems Inc, USA.",
     image: "/Sangeeta Singh.avif",
     linkedIn: "https://www.linkedin.com/in/sangeetasinghembeddedsystems/"
   },
   {
     name: "Mr. Satish Bhambri",
     title: "Sr Machine Learning Engineer",
-    company: "Walmart Labs",
+    company: "Walmart Labs, USA.",
     image: "/Satish Bhambri.avif",
     linkedIn: "https://www.linkedin.com/in/satish-bhambri-9164b997/"
   },
   {
     name: "Ms. Sonali Suri",
     title: "Software Development Engineer",
-    company: "Amazon, USA",
+    company: "Amazon, USA.",
     image: "/sonali.jpg",
     linkedIn: "https://www.linkedin.com/in/sonali-suri-3bb440b6/"
   },
   {
     name: "Mr. Sreekar Theja Jami",
     title: "Sr. SysDev Engineer",
-    company: "USA",
+    company: "USA.",
     image: "/Sreekar Theja Jami.png",
     linkedIn: "http://www.linkedin.com/in/sreekar-jami-554583173/"
   },
