@@ -48,6 +48,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
   },
   {
+    name: "Mr. Justin Rajakumar Maria Thason",
+    title: "Director of DevOps Information Technology",
+    company: "Virginia, USA.",
+    image: "/Justin Rajakumar Maria Thason.png",
+    linkedIn: "https://www.linkedin.com/in/justin-rajakumar-thason-a3349425/"
+  },
+  {
     name: "Mr. Naga Bharadwaj Bhavikatta",
     title: "Sr Tech Manager",
     company: "Oracle, USA",
