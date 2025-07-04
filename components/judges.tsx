@@ -72,7 +72,7 @@ const judges = [
     name: "Mr. Praveen Kumar Thota",
     title: "Sr. Technical Operations Manager",
     company: "USA.",
-    image: "/Praveen.jpg", // Add the correct image path if available
+    image: "/Praveen.png", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/praveen-t-2b0a23222/"
   },
   {
