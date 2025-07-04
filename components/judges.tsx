@@ -47,12 +47,20 @@ const judges = [
     image: "/Mr. Jaya Krishna Modadugu.avif",
     linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
   },
-  {
+  /*{
     name: "Mr. Justin Rajakumar Thason",
     title: "Director of DevOps Information Technology",
     company: "Virginia, USA.",
     image: "/Justin Rajakumar.png",
     linkedIn: "https://www.linkedin.com/in/justin-rajakumar-thason-a3349425/"
+  },*/
+  
+  {
+    name: "Mr. Karthik Sirigiri",
+    title: "Software Developer",
+    company: "USA.",
+    image: "/Karthik Sirigiri.png",
+    linkedIn: "http://www.linkedin.com/in/karthik2502/"
   },
   {
     name: "Mr. Naga Bharadwaj Bhavikatta",
