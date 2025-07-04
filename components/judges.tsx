@@ -83,6 +83,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/ravi-patneedi-169233a/"
   },
   {
+    name: "Mr. Ritesh Tandon",
+    title: "Independent Researcher and Lead Data Scientist",
+    company: "Data and AI Solution",
+    image: "/Ritesh Tandon.png",
+    linkedIn: "https://www.linkedin.com/in/ritesh-tandon-3427481/"
+  },
+  {
     name: "Mr. Sai Kiran Nandipati",
     title: "Senior Application System Engineer",
     company: " Ernst & Young, USA.",
