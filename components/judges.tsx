@@ -27,6 +27,13 @@ const judges = [
     linkedIn: "http://linkedin.com/in/rbhanur/"
   },
   {
+    name: "Mr. Chaitanya Gunupudi",
+    title: "Independent Researcher and IT Platform Senior Cloud Engineer,",
+    company: "University of Maryland Research Center, USA.",
+    image: "/Chaitanya Gunupudi.png", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/chaitanyagunupudi/"
+  },
+  {
     name: "Mr. Chetan Sharma",
     title: "SAP Architect",
     company: "Tractor Supply Company, Brentwood, Tennessee, USA.",
