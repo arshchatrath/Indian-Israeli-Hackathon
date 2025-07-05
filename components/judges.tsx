@@ -91,6 +91,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/praveen-t-2b0a23222/"
   },
   {
+    name: "Mr. Rakesh Keshava",
+    title: "Software Architect, Security",
+    company: "Okta, Inc., USA.",
+    image: "/Rakesh Keshava.png",
+    linkedIn: "https://www.linkedin.com/in/rakeshkeshava/"
+  },
+  {
     name: "Mr. Ravi Patneedi",
     title: "Lead SAP",
     company: "Tractor Supply Company",
