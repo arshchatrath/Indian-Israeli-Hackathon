@@ -19,6 +19,13 @@ const judges = [
     image: "/Arun.jpg", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/arunqumar/"
   },
+  {
+    name: "Mr. Arun Kumar Elengovan",
+    title: "Director, Engineering Security",
+    company: "OKTA Inc. USA.",
+    image: "/Arun Kumar Elengovan.png", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/arun-kumar-e-b7019a33/"
+  },
   /*
   {
     name: "Mr. Bhanu Prakash Reddy Rella",
@@ -99,6 +106,7 @@ const judges = [
     image: "/Praveen.png", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/praveen-t-2b0a23222/"
   },
+  /*
   {
     name: "Mrs. Priyanka Bakthavalsalan",
     title: "Engineering Manager",
@@ -106,6 +114,7 @@ const judges = [
     image: "/Priyanka Bakthavalsalan.jpeg", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/priyanka-bakthavalsalan-601079127/"
   },
+  */
   {
     name: "Mr. Rakesh Keshava",
     title: "Software Architect, Security",
