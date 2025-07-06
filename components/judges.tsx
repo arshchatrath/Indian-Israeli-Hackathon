@@ -19,6 +19,7 @@ const judges = [
     image: "/Arun.jpg", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/arunqumar/"
   },
+  /*
   {
     name: "Mr. Bhanu Prakash Reddy Rella",
     title: "Sr. Software Engineer",
@@ -26,6 +27,7 @@ const judges = [
     image: "/Bhanu Prakash Reddy Rella.png", // Add the correct image path if available
     linkedIn: "http://linkedin.com/in/rbhanur/"
   },
+  */
   {
     name: "Mr. Chaitanya Gunupudi",
     title: "Independent Researcher and IT Platform Senior Cloud Engineer,",
