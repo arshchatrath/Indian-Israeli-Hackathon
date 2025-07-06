@@ -98,6 +98,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/praveen-t-2b0a23222/"
   },
   {
+    name: "Mrs. Priyanka Bakthavalsalan",
+    title: "Engineering Manager",
+    company: "Juniper Square, USA.",
+    image: "/Priyanka Bakthavalsalan.jpeg", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/priyanka-bakthavalsalan-601079127/"
+  },
+  {
     name: "Mr. Rakesh Keshava",
     title: "Software Architect, Security",
     company: "Okta, Inc., USA.",
