@@ -84,6 +84,13 @@ const judges = [
     linkedIn:"https://www.linkedin.com/in/inavdeepsingh/"
   },
   {
+    name: "Mr. Nandagopal Seshagiri",
+    title: "Sr. Software Architect",
+    company: "Okta, USA.",
+    image: "/Nandagopal Seshagiri.jpeg",
+    linkedIn:"https://www.linkedin.com/in/nandagopal-seshagiri-1479ab5/"
+  },
+  {
     name: "Mr. Praveen Kumar Thota",
     title: "Sr. Technical Operations Manager",
     company: "USA.",
