@@ -83,7 +83,7 @@ const judges = [
     title: "Senior Data Engineer",
     company: "Artnet Worldwide Corporation, USA.",
     image: "/Manoj Pal.png",
-    linkedIn: "https://www.linkedin.com/in/arun-medisetty-7a27b055/"
+    linkedIn: "https://www.linkedin.com/in/manoj7pal/"
   },
   {
     name: "Mr. Naga Bharadwaj Bhavikatta",
