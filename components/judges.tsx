@@ -79,9 +79,16 @@ const judges = [
     linkedIn: "http://www.linkedin.com/in/karthik2502/"
   },
   {
+    name: "Mr. Manoj Pal",
+    title: "Senior Data Engineer",
+    company: "Artnet Worldwide Corporation, USA.",
+    image: "/Manoj Pal.png",
+    linkedIn: "https://www.linkedin.com/in/arun-medisetty-7a27b055/"
+  },
+  {
     name: "Mr. Naga Bharadwaj Bhavikatta",
     title: "Sr Tech Manager",
-    company: "Oracle, USA",
+    company: "Oracle, USA.",
     image: "/Naga Bharadwaj Bhavikatta.avif",
     linkedIn: "https://www.linkedin.com/in/naga-bharadwaj-bhavikatta-101347203/"
   },
