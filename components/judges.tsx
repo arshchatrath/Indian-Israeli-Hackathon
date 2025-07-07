@@ -43,6 +43,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/chaitanyagunupudi/"
   },
   {
+    name: "Mr. Chandra Mouli Yalamanchili",
+    title: "Independent Researcher",
+    company: "USA.",
+    image: "/Chandra Mouli Yalamanchili.png", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/chandu85"
+  },
+  {
     name: "Mr. Chetan Sharma",
     title: "SAP Architect",
     company: "Tractor Supply Company, Brentwood, Tennessee, USA.",
