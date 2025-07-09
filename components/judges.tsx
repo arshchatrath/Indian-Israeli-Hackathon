@@ -37,7 +37,7 @@ const judges = [
   */
   {
     name: "Mr. Chaitanya Gunupudi",
-    title: "Independent Researcher and IT Platform Senior Cloud Engineer,",
+    title: "Independent Researcher and IT Platform Senior Cloud Engineer",
     company: "University of Maryland Research Center, USA.",
     image: "/Chaitanya Gunupudi.png", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/chaitanyagunupudi/"
@@ -58,7 +58,7 @@ const judges = [
   },
   {
     name: "Mr. Damodhara Reddy Palavali",
-    title: "Software Engineer,",
+    title: "Software Engineer",
     company: "Sbase Technologies, Inc., USA.",
     image: "/Damodhara Reddy Palavali.png",
     linkedIn: "https://www.linkedin.com/in/damodharap/"
