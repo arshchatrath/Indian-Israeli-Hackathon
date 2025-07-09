@@ -57,6 +57,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/chetansharma4u/"
   },
   {
+    name: "Mr. Damodhara Reddy Palavali",
+    title: "Software Engineer,",
+    company: "Sbase Technologies, Inc., USA.",
+    image: "/Damodhara Reddy Palavali.png",
+    linkedIn: "https://www.linkedin.com/in/damodharap/"
+  },
+  {
     name: "Mr. Dharmateja Priyadarshi Uddandarao",
     title: "Sr. Data Scientist",
     company: "Amazon, USA.",
