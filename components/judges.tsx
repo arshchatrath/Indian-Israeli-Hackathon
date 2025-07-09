@@ -84,7 +84,13 @@ const judges = [
     image: "/Justin Rajakumar.png",
     linkedIn: "https://www.linkedin.com/in/justin-rajakumar-thason-a3349425/"
   },*/
-  
+  {
+    name: "Mr. Karan Alang",
+    title: "Independent Researcher",
+    company: "CA, USA.",
+    image: "/Karan Alang.png",
+    linkedIn: "https://www.linkedin.com/in/karan-alang-4173437/"
+  },  
   {
     name: "Mr. Karthik Sirigiri",
     title: "Software Developer",
