@@ -19,6 +19,7 @@ const judges = [
     image: "/Arun.jpg", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/arunqumar/"
   },
+  /*
   {
     name: "Mr. Arun Kumar Elengovan",
     title: "Director, Engineering Security",
@@ -26,6 +27,7 @@ const judges = [
     image: "/Arun Kumar Elengovan.png", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/arun-kumar-e-b7019a33/"
   },
+  */
   /*
   {
     name: "Mr. Bhanu Prakash Reddy Rella",
