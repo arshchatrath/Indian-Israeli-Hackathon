@@ -84,7 +84,6 @@ const judges = [
     image: "/Justin Rajakumar.png",
     linkedIn: "https://www.linkedin.com/in/justin-rajakumar-thason-a3349425/"
   },*/
-  /*
   {
     name: "Mr. Karan Alang",
     title: "Independent Researcher",
@@ -92,7 +91,6 @@ const judges = [
     image: "/Karan Alang.png",
     linkedIn: "https://www.linkedin.com/in/karan-alang-4173437/"
   },
-  */
   {
     name: "Mr. Kapil Kumar Goyal",
     title: "Sr. Product Manager",
@@ -129,6 +127,13 @@ const judges = [
     linkedIn:"https://www.linkedin.com/in/inavdeepsingh/"
   },
   {
+    name: "Mr. Naveen Edapurath Vijayan",
+    title: "Head of Engineering",
+    company: "AWS Central Economics, USA.",
+    image: "/Naveen Edapurath Vijayan.jpeg",
+    linkedIn:"https://www.linkedin.com/in/naveenvijayan/"
+  },
+  {
     name: "Mr. Nandagopal Seshagiri",
     title: "Sr. Software Architect",
     company: "Okta, USA.",
@@ -154,7 +159,7 @@ const judges = [
   {
     name: "Mr. Rakesh Keshava",
     title: "Software Architect, Security",
-    company: "Okta, Inc., USA.",
+    company: "USA.",
     image: "/Rakesh Keshava.png",
     linkedIn: "https://www.linkedin.com/in/rakeshkeshava/"
   },
