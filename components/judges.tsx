@@ -86,8 +86,8 @@ const judges = [
   },*/
   {
     name: "Mr. Karan Alang",
-    title: "Independent Researcher",
-    company: "CA, USA.",
+    title: "Principal Software Engineer",
+    company: "Versa Networks Inc, USA.",
     image: "/Karan Alang.png",
     linkedIn: "https://www.linkedin.com/in/karan-alang-4173437/"
   },
