@@ -122,6 +122,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/naga-bharadwaj-bhavikatta-101347203/"
   },
   {
+    name: "Mr. Nagamalleswararao Bellamkonda",
+    title: "Sr. Database Adminstrator",
+    company: "IEEE Senior Member",
+    image: "/Nagamalleswararao Bellamkonda.jpeg",
+    linkedIn: "http://linkedin.com/in/naga-bellamkonda-7209a11a0/"
+  },
+  {
     name: "Mr. Navdeep Singh",
     title: "Principal Product Manager",
     company: "Walmart",
