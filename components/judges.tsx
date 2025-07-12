@@ -150,6 +150,13 @@ const judges = [
     linkedIn:"https://www.linkedin.com/in/nandagopal-seshagiri-1479ab5/"
   },
   {
+    name: "Mr. Nayan Goel",
+    title: "Principal Application Security Engineer",
+    company: "Upgrade Inc",
+    image: "/Nayan Goel.jpeg",
+    linkedIn:"https://www.linkedin.com/in/nayan-goel-426922bb/"
+  },
+  {
     name: "Mr. Praveen Kumar Thota",
     title: "Sr. Technical Operations Manager",
     company: "USA",
