@@ -108,6 +108,13 @@ const judges = [
     linkedIn: "http://www.linkedin.com/in/karthik2502/"
   },
   {
+    name: "Dr. Manas Ranjan Panda",
+    title: "Partner",
+    company: "Wipro Limited",
+    image: "/Manas Panda.jpg",
+    linkedIn: "http://linkedin.com/in/manaspanda01/"
+  },
+  {
     name: "Mr. Manoj Pal",
     title: "Senior Data Engineer",
     company: "Artnet Worldwide Corporation",
