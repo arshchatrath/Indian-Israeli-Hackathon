@@ -201,7 +201,8 @@ const coreMembers = [
 		designation: "Student Volunteer, Thapar University",
 		image: "/Bhavishya Singla.avif",
 		bio: "Innovative thinker driving student-led change.",
-		location: "India"
+		location: "India",
+		Linkedin: "https://www.linkedin.com/in/bhavishyasingla1/"
 	},
 	{
 		name: "Vishesh Makwana",
