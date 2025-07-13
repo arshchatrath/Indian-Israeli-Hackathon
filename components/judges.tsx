@@ -129,6 +129,13 @@ const judges = [
     linkedIn: "http://linkedin.com/in/naga-bellamkonda-7209a11a0/"
   },
   {
+    name: "Mr. Narendra Kandregula",
+    title: "Assitant Vice President",
+    company: "Deutsche Bank",
+    image: "/Narendra Kandregula.png",
+    linkedIn: "https://www.linkedin.com/in/ganpatigoel/"
+  },
+  {
     name: "Mr. Navdeep Singh",
     title: "Principal Product Manager",
     company: "Walmart",
