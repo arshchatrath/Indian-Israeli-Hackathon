@@ -55,7 +55,7 @@ export default function Guidelines() {
 
   const generalInstructions = [
     "Each team must register through the official registration form provided by the organizers.",
-    "Team size should be between 1-6 members (minimum 1, maximum 6 participants per team).",
+    "Team size should be between 2-5 members (minimum 2, maximum 5 participants per team).",
     "Teams can have mixed composition of students from different institutions, disciplines, and countries.",
     "All team members must submit the registration form individually and mention their team name consistently.",
     "After registration, teams must join the official WhatsApp group for important updates and communications."
