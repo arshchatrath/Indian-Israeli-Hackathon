@@ -202,7 +202,7 @@ const coreMembers = [
 		image: "/Bhavishya Singla.avif",
 		bio: "Innovative thinker driving student-led change.",
 		location: "India",
-		Linkedin: "https://www.linkedin.com/in/bhavishyasingla1/"
+		linkedin: "https://www.linkedin.com/in/bhavishyasingla1/"
 	},
 	{
 		name: "Vishesh Makwana",
