@@ -6,6 +6,194 @@ import { ChevronDown, Users, Lightbulb, Globe2, BookOpen, Star, Scale, Building2
 
 const judges = [
   {
+    name: "Mr. Anil Vijarnia",
+    title: "Senior Principal Engineer",
+    company: "Wasabi Technologies",
+    image: "/Anil Vijarnia.avif",
+    linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
+  },
+  {
+    name: "Mr. Arun Kumar",
+    title: "Sr. Sofware Solution Architect",
+    company: "BiziByte",
+    image: "/Arun.jpg", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/arunqumar/"
+  },
+  /*
+  {
+    name: "Mr. Arun Kumar Elengovan",
+    title: "Director, Engineering Security",
+    company: "OKTA Inc",
+    image: "/Arun Kumar Elengovan.png", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/arun-kumar-e-b7019a33/"
+  },
+  */
+  /*
+  {
+    name: "Mr. Bhanu Prakash Reddy Rella",
+    title: "Sr. Software Engineer",
+    company: "Walmart, USA.",
+    image: "/Bhanu Prakash Reddy Rella.png", // Add the correct image path if available
+    linkedIn: "http://linkedin.com/in/rbhanur/"
+  },
+  */
+  {
+    name: "Mr. Chaitanya Gunupudi",
+    title: "Independent Researcher and IT Platform Senior Cloud Engineer",
+    company: "University of Maryland Research Center",
+    image: "/Chaitanya Gunupudi.png", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/chaitanyagunupudi/"
+  },
+  {
+    name: "Mr. Chandra Mouli Yalamanchili",
+    title: "Independent Researcher",
+    company: "USA",
+    image: "/Chandra Mouli Yalamanchili.png", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/chandu85"
+  },
+  {
+    name: "Mr. Chetan Sharma",
+    title: "SAP Architect",
+    company: "Tractor Supply Company",
+    image: "/Mr. Chetan Sharma.avif",
+    linkedIn: "https://www.linkedin.com/in/chetansharma4u/"
+  },
+  {
+    name: "Mr. Damodhara Reddy Palavali",
+    title: "Software Engineer",
+    company: "Sbase Technologies, Inc",
+    image: "/Damodhara Reddy Palavali.png",
+    linkedIn: "https://www.linkedin.com/in/damodharap/"
+  },
+  {
+    name: "Mr. Dharmateja Priyadarshi Uddandarao",
+    title: "Sr. Data Scientist",
+    company: "Amazon",
+    image: "/Dharmateja Priyadarshi Uddandarao.jpg",
+    linkedIn: "https://www.linkedin.com/in/dtp-uddandarao/"
+  },
+  {
+    name: "Mr. Jaya Krishna Modadugu",
+    title: "Sr. Software Engineer",
+    company: "Prosper Marketplace Inc",
+    image: "/Mr. Jaya Krishna Modadugu.avif",
+    linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
+  },
+  /*{
+    name: "Mr. Justin Rajakumar Thason",
+    title: "Director of DevOps Information Technology",
+    company: "Virginia, USA.",
+    image: "/Justin Rajakumar.png",
+    linkedIn: "https://www.linkedin.com/in/justin-rajakumar-thason-a3349425/"
+  },*/
+  {
+    name: "Mr. Karan Alang",
+    title: "Principal Software Engineer",
+    company: "Versa Networks Inc",
+    image: "/Karan Alang.png",
+    linkedIn: "https://www.linkedin.com/in/karan-alang-4173437/"
+  },
+  {
+    name: "Mr. Kapil Kumar Goyal",
+    title: "Sr. Product Manager",
+    company: "The Zillow Group",
+    image: "/Kapil Kumar Goyal.png",
+    linkedIn: "https://www.linkedin.com/in/kapil-goyal/"
+  },  
+  {
+    name: "Mr. Karthik Sirigiri",
+    title: "Software Developer",
+    company: "USA",
+    image: "/Karthik Sirigiri.png",
+    linkedIn: "http://www.linkedin.com/in/karthik2502/"
+  },
+  {
+    name: "Dr. Manas Ranjan Panda",
+    title: "Partner",
+    company: "Wipro Limited",
+    image: "/Manas Panda.jpg",
+    linkedIn: "http://linkedin.com/in/manaspanda01/"
+  },
+  {
+    name: "Mr. Manoj Pal",
+    title: "Senior Data Engineer",
+    company: "Artnet Worldwide Corporation",
+    image: "/Manoj Pal.png",
+    linkedIn: "https://www.linkedin.com/in/manoj7pal/"
+  },
+  {
+    name: "Mr. Naga Bharadwaj Bhavikatta",
+    title: "Sr Tech Manager",
+    company: "Oracle",
+    image: "/Naga Bharadwaj Bhavikatta.avif",
+    linkedIn: "https://www.linkedin.com/in/naga-bharadwaj-bhavikatta-101347203/"
+  },
+  {
+    name: "Mr. Nagamalleswararao Bellamkonda",
+    title: "Sr. Database Adminstrator",
+    company: "IEEE Senior Member",
+    image: "/Nagamalleswararao Bellamkonda.jpeg",
+    linkedIn: "http://linkedin.com/in/naga-bellamkonda-7209a11a0/"
+  },
+  {
+    name: "Mr. Narendra Kandregula",
+    title: "Assitant Vice President",
+    company: "Deutsche Bank",
+    image: "/Narendra Kandregula.png",
+    linkedIn: "https://www.linkedin.com/in/ganpatigoel/"
+  },
+  {
+    name: "Mr. Navdeep Singh",
+    title: "Principal Product Manager",
+    company: "Walmart",
+    image: "/Navdeep Singh.avif",
+    linkedIn:"https://www.linkedin.com/in/inavdeepsingh/"
+  },
+  {
+    name: "Mr. Naveen Edapurath Vijayan",
+    title: "Head of Engineering",
+    company: "AWS Central Economics",
+    image: "/Naveen Edapurath Vijayan.jpeg",
+    linkedIn:"https://www.linkedin.com/in/naveenvijayan/"
+  },
+  {
+    name: "Mr. Nandagopal Seshagiri",
+    title: "Sr. Software Architect",
+    company: "Okta Inc",
+    image: "/Nandagopal Seshagiri.jpeg",
+    linkedIn:"https://www.linkedin.com/in/nandagopal-seshagiri-1479ab5/"
+  },
+  {
+    name: "Mr. Nayan Goel",
+    title: "Principal Application Security Engineer",
+    company: "Upgrade Inc",
+    image: "/Nayan Goel.jpeg",
+    linkedIn:"https://www.linkedin.com/in/nayan-goel-426922bb/"
+  },
+  {
+    name: "Mr. Praveen Kumar Thota",
+    title: "Sr. Technical Operations Manager",
+    company: "USA",
+    image: "/Praveen.png", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/praveen-t-2b0a23222/"
+  },
+  /*
+  {
+    name: "Mrs. Priyanka Bakthavalsalan",
+    title: "Engineering Manager",
+    company: "Juniper Square, USA.",
+    image: "/Priyanka Bakthavalsalan.jpeg", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/priyanka-bakthavalsalan-601079127/"
+  },
+  */
+  {
+    name: "Mr. Rakesh Keshava",
+    title: "Software Architect, Security",
+    company: "USA",
+    image: "/Rakesh Keshava.png",
+    linkedIn: "https://www.linkedin.com/in/rakeshkeshava/"
+  },
+  {
     name: "Mr. Ravi Patneedi",
     title: "Lead SAP",
     company: "Tractor Supply Company",
@@ -13,58 +201,23 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/ravi-patneedi-169233a/"
   },
   {
-    name: "Mr. Satish Bhambri",
-    title: "Sr Machine Learning Engineer",
-    company: "Walmart Labs",
-    image: "/Satish Bhambri.avif",
-    linkedIn: "https://www.linkedin.com/in/satish-bhambri-9164b997/"
+    name: "Mr. Ritesh Tandon",
+    title: "Independent Researcher and Lead Data Scientist",
+    company: "Data and AI Solution",
+    image: "/Ritesh Tandon.png",
+    linkedIn: "https://www.linkedin.com/in/ritesh-tandon-3427481/"
   },
   {
-    name: "Mr. Sunil Netra",
-    title: "Principal Developer",
-    company: "",
-    image: "/Sunil Netra.avif",
-    linkedIn: "https://www.linkedin.com/in/snetra/"
-  },
-  {
-    name: "Mr. Anil Vijarnia",
-    title: "Senior Principal Engineer",
-    company: "Wasabi Technologies",
-    image: "/Anil Vijarnia.avif",
-    linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
-  },
-    {
-    name: "Mr Arun Kumar",
-    title: "Sr. Sofware Solution Architect",
-    company: "BiziByte, USA.",
-    image: "/Arun.jpg", // Add the correct image path if available
-    linkedIn: "https://www.linkedin.com/in/arunqumar"
-  },
-  {
-    name: "Mr Praveen Kumar Thota",
-    title: "Sr. Technical Operations Manager",
-    company: "USA.",
-    image: "/Praveen.jpg", // Add the correct image path if available
-    linkedIn: "https://www.linkedin.com/in/praveen-t-2b0a23222/"
-  },
-  {
-    name: "Mr Sai Kiran Nandipati",
+    name: "Mr. Sai Kiran Nandipati",
     title: "Senior Application System Engineer",
-    company: " Ernst & Young, USA.",
+    company: "Ernst & Young",
     image: "/sai kiran.jpg",
     linkedIn: "https://www.linkedin.com/in/sai-kiran-nandipati-92a302133 ",
   },
   {
-    name: "Mr. Chetan Sharma",
-    title: "SAP Architect",
-    company: "Tractor Supply Company, Brentwood, Tennessee",
-    image: "/Mr. Chetan Sharma.avif",
-    linkedIn: "https://www.linkedin.com/in/chetansharma4u/"
-  },
-  {
-    name: "Mr Sai Raghu Ram Gummadidala",
+    name: "Mr. Sai Raghu Ram Gummadidala",
     title: "Independent Researcher",
-    company: "Tractor Supply Company, Brentwood, Tennessee",
+    company: "Tractor Supply Company",
     image: "/Sai raghu.jpg",
     linkedIn:"https://www.linkedin.com/in/raghu-ram-gummadidala-b2a171128/"
   },
@@ -76,25 +229,32 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/sangeetasinghembeddedsystems/"
   },
   {
-    name: "Mr. Naga Bharadwaj Bhavikatta",
-    title: "Sr Tech Manager",
-    company: "Oracle, USA",
-    image: "/Naga Bharadwaj Bhavikatta.avif",
-    linkedIn: "https://www.linkedin.com/in/naga-bharadwaj-bhavikatta-101347203/"
+    name: "Mr. Satish Bhambri",
+    title: "Sr Machine Learning Engineer",
+    company: "Walmart Labs",
+    image: "/Satish Bhambri.avif",
+    linkedIn: "https://www.linkedin.com/in/satish-bhambri-9164b997/"
   },
   {
-    name: "Mr. Navdeep Singh",
-    title: "Principal Product Manager",
-    company: "Walmart",
-    image: "/Navdeep Singh.avif",
-    linkedIn:"https://www.linkedin.com/in/inavdeepsingh/"
+    name: "Ms. Sonali Suri",
+    title: "Software Development Engineer",
+    company: "Amazon",
+    image: "/sonali.jpg",
+    linkedIn: "https://www.linkedin.com/in/sonali-suri-3bb440b6/"
   },
   {
-    name: "Mr. Jaya Krishna Modadugu",
-    title: "Sr. Software Engineer",
-    company: "Prosper Marketplace INC",
-    image: "/Mr. Jaya Krishna Modadugu.avif",
-    linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
+    name: "Mr. Sreekar Theja Jami",
+    title: "Sr. SysDev Engineer",
+    company: "USA",
+    image: "/Sreekar Theja Jami.png",
+    linkedIn: "http://www.linkedin.com/in/sreekar-jami-554583173/"
+  },
+  {
+    name: "Mr. Sunil Netra",
+    title: "Principal Developer",
+    company: "",
+    image: "/Sunil Netra.avif",
+    linkedIn: "https://www.linkedin.com/in/snetra/"
   },
 ]
 

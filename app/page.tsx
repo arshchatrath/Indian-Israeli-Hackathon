@@ -5,7 +5,6 @@ import dynamic from "next/dynamic"
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 
-
 // Lazy load non-critical sections
 const Timeline = dynamic(() => import("@/components/timeline"), { suspense: true })
 const About = dynamic(() => import("@/components/about"), { suspense: true })
@@ -14,9 +13,10 @@ const Organizers = dynamic(() => import("@/components/organizers"), { suspense: 
 const Judges = dynamic(() => import("@/components/judges"), { suspense: true })
 const Registration = dynamic(() => import("@/components/registration"), { suspense: true })
 const Prizes = dynamic(() => import("@/components/prizes"), { suspense: true })
-const Partners = dynamic(() => import("@/components/partners"), { suspense: true })
 const Contact = dynamic(() => import("@/components/contact"), { suspense: true })
 const Footer = dynamic(() => import("@/components/footer"), { suspense: true })
+const Partners = dynamic(() => import("@/components/partners"), { suspense: true })
+
 // const TechnicalSupport = dynamic(() => import("@/components/technical-support"), { suspense: true })
 const SPOC = dynamic(() => import("@/components/spoc"), { suspense: true })
 

@@ -324,20 +324,24 @@ export default function Hero() {
                                 className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full justify-start"
                             >
                                 {/* Devfolio Apply Button */}
-                                <motion.div
+                                {/* <motion.div
                                     whileHover={{ 
                                         y: -3,
                                         boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
                                     }}
                                     whileTap={{ y: 0, scale: 0.98 }}
                                     className="relative overflow-hidden rounded-2xl flex items-center"
-                                >
-                                    <div 
-                                        className="apply-button h-[44px] w-[312px]" 
+                                > */}
+                                    <motion.div 
+                                        className="apply-button h-[44px] w-[312px] cursor-pointer" 
                                         data-hackathon-slug="israeliindian-hackathon" 
                                         data-button-theme="light"
-                                        // style="height: 44px; width: 312px"
-                                    ></div>
+                                        whileHover={{ 
+                                        y: -3,
+                                        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                                    }}
+                                    whileTap={{ y: 0, scale: 0.98 }}
+                                    ></motion.div>
                                     {/* <div
                                         className="apply-button"
                                         data-hackathon-slug="israeliindian-hackathon"
@@ -346,7 +350,7 @@ export default function Hero() {
                                     >
                                         <span className="text-blue-700 font-bold text-base">Apply with Devfolio</span>
                                     </div> */}
-                                </motion.div>
+                                {/* </motion.div> */}
                                 
                                 <Button
                                     variant="outline"
