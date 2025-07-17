@@ -296,7 +296,29 @@ const coreMembers = [
 		image:"/Prarabdh Sharma.avif",
 		bio:"Turning ideas into impact through technology and teamwork.",
 		location:"India"
+	},
+	{
+		name:"Mannat Kaur Miglani",
+		designation:"General Secretary, Microsoft Learn Student Chapter, TIET",
+		image:"/Mannat Kaur Miglani.jpeg",
+		bio:"Rooted in a legacy of innovation, driven by bold student vision",
+		location:"India"
+	},
+	{
+		name:"Jeevant Verma",
+		designation:"Finance Secretary, Microsoft Learn Student Chapter, TIET",
+		image:"/Jeevant Verma.jpeg",
+		bio:"Leading at the intersection of technology and student impact.",
+		location:"India"
+	},
+	{
+		name:"Akshat Nathani",
+		designation:"Joint Secretary, Microsoft Learn Student Chapter, TIET",
+		image:"/Akshat Nathani.jpeg",
+		bio:"Building impactful tech and communities with purpose and pace.",
+		location:"India"
 	}
+	
 ];
 
 export default function Organizers() {
