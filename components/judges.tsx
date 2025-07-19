@@ -66,6 +66,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/damodharap/"
   },
   {
+    name: "Mr. Desi Ramananda Kishore Katuri",
+    title: "Application Programmer IV",
+    company: "UC Berkeley",
+    image: "/Desi Ramananda Kishore Katuri.png",
+    linkedIn: "https://www.linkedin.com/in/desi-ramananda-kishore-katuri-06b64832/"
+  },
+  {
     name: "Mr. Dharmateja Priyadarshi Uddandarao",
     title: "Sr. Data Scientist",
     company: "Amazon",
