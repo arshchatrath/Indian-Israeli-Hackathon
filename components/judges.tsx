@@ -65,6 +65,13 @@ const judges = [
     image: "/Damodhara Reddy Palavali.png",
     linkedIn: "https://www.linkedin.com/in/damodharap/"
   },
+    {
+    name: "Mr. Dennis Surendar",
+    title: "Technical Advisor",
+    company: "Fannie Mae",
+    image: "/Dennis Surendar.png",
+    linkedIn: "https://www.linkedin.com/in/dennis-surendar"
+  },
   {
     name: "Mr. Desi Ramananda Kishore Katuri",
     title: "Application Programmer IV",
