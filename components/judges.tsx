@@ -243,6 +243,20 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/satish-bhambri-9164b997/"
   },
   {
+    name: "Mr. Sai Raghavendra Varanasi",
+    title: "Change/Release Manager",
+    company: "Cigna Health Care",
+    image: "/Sai Raghavendra Varanasi.png",
+    linkedIn: "https://www.linkedin.com/in/sai-raghavendra-varanasi-a12311244"
+  },
+  {
+    name: "Ms. Sesha Sai Sravanthi Valiveti",
+    title: "Technical Lead",
+    company: "Infosys Limited",
+    image: "/Sesha Sai Sravanthi Valiveti.png",
+    linkedIn: "http://www.linkedin.com/in/sesha-v-7159b7238"
+  },
+  {
     name: "Ms. Sonali Suri",
     title: "Software Development Engineer",
     company: "Amazon",
