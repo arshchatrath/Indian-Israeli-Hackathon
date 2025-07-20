@@ -302,6 +302,7 @@ const coreMembers = [
 		designation:"General Secretary, Microsoft Learn Student Chapter, TIET",
 		image:"/Mannat Kaur Miglani.jpeg",
 		bio:"Rooted in a legacy of innovation, driven by bold student vision",
+		linkedin: "https://www.linkedin.com/in/mannat-kaur-miglani/",
 		location:"India"
 	},
 	{
@@ -309,6 +310,7 @@ const coreMembers = [
 		designation:"Finance Secretary, Microsoft Learn Student Chapter, TIET",
 		image:"/Jeevant Verma.jpeg",
 		bio:"Leading at the intersection of technology and student impact.",
+		linkedin: "https://www.linkedin.com/in/jeevantverma/",
 		location:"India"
 	},
 	{
@@ -316,6 +318,7 @@ const coreMembers = [
 		designation:"Joint Secretary, Microsoft Learn Student Chapter, TIET",
 		image:"/Akshat Nathani.jpeg",
 		bio:"Building impactful tech and communities with purpose and pace.",
+		linkedin: "https://www.linkedin.com/in/akshatnathani/",
 		location:"India"
 	}
 	

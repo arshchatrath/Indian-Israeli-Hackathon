@@ -415,7 +415,7 @@ export default function Hero() {
 										</motion.span>
 									</span>
 								</Button>
-								<a
+								{/* <a
 									href="https://hack4help.devfolio.co/"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -439,7 +439,7 @@ export default function Hero() {
 											</motion.span>
 										</span>
 									</Button>
-								</a>
+								</a> */}
 							</motion.div>
 							{/* Timer */}
 							<motion.div
