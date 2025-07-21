@@ -458,7 +458,7 @@ export default function Hero() {
 										repeat: Infinity,
 									}}
 								>
-									<Countdown deadline="2025-07-24T23:59:59" />
+									<Countdown deadline="2025-08-07T23:59:59" />
 								</motion.div>
 								{/* Subtle animated border */}
 								<motion.div
