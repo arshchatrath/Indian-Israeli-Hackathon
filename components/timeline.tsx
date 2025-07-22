@@ -8,7 +8,7 @@ const timelineData = [
 	{
 		round: "Round-I",
 		title: "PPT Submission",
-		date: "7 August 2025",
+		date: "7 August 2025, 11:59:59 pm (IST)",
 		icon: Calendar,
 		color: "bg-blue-500",
 		bgColor: "bg-blue-50",
