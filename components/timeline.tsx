@@ -19,7 +19,7 @@ const timelineData = [
 			"Focus on problem definition",
 			"Technical feasibility analysis",
 			"Innovation and creativity",
-			"Last date: 7th August 2025",
+			"Last date: 7 August 2025, 11:59:59 pm (IST)",
 		],
 	},
 	{
@@ -36,7 +36,7 @@ const timelineData = [
 			"5 minutes Q&A session",
 			"Live demo preferred",
 			"Team coordination evaluation",
-			"Online presentation on 15th August 2025",
+			"Online presentation on 16 August 2025, 09:00 am (IST)",
 		],
 	},
 	{
