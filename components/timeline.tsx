@@ -25,7 +25,7 @@ const timelineData = [
 	{
 		round: "Round-II",
 		title: "Online Presentation",
-		date: "15 August 2025",
+		date: "16 August 2025, 09:00 am",
 		icon: Presentation,
 		color: "bg-purple-500",
 		bgColor: "bg-purple-50",
