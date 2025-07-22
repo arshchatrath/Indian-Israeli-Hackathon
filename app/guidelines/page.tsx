@@ -148,7 +148,7 @@ export default function Guidelines() {
 			description:
 				"Submit your 13-slide presentation with your innovative healthcare solution",
 			details:
-				"Due by: 7 August 2025. Exactly 13 slides required. Focus on problem, solution, and implementation plan.",
+				"Due by: 7 August 2025, 11:59:59 pm (IST). Exactly 13 slides required. Focus on problem, solution, and implementation plan.",
 			color: "blue",
 		},
 		{
@@ -156,7 +156,7 @@ export default function Guidelines() {
 			title: "Online Presentation",
 			description: "Present your idea to judges via online platform",
 			details:
-				"15 August 2025. 15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
+				"16 August 2025, 09:00 am (IST). 15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
 			color: "purple",
 		},
 		{
