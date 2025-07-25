@@ -284,6 +284,13 @@ const judges = [
     image: "/Sunil Netra.avif",
     linkedIn: "https://www.linkedin.com/in/snetra/"
   },
+  {
+    name: "Mr. Vikas Jodigatte Nagaraj",
+    title: "Member Technical Staff",
+    company: "AMD Inc",
+    image: "/Vikas Jodigatte Nagaraj.png",
+    linkedIn: "https://www.linkedin.com/in/vikasnagaraj/"
+  }
 ]
 
 const selectionCriteria = [
