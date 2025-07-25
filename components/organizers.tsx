@@ -197,6 +197,13 @@ const coreMembers = [
 		location: "Israel"
 	},
 	{
+		name: "Dir. Ishaan Jindal",
+		designation: "President, Thapar Club of Technical Production, TIET",
+		image: "/Dr Ishaan Jindal.avif",
+		bio: "Leading technical innovation and fostering future engineering talent.",
+		location: "India"
+	},
+	{
 		name: "Bhavishya Singla",
 		designation: "Student Volunteer, Thapar University",
 		image: "/Bhavishya Singla.avif",
