@@ -122,6 +122,13 @@ const judges = [
     linkedIn: "http://www.linkedin.com/in/karthik2502/"
   },
   {
+    name: "Mr. Krishna Dornala",
+    title: "Principal Consultant/Lead BSA",
+    company: "Resource Logistics Inc",
+    image: "/Krishna Dornala.png",
+    linkedIn: "https://www.linkedin.com/in/krishna-dornala-a1a89a75/"
+  },
+  {
     name: "Dr. Manas Ranjan Panda",
     title: "Partner",
     company: "Wipro Limited",
@@ -283,6 +290,13 @@ const judges = [
     company: "",
     image: "/Sunil Netra.avif",
     linkedIn: "https://www.linkedin.com/in/snetra/"
+  },
+  {
+    name: "Mr. Vignesh Kumar Subramanian",
+    title: "Lead/Senior Software Engineer",
+    company: "Marketaxess",
+    image: "/Vignesh Kumar Subramanian.png",
+    linkedIn: "https://www.linkedin.com/in/vicmania2007/"
   },
   {
     name: "Mr. Vikas Jodigatte Nagaraj",
