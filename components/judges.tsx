@@ -6,6 +6,13 @@ import { ChevronDown, Users, Lightbulb, Globe2, BookOpen, Star, Scale, Building2
 
 const judges = [
   {
+    name: "Mr. Abhishek Vyas",
+    title: "Director, AI Product Management",
+    company: "Auditoria.ai",
+    image: "/Abhishek Vyas.png",
+    linkedIn:"https://www.linkedin.com/in/abvyas/"
+  },
+  {
     name: "Mr. Anil Vijarnia",
     title: "Senior Principal Engineer",
     company: "Wasabi Technologies",
