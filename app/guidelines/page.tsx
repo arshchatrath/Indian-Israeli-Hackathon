@@ -148,7 +148,7 @@ export default function Guidelines() {
 			description:
 				"Submit your 13-slide presentation with your innovative healthcare solution",
 			details:
-				"Due by: 24 July 2025. Exactly 13 slides required. Focus on problem, solution, and implementation plan.",
+				"Due by: 7 August 2025, 11:59:59 pm (IST). Exactly 13 slides required. Focus on problem, solution, and implementation plan.",
 			color: "blue",
 		},
 		{
@@ -156,15 +156,15 @@ export default function Guidelines() {
 			title: "Online Presentation",
 			description: "Present your idea to judges via online platform",
 			details:
-				"31 July 2025. 15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
+				"16 August 2025, 09:00 am (IST). 15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
 			color: "purple",
 		},
 		{
 			round: "Round-III",
-			title: "Offline Evaluation",
-			description: "Final round with in-person presentation and demo",
+			title: "Final 24-Hour Hackathon",
+			description: "In-person 24-hour hackathon with demo and evaluation",
 			details:
-				"2nd week of August 2025. 15 minutes total: 10 minutes presentation + 5 minutes Q&A session",
+				"23-24 August 2025. 24-hour hackathon at the venue. Final presentations and demos to judges.",
 			color: "green",
 		},
 		{

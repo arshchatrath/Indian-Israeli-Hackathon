@@ -6,6 +6,13 @@ import { ChevronDown, Users, Lightbulb, Globe2, BookOpen, Star, Scale, Building2
 
 const judges = [
   {
+    name: "Mr. Abhishek Vyas",
+    title: "Director, AI Product Management",
+    company: "Auditoria.ai",
+    image: "/Abhishek Vyas.png",
+    linkedIn:"https://www.linkedin.com/in/abvyas/"
+  },
+  {
     name: "Mr. Anil Vijarnia",
     title: "Senior Principal Engineer",
     company: "Wasabi Technologies",
@@ -121,6 +128,13 @@ const judges = [
     image: "/Karthik Sirigiri.png",
     linkedIn: "http://www.linkedin.com/in/karthik2502/"
   },
+  /*{
+    name: "Mr. Krishna Dornala",
+    title: "Principal Consultant/Lead BSA",
+    company: "Resource Logistics Inc",
+    image: "/Krishna Dornala.png",
+    linkedIn: "https://www.linkedin.com/in/krishna-dornala-a1a89a75/"
+  },*/
   {
     name: "Dr. Manas Ranjan Panda",
     title: "Partner",
@@ -284,6 +298,20 @@ const judges = [
     image: "/Sunil Netra.avif",
     linkedIn: "https://www.linkedin.com/in/snetra/"
   },
+  {
+    name: "Mr. Vignesh Kumar Subramanian",
+    title: "Lead/Senior Software Engineer",
+    company: "Marketaxess",
+    image: "/Vignesh Kumar Subramanian.png",
+    linkedIn: "https://www.linkedin.com/in/vicmania2007/"
+  },
+  {
+    name: "Mr. Vikas Jodigatte Nagaraj",
+    title: "Member Technical Staff",
+    company: "AMD Inc",
+    image: "/Vikas Jodigatte Nagaraj.png",
+    linkedIn: "https://www.linkedin.com/in/vikasnagaraj/"
+  }
 ]
 
 const selectionCriteria = [

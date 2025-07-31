@@ -377,25 +377,32 @@ export default function Hero() {
 								className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full justify-start"
 							>
 								{/* Devfolio Apply Button */}
-								{/* <motion.div
-                                    whileHover={{ 
-                                        y: -3,
-                                        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-                                    }}
-                                    whileTap={{ y: 0, scale: 0.98 }}
-                                    className="relative overflow-hidden rounded-2xl flex items-center"
-                                > */}
-								<motion.div
-									className="apply-button h-[44px] w-[312px] cursor-pointer"
-									data-hackathon-slug="israeliindian-hackathon"
-									data-button-theme="light"
-									whileHover={{
-										y: -3,
-										boxShadow:
-											"0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-									}}
-									whileTap={{ y: 0, scale: 0.98 }}
-								></motion.div>
+								<a
+									href="https://hack4help.devfolio.co/"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="group"
+								>
+									<Button
+										variant="outline"
+										size="lg"
+										className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-blue-400 hover:text-blue-700 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold rounded-2xl bg-white/90 backdrop-blur-sm shadow-xl relative overflow-hidden flex items-center gap-2"
+									>
+										<span className="relative z-10 flex items-center gap-2">
+											Apply with
+											<motion.span
+												whileHover={{ rotate: 0 }}
+												transition={{ duration: 0.3 }}
+											>
+												<img
+													src="devfolio.jpg"
+													alt="DEVFOLIO LOGO"
+													className="h-10 w-22"
+												/>
+											</motion.span>
+										</span>
+									</Button>
+								</a>
 
 								<Button
 									variant="outline"
@@ -415,31 +422,6 @@ export default function Hero() {
 										</motion.span>
 									</span>
 								</Button>
-								{/* <a
-									href="https://hack4help.devfolio.co/"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<Button
-										variant="outline"
-										size="lg"
-										className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-purple-400 hover:text-purple-700 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold rounded-2xl bg-white/90 backdrop-blur-sm shadow-xl relative overflow-hidden group"
-									>
-										<span className="relative z-10 flex items-center gap-2">
-											Apply with
-											<motion.span
-												whileHover={{ rotate: 0 }}
-												transition={{ duration: 0.3 }}
-											>
-												<img
-													src="https://guide.devfolio.co/~gitbook/image?url=https%3A%2F%2F1314378906-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-LX2wpUXI1eWMY46nkHR%252Favatar-rectangle.png%3Fgeneration%3D1570189666128075%26alt%3Dmedia&width=260&dpr=2&quality=100&sign=6302477a&sv=2"
-													alt=""
-													className="h-5"
-												/>
-											</motion.span>
-										</span>
-									</Button>
-								</a> */}
 							</motion.div>
 							{/* Timer */}
 							<motion.div
@@ -476,7 +458,7 @@ export default function Hero() {
 										repeat: Infinity,
 									}}
 								>
-									<Countdown deadline="2025-07-24T23:59:59" />
+									<Countdown deadline="2025-08-07T23:59:59" />
 								</motion.div>
 								{/* Subtle animated border */}
 								<motion.div
@@ -560,7 +542,7 @@ export default function Hero() {
 												<Calendar className="h-4 w-4 text-blue-600" />
 												<div>
 													<div className="text-xs sm:text-sm font-semibold text-slate-900 leading-tight">
-														48 Hours
+														24 Hours
 													</div>
 													<div className="text-[11px] sm:text-xs text-slate-600">
 														Event Duration
