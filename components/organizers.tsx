@@ -320,7 +320,43 @@ const coreMembers = [
 		bio:"Building impactful tech and communities with purpose and pace.",
 		linkedin: "https://www.linkedin.com/in/akshatnathani/",
 		location:"India"
-	}
+	}, 
+	{
+		name:"Anshika Mangal",
+		designation:"Core Member, Microsoft Learn Student Chapter, TIET",
+		image:"/Anshika Mangal.JPG",
+		bio:"Designing with intention as every pixel becomes a step toward clarity, creativity and impact.",
+		location:"India"
+	},
+	{
+		name:"Lavanya Sharma",
+		designation:"Executive Member, Microsoft Learn Student Chapter, TIET",
+		image:"/Lavanya Sharma.jpg",
+		bio:"Shaping innovation and impact with heart and hustle.",
+		location:"India"
+	},
+	{
+		name:"Vatsal Gupta",
+		designation:"Core Member, Microsoft Learn Student Chapter, TIET",
+		image:"/Vatsal Gupta.jpg",
+		bio:" Crafting tech with intention, merging innovation and curiosity at every line of code.",
+		location:"India"
+	},
+	{
+		name:"Shashwat Narwal",
+		designation:"Core Member, Microsoft Learn Student Chapter, TIET",
+		image:"/Shashwat Narwal.JPG",
+		bio:"Engineering stories frame by frame where every cut, color, and clip shapes moments into meaning",
+		location:"India"
+	},
+	{
+		name:"Yuvaan Mutreja:",
+		designation:"Core Member, Microsoft Learn Student Chapter, TIET",
+		image:"/Yuvaan Mutreja.jpg",
+		bio:"Building for real problems; no fluff, just function.",
+		location:"India"
+	},
+	
 	
 ];
 
