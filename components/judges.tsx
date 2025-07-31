@@ -128,13 +128,13 @@ const judges = [
     image: "/Karthik Sirigiri.png",
     linkedIn: "http://www.linkedin.com/in/karthik2502/"
   },
-  {
+  /*{
     name: "Mr. Krishna Dornala",
     title: "Principal Consultant/Lead BSA",
     company: "Resource Logistics Inc",
     image: "/Krishna Dornala.png",
     linkedIn: "https://www.linkedin.com/in/krishna-dornala-a1a89a75/"
-  },
+  },*/
   {
     name: "Dr. Manas Ranjan Panda",
     title: "Partner",
