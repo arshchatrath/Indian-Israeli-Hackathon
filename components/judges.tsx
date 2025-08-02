@@ -175,9 +175,9 @@ const judges = [
     title: "Sr System Architect",
     company: "Banking, Insurance & Healthcare",
     image: "/Naresh Babu Goolla.jpg",
-    linkedIn: "https://www.linkedin.com/in/naresh-goolla-1b69a228/"
+    linkedIn:"https://www.linkedin.com/in/naresh-goolla-1b69a228/"
   },
-  {
+    {
     name: "Navdeep Singh",
     title: "Principal Product Manager",
     company: "Walmart",
