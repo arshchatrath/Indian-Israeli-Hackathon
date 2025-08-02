@@ -171,6 +171,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/ganpatigoel/"
   },
   {
+    name: "Mr. Naresh Babu Goolla",
+    title: "Sr System Architect",
+    company: "",
+    image: "/Naresh Babu Goolla.png",
+    linkedIn: "https://www.linkedin.com/in/naresh-goolla-1b69a228/"
+  },
+  {
     name: "Mr. Navdeep Singh",
     title: "Principal Product Manager",
     company: "Walmart",
