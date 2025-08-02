@@ -171,10 +171,10 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/ganpatigoel/"
   },
   {
-    name: "Mr. Naresh Babu Goolla",
+    name: "Mr. Naresh Babu Goolla ",
     title: "Sr System Architect",
     company: "Banking, Insurance & Healthcare",
-    image: "/Naresh Babu Goolla.png",
+    image: "/Naresh Babu  Goolla.png",
     linkedIn: "https://www.linkedin.com/in/naresh-goolla-1b69a228/"
   },
   {
