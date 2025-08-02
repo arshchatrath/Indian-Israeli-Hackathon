@@ -6,21 +6,21 @@ import { ChevronDown, Users, Lightbulb, Globe2, BookOpen, Star, Scale, Building2
 
 const judges = [
   {
-    name: "Mr. Abhishek Vyas",
+    name: "Abhishek Vyas",
     title: "Director, AI Product Management",
     company: "Auditoria.ai",
     image: "/Abhishek Vyas.png",
     linkedIn:"https://www.linkedin.com/in/abvyas/"
   },
   {
-    name: "Mr. Anil Vijarnia",
+    name: "Anil Vijarnia",
     title: "Senior Principal Engineer",
     company: "Wasabi Technologies",
     image: "/Anil Vijarnia.avif",
     linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
   },
   {
-    name: "Mr. Arun Kumar",
+    name: "Arun Kumar",
     title: "Sr. Sofware Solution Architect",
     company: "BiziByte",
     image: "/Arun.jpg", // Add the correct image path if available
@@ -28,7 +28,7 @@ const judges = [
   },
   /*
   {
-    name: "Mr. Arun Kumar Elengovan",
+    name: "Arun Kumar Elengovan",
     title: "Director, Engineering Security",
     company: "OKTA Inc",
     image: "/Arun Kumar Elengovan.png", // Add the correct image path if available
@@ -37,7 +37,7 @@ const judges = [
   */
   /*
   {
-    name: "Mr. Bhanu Prakash Reddy Rella",
+    name: "Bhanu Prakash Reddy Rella",
     title: "Sr. Software Engineer",
     company: "Walmart, USA.",
     image: "/Bhanu Prakash Reddy Rella.png", // Add the correct image path if available
@@ -45,168 +45,168 @@ const judges = [
   },
   */
   {
-    name: "Mr. Chaitanya Gunupudi",
+    name: "Chaitanya Gunupudi",
     title: "Independent Researcher and IT Platform Senior Cloud Engineer",
     company: "University of Maryland Research Center",
     image: "/Chaitanya Gunupudi.png", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/chaitanyagunupudi/"
   },
   {
-    name: "Mr. Chandra Mouli Yalamanchili",
+    name: "Chandra Mouli Yalamanchili",
     title: "Independent Researcher",
     company: "USA",
     image: "/Chandra Mouli Yalamanchili.png", // Add the correct image path if available
     linkedIn: "https://www.linkedin.com/in/chandu85"
   },
   {
-    name: "Mr. Chetan Sharma",
+    name: "Chetan Sharma",
     title: "SAP Architect",
     company: "Tractor Supply Company",
-    image: "/Mr. Chetan Sharma.avif",
+    image: "/Chetan Sharma.avif",
     linkedIn: "https://www.linkedin.com/in/chetansharma4u/"
   },
   {
-    name: "Mr. Damodhara Reddy Palavali",
+    name: "Damodhara Reddy Palavali",
     title: "Software Engineer",
     company: "Sbase Technologies, Inc",
     image: "/Damodhara Reddy Palavali.png",
     linkedIn: "https://www.linkedin.com/in/damodharap/"
   },
     {
-    name: "Mr. Dennis Surendar",
+    name: "Dennis Surendar",
     title: "Technical Advisor",
     company: "Fannie Mae",
     image: "/Dennis Surendar.png",
     linkedIn: "https://www.linkedin.com/in/dennis-surendar"
   },
   {
-    name: "Mr. Desi Ramananda Kishore Katuri",
+    name: "Desi Ramananda Kishore Katuri",
     title: "Application Programmer IV",
     company: "UC Berkeley",
     image: "/Desi Ramananda Kishore Katuri.png",
     linkedIn: "https://www.linkedin.com/in/desi-ramananda-kishore-katuri-06b64832/"
   },
   {
-    name: "Mr. Dharmateja Priyadarshi Uddandarao",
+    name: "Dharmateja Priyadarshi Uddandarao",
     title: "Sr. Data Scientist",
     company: "Amazon",
     image: "/Dharmateja Priyadarshi Uddandarao.jpg",
     linkedIn: "https://www.linkedin.com/in/dtp-uddandarao/"
   },
   {
-    name: "Mr. Jaya Krishna Modadugu",
+    name: "Jaya Krishna Modadugu",
     title: "Sr. Software Engineer",
     company: "Prosper Marketplace Inc",
-    image: "/Mr. Jaya Krishna Modadugu.avif",
+    image: "/Jaya Krishna Modadugu.avif",
     linkedIn: "https://www.linkedin.com/in/jaya-krishna-modadugu-77820813a/"
   },
   /*{
-    name: "Mr. Justin Rajakumar Thason",
+    name: "Justin Rajakumar Thason",
     title: "Director of DevOps Information Technology",
     company: "Virginia, USA.",
     image: "/Justin Rajakumar.png",
     linkedIn: "https://www.linkedin.com/in/justin-rajakumar-thason-a3349425/"
   },*/
   {
-    name: "Mr. Karan Alang",
+    name: "Karan Alang",
     title: "Principal Software Engineer",
     company: "Versa Networks Inc",
     image: "/Karan Alang.png",
     linkedIn: "https://www.linkedin.com/in/karan-alang-4173437/"
   },
   {
-    name: "Mr. Kapil Kumar Goyal",
+    name: "Kapil Kumar Goyal",
     title: "Sr. Product Manager",
     company: "The Zillow Group",
     image: "/Kapil Kumar Goyal.png",
     linkedIn: "https://www.linkedin.com/in/kapil-goyal/"
   },  
   {
-    name: "Mr. Karthik Sirigiri",
+    name: "Karthik Sirigiri",
     title: "Software Developer",
     company: "USA",
     image: "/Karthik Sirigiri.png",
     linkedIn: "http://www.linkedin.com/in/karthik2502/"
   },
   /*{
-    name: "Mr. Krishna Dornala",
+    name: "Krishna Dornala",
     title: "Principal Consultant/Lead BSA",
     company: "Resource Logistics Inc",
     image: "/Krishna Dornala.png",
     linkedIn: "https://www.linkedin.com/in/krishna-dornala-a1a89a75/"
   },*/
   {
-    name: "Dr. Manas Ranjan Panda",
+    name: "Manas Ranjan Panda",
     title: "Partner",
     company: "Wipro Limited",
     image: "/Manas Panda.jpg",
     linkedIn: "http://linkedin.com/in/manaspanda01/"
   },
   {
-    name: "Mr. Manoj Pal",
+    name: "Manoj Pal",
     title: "Senior Data Engineer",
     company: "Artnet Worldwide Corporation",
     image: "/Manoj Pal.png",
     linkedIn: "https://www.linkedin.com/in/manoj7pal/"
   },
   {
-    name: "Mr. Naga Bharadwaj Bhavikatta",
+    name: "Naga Bharadwaj Bhavikatta",
     title: "Sr Tech Manager",
     company: "Oracle",
     image: "/Naga Bharadwaj Bhavikatta.avif",
     linkedIn: "https://www.linkedin.com/in/naga-bharadwaj-bhavikatta-101347203/"
   },
   {
-    name: "Mr. Nagamalleswararao Bellamkonda",
+    name: "Nagamalleswararao Bellamkonda",
     title: "Sr. Database Adminstrator",
     company: "IEEE Senior Member",
     image: "/Nagamalleswararao Bellamkonda.jpeg",
     linkedIn: "http://linkedin.com/in/naga-bellamkonda-7209a11a0/"
   },
   {
-    name: "Mr. Narendra Kandregula",
+    name: "Narendra Kandregula",
     title: "Assitant Vice President",
     company: "Deutsche Bank",
     image: "/Narendra Kandregula.png",
     linkedIn: "https://www.linkedin.com/in/ganpatigoel/"
   },
   {
-    name: "Mr. Naresh Babu Goolla ",
+    name: "Naresh Babu Goolla ",
     title: "Sr System Architect",
     company: "Banking, Insurance & Healthcare",
     image: "/Naresh Babu  Goolla.png",
     linkedIn: "https://www.linkedin.com/in/naresh-goolla-1b69a228/"
   },
   {
-    name: "Mr. Navdeep Singh",
+    name: "Navdeep Singh",
     title: "Principal Product Manager",
     company: "Walmart",
     image: "/Navdeep Singh.avif",
     linkedIn:"https://www.linkedin.com/in/inavdeepsingh/"
   },
   {
-    name: "Mr. Naveen Edapurath Vijayan",
+    name: "Naveen Edapurath Vijayan",
     title: "Head of Engineering",
     company: "AWS Central Economics",
     image: "/Naveen Edapurath Vijayan.jpeg",
     linkedIn:"https://www.linkedin.com/in/naveenvijayan/"
   },
   {
-    name: "Mr. Nandagopal Seshagiri",
+    name: "Nandagopal Seshagiri",
     title: "Sr. Software Architect",
     company: "Okta Inc",
     image: "/Nandagopal Seshagiri.jpeg",
     linkedIn:"https://www.linkedin.com/in/nandagopal-seshagiri-1479ab5/"
   },
   {
-    name: "Mr. Nayan Goel",
+    name: "Nayan Goel",
     title: "Principal Application Security Engineer",
     company: "Upgrade Inc",
     image: "/Nayan Goel.jpeg",
     linkedIn:"https://www.linkedin.com/in/nayan-goel-426922bb/"
   },
   {
-    name: "Mr. Praveen Kumar Thota",
+    name: "Praveen Kumar Thota",
     title: "Sr. Technical Operations Manager",
     company: "USA",
     image: "/Praveen.png", // Add the correct image path if available
@@ -222,35 +222,35 @@ const judges = [
   },
   */
   {
-    name: "Mr. Rakesh Keshava",
+    name: "Rakesh Keshava",
     title: "Software Architect, Security",
     company: "USA",
     image: "/Rakesh Keshava.png",
     linkedIn: "https://www.linkedin.com/in/rakeshkeshava/"
   },
   {
-    name: "Mr. Ravi Patneedi",
+    name: "Ravi Patneedi",
     title: "Lead SAP",
     company: "Tractor Supply Company",
     image: "/Ravi Patneedi.avif",
     linkedIn: "https://www.linkedin.com/in/ravi-patneedi-169233a/"
   },
   {
-    name: "Mr. Ritesh Tandon",
+    name: "Ritesh Tandon",
     title: "Independent Researcher and Lead Data Scientist",
     company: "Data and AI Solution",
     image: "/Ritesh Tandon.png",
     linkedIn: "https://www.linkedin.com/in/ritesh-tandon-3427481/"
   },
   {
-    name: "Mr. Sai Kiran Nandipati",
+    name: "Sai Kiran Nandipati",
     title: "Senior Application System Engineer",
     company: "Ernst & Young",
     image: "/sai kiran.jpg",
     linkedIn: "https://www.linkedin.com/in/sai-kiran-nandipati-92a302133 ",
   },
   {
-    name: "Mr. Sai Raghu Ram Gummadidala",
+    name: "Sai Raghu Ram Gummadidala",
     title: "Independent Researcher",
     company: "Tractor Supply Company",
     image: "/Sai raghu.jpg",
@@ -264,56 +264,56 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/sangeetasinghembeddedsystems/"
   },
   {
-    name: "Mr. Satish Bhambri",
+    name: "Satish Bhambri",
     title: "Sr Machine Learning Engineer",
     company: "Walmart Labs",
     image: "/Satish Bhambri.avif",
     linkedIn: "https://www.linkedin.com/in/satish-bhambri-9164b997/"
   },
   {
-    name: "Mr. Sai Raghavendra Varanasi",
+    name: "Sai Raghavendra Varanasi",
     title: "Change/Release Manager",
     company: "Cigna Health Care",
     image: "/Sai Raghavendra Varanasi.png",
     linkedIn: "https://www.linkedin.com/in/sai-raghavendra-varanasi-a12311244"
   },
   {
-    name: "Ms. Sesha Sai Sravanthi Valiveti",
+    name: "Sesha Sai Sravanthi Valiveti",
     title: "Technical Lead",
     company: "Infosys Limited",
     image: "/Sesha Sai Sravanthi Valiveti.png",
     linkedIn: "http://www.linkedin.com/in/sesha-v-7159b7238"
   },
   {
-    name: "Ms. Sonali Suri",
+    name: "Sonali Suri",
     title: "Software Development Engineer",
     company: "Amazon",
     image: "/sonali.jpg",
     linkedIn: "https://www.linkedin.com/in/sonali-suri-3bb440b6/"
   },
   {
-    name: "Mr. Sreekar Theja Jami",
+    name: "Sreekar Theja Jami",
     title: "Sr. SysDev Engineer",
     company: "USA",
     image: "/Sreekar Theja Jami.png",
     linkedIn: "http://www.linkedin.com/in/sreekar-jami-554583173/"
   },
   {
-    name: "Mr. Sunil Netra",
+    name: "Sunil Netra",
     title: "Principal Developer",
     company: "",
     image: "/Sunil Netra.avif",
     linkedIn: "https://www.linkedin.com/in/snetra/"
   },
   {
-    name: "Mr. Vignesh Kumar Subramanian",
+    name: "Vignesh Kumar Subramanian",
     title: "Lead/Senior Software Engineer",
     company: "Marketaxess",
     image: "/Vignesh Kumar Subramanian.png",
     linkedIn: "https://www.linkedin.com/in/vicmania2007/"
   },
   {
-    name: "Mr. Vikas Jodigatte Nagaraj",
+    name: "Vikas Jodigatte Nagaraj",
     title: "Member Technical Staff",
     company: "AMD Inc",
     image: "/Vikas Jodigatte Nagaraj.png",
