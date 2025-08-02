@@ -256,7 +256,7 @@ const coreMembers = [
 	{
 		name: "Ms. Sowmya Sudhakar",
 		designation: "Medical Device Design & Development",
-		image: "/Ms. Sowmya Sudhakar.avif",
+		image: "/Sowmya Sudhakar.avif",
 		bio: "Developer of innovative medical devices and systems.",
 		location: "India"
 	},
