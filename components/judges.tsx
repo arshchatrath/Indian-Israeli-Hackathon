@@ -173,7 +173,7 @@ const judges = [
   {
     name: "Mr. Naresh Babu Goolla",
     title: "Sr System Architect",
-    company: "",
+    company: " ",
     image: "/Naresh Babu Goolla.png",
     linkedIn: "https://www.linkedin.com/in/naresh-goolla-1b69a228/"
   },
