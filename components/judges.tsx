@@ -171,10 +171,10 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/ganpatigoel/"
   },
   {
-    name: "Naresh Babu Goolla ",
+    name: "Naresh Babu Goolla",
     title: "Sr System Architect",
     company: "Banking, Insurance & Healthcare",
-    image: "/Naresh Babu  Goolla.png",
+    image: "/Naresh Babu Goolla.jpg",
     linkedIn: "https://www.linkedin.com/in/naresh-goolla-1b69a228/"
   },
   {
@@ -257,7 +257,7 @@ const judges = [
     linkedIn:"https://www.linkedin.com/in/raghu-ram-gummadidala-b2a171128/"
   },
   {
-    name: "Ms. Sangeeta Singh",
+    name: "Sangeeta Singh",
     title: "Firmware Engineer III",
     company: "Variosystems Inc",
     image: "/Sangeeta Singh.avif",
