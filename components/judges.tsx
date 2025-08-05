@@ -229,6 +229,13 @@ const judges = [
     linkedIn: "https://www.linkedin.com/in/rakeshkeshava/"
   },
   {
+    name: "Rakesh Kumar Mali",
+    title: "Delivery Module Lead",
+    company: "Mphasis Corp",
+    image: "/Rakesh Kumar Mali.png",
+    linkedIn: "https://www.linkedin.com/in/rakesh-mali-25997098/"
+  },
+  {
     name: "Ravi Patneedi",
     title: "Lead SAP",
     company: "Tractor Supply Company",
