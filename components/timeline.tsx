@@ -8,7 +8,7 @@ const timelineData = [
 	{
 		round: "Round-I",
 		title: "PPT Submission",
-		date: "7 August 2025, 11:59:59 pm (IST)",
+		date: "10 August 2025, 11:59:59 pm (IST)",
 		icon: Calendar,
 		color: "bg-blue-500",
 		bgColor: "bg-blue-50",
@@ -19,7 +19,7 @@ const timelineData = [
 			"Focus on problem definition",
 			"Technical feasibility analysis",
 			"Innovation and creativity",
-			"Last date: 7 August 2025, 11:59:59 pm (IST)",
+			"Last date: 10 August 2025, 11:59:59 pm (IST)",
 		],
 	},
 	{
