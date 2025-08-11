@@ -19,13 +19,13 @@ const judges = [
     image: "/Anil Vijarnia.avif",
     linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
   },
-  {
+  /*{
     name: "Ankush Gautam",
     title: "Senior Manager",
     company: "Engineering at Datastax",
     image: "/Ankush Gautam.jpg",
     linkedIn:"https://www.linkedin.com/in/ankushgautam/"
-  },
+  },*/
   {
     name: "Arun Kumar",
     title: "Sr. Sofware Solution Architect",
@@ -211,6 +211,13 @@ const judges = [
     company: "Upgrade Inc",
     image: "/Nayan Goel.jpeg",
     linkedIn:"https://www.linkedin.com/in/nayan-goel-426922bb/"
+  },
+  {
+    name: "Prassanna Rao Rajgopal",
+    title: "Cybersecurity Leader",
+    company: "Member IEEE & ISACA",
+    image: "/Prassanna Rao Rajgopal.jpeg", // Add the correct image path if available
+    linkedIn: "https://www.linkedin.com/in/prassannarao/"
   },
   {
     name: "Praveen Kumar Thota",
