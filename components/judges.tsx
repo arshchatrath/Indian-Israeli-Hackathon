@@ -52,6 +52,13 @@ const judges = [
   },
   */
   {
+    name: "Badal Bhushan",
+    title: "Distinguished Engineer",
+    company: "Cybersecurity",
+    image: "/Badal Bhushan.jpeg", // Add the correct image path if available
+    linkedIn: "http://www.linkedin.com/in/badal-bhushan-491b263a"
+  },
+  {
     name: "Chaitanya Gunupudi",
     title: "Independent Researcher and IT Platform Senior Cloud Engineer",
     company: "University of Maryland Research Center",
