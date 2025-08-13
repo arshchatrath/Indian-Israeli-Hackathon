@@ -19,6 +19,13 @@ const judges = [
     image: "/Anil Vijarnia.avif",
     linkedIn:"https://www.linkedin.com/in/anil-vijarnia/"
   },
+  {
+    name: "Arjun Sirangi",
+    title: "CDP Architect",
+    company: "",
+    image: "/Arjun Sirangi.jpeg",
+    linkedIn:"https://www.linkedin.com/in/arjun-sirangi/"
+  },
   /*{
     name: "Ankush Gautam",
     title: "Senior Manager",
@@ -169,6 +176,13 @@ const judges = [
     company: "Oracle",
     image: "/Naga Bharadwaj Bhavikatta.avif",
     linkedIn: "https://www.linkedin.com/in/naga-bharadwaj-bhavikatta-101347203/"
+  },
+  {
+    name: "Naga Subrahmanyam Cherukupalle",
+    title: "Principal Architect",
+    company: "Catalyst Brands",
+    image: "/Naga Subrahmanyam Cherukupalle.jpg",
+    linkedIn: "https://www.linkedin.com/in/nagacherukupalle/"
   },
   {
     name: "Nagamalleswararao Bellamkonda",
@@ -332,6 +346,20 @@ const judges = [
     company: "",
     image: "/Sunil Netra.avif",
     linkedIn: "https://www.linkedin.com/in/snetra/"
+  },
+  {
+    name: "Tejesvi Alekh Prasad",
+    title: "Principal DeveloperAssistant Director",
+    company: "Ernst & Young",
+    image: "/Tejesvi Alekh Prasad.jpg",
+    linkedIn: "https://www.linkedin.com/in/alekhprasad19/"
+  },
+  {
+    name: "Venkata Thej Deep Jakkaraju",
+    title: "Cloud Architect",
+    company: "Gamestop",
+    image: "/Venkata Thej Deep Jakkaraju.jpeg",
+    linkedIn: "https://www.linkedin.com/in/venkatathejdeepjakkaraju/"
   },
   {
     name: "Vignesh Kumar Subramanian",
