@@ -22,7 +22,7 @@ const judges = [
   {
     name: "Arjun Sirangi",
     title: "CDP Architect",
-    company: "",
+    company: "BH",
     image: "/Arjun Sirangi.jpeg",
     linkedIn:"https://www.linkedin.com/in/arjun-sirangi/"
   },
