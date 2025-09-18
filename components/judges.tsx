@@ -201,7 +201,7 @@ const judges = [
   {
     name: "Naresh Babu Goolla",
     title: "Sr System Architect",
-    company: "Banking, Insurance & Healthcare",
+    company: "IMR Soft LLC",
     image: "/Naresh Goolla.jpeg",
     linkedIn:"https://www.linkedin.com/in/naresh-goolla-1b69a228/"
   },
