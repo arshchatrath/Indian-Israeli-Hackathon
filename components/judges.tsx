@@ -45,7 +45,7 @@ const judges = [
     title: "Director, Engineering Security",
     company: "OKTA Inc",
     image: "/Arun Kumar Elengovan.png", // Add the correct image path if available
-    linkedIn: "https://www.linkedin.com/in/arun-kumar-e-b7019a33/"
+    linkedIn: "https://www.linkedin.com/in/arun-kumar-elengovan"
   },
   /*
   {
